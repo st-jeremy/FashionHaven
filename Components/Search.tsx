@@ -1,4 +1,5 @@
 import { Input, FormControl } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 
 const Search = () => {
   return ( 
@@ -11,8 +12,11 @@ const Search = () => {
         placeholder="Search products"
         marginLeft={2} 
         maxWidth={600} 
-        marginRight={2}/>
-      <Input  type="submit" width={200} value="Search" bgColor='blue.500'/>
+        marginRight={2}
+        rightIcon={<SearchIcon />}
+        
+        />
+      
     </FormControl>
     </>
 
