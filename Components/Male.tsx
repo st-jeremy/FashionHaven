@@ -43,43 +43,48 @@ const Male = () => {
         </MenuButton>
 
         <MenuList>
-          <TableContainer display='flex'>
+          <TableContainer display='flex' p={2}>
+            <Image src= '/milo.png' width={450} height={500} alt='can' />
+
             <Table variant='simple'>
-              <TableCaption>Imperial to metric conversion factors</TableCaption>
+              <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
               <Thead>
                 <Tr>
-                  <Th>To convert</Th>
-                  <Th>into</Th>
-                  <Th isNumeric>multiply by</Th>
+                  <Th>Clothing</Th>
+                  <Th>Foot Wear</Th>
+                  <Th>Head Wear</Th>
+                  <Th>Accessories</Th>
                 </Tr>
               </Thead>
 
               <Tbody>
                 <Tr>
-                  <Td>inches</Td>
-                  <Td>millimetres (mm)</Td>
-                  <Td isNumeric>25.4</Td>
+                  <Td>Bespoke</Td>
+                  <Td>Slides</Td>
+                  <Td>Face Caps</Td>
+                  <Td>Luggages & Bags</Td>
                 </Tr>
                 <Tr>
-                  <Td>feet</Td>
-                  <Td>centimetres (cm)</Td>
-                  <Td isNumeric>30.48</Td>
+                  <Td>Suits</Td>
+                  <Td>Loafers</Td>
+                  <Td>Kagol Cap</Td>
+                  <Td>Sunglasses</Td>
                 </Tr>
                 <Tr>
-                  <Td>yards</Td>
-                  <Td>metres (m)</Td>
-                  <Td isNumeric>0.91444</Td>
+                  <Td>Blazers</Td>
+                  <Td>Mules</Td>
+                  <Td></Td>
+                </Tr>
+                <Tr>
+                  <Td>Hoodies & Sweatshirts</Td>
+                  <Td>Black Tie</Td>
                 </Tr>
               </Tbody>
               <Tfoot>
-                <Tr>
-                  <Th>To convert</Th>
-                  <Th>into</Th>
-                  <Th isNumeric>multiply by</Th>
-                </Tr>
+               
               </Tfoot>
             </Table>
-            <Image src= '/public/milo.png' width={450} height={500} alt='can' />
+            
           </TableContainer>
          
         </MenuList>
