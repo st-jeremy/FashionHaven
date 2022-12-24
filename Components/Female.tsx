@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
 
-const HeadWear = () => {
+const Female = () => {
   return ( 
     <Box>
-      Head Wear
+      Female
     </Box>
    );
 }
  
-export default HeadWear;
+export default Female;

@@ -4,6 +4,7 @@ import Account from './Account';
 import Help from './Help';
 import { GiShoppingCart } from 'react-icons/gi';
 import { useRouter } from 'next/router';
+import Female from './Female';
 
 
 const Header = () => {
@@ -18,25 +19,29 @@ const Header = () => {
 
   return ( 
     <>
-      <Box display='flex' bgColor='pink.50' p='1rem 2rem' >
-        
-        <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width='550px'>Fashion Haven<sup>®</sup></Heading>
+      <Box >
+        <Heading fontSize={15} bgColor={'blackAlpha.100'} textAlign='center' p={2}>Welcome to Fashion Haven. Shop now!</Heading>
 
-        <Search />
+        <Box display='flex' bgColor= 'white' p='1rem 2rem' >
+          <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width='550px'>Fashion Haven<sup>®</sup></Heading>
 
-        <Account />
+          <Female />
+          <Search />
 
-        <Help />
+          <Account />
 
-        <GiShoppingCart 
-          style={{
-            width: '70px', 
-            height: '50px', 
-            cursor: 'pointer',
-            marginLeft: '5px'
-          }} 
-          onClick={handleCartClick}
-        />
+          <Help />
+
+          <GiShoppingCart 
+            style={{
+              width: '70px', 
+              height: '50px', 
+              cursor: 'pointer',
+              marginLeft: '5px'
+            }} 
+            onClick={handleCartClick}
+          />
+        </Box>
 
       </Box>
     </>
