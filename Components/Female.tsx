@@ -42,71 +42,61 @@ const Female = () => {
         </MenuButton>
 
         <MenuList>
-        <TableContainer display='flex' p={2}>
-            <Image src= '/milo.png' width={450} height={500} alt='can' />
+          <TableContainer display='flex' p={5}>
+              <Image src= '/milo.png' width={450} height={500} alt='can' />
 
-            <Table variant='simple'>
-              <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
-              <Thead>
-                <Tr>
-                  <Th>Clothing</Th>
-                  <Th>Foot Wear</Th>
-                  <Th>Head Wear</Th>
-                  <Th>Accessories</Th>
-                </Tr>
-              </Thead>
+              <Table variant='unstyled'>
+                <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+                <Thead>
+                  <Tr >
+                    <Th></Th>
+                    <Th>Female Fashion</Th>
+                  </Tr>
+                  <Tr>
+                    <Th>Clothing</Th>
+                    <Th>Foot Wear</Th>
+                    <Th>Accessories</Th>
+                  </Tr>
+                </Thead>
 
-              <Tbody>
+                <Tbody>
 
-                <Tr>
-                  <Td>Bespoke</Td>
-                  <Td>Slides</Td>
-                  <Td>Face Caps</Td>
-                  <Td>Luggages & Bags</Td>
-                </Tr>
-                <Tr>
-                  <Td>Dresses</Td>
-                  <Td>Heels</Td>
-                  <Td>Kagol Cap</Td>
-                  <Td>Sunglasses</Td>
-                </Tr>
-                <Tr>
-                  <Td>Tops</Td>
-                  <Td>Flats</Td>
-                  <Td>Dresses</Td>
-                  <Td>Loafers</Td>
-                </Tr>
-                <Tr>
-                  <Td>Trousers</Td>
-                  <Td>Black Tie</Td>
-                  <Td>Dresses</Td>
-                  <Td>Loafers</Td>
-                </Tr>
-                <Tr>
-                  <Td>Hoodies & Sweatshirts</Td>
-                  <Td>Loafers</Td>
-                  <Td>Kagol Cap</Td>
-                  <Td>Sunglasses</Td>
-                </Tr>
-                <Tr>
-                  <Td>Skirts</Td>
-                  <Td>Loafers</Td>
-                </Tr>
-                <Tr>
-                  <Td>Jackets & Blazers</Td>
-                  
-                </Tr>
-                <Tr>
-                  <Td>Jumpsuits</Td>
-                  <Td>Loafers</Td>
-                  
-                </Tr>
-              </Tbody>
-              <Tfoot>
-               
-              </Tfoot>
-            </Table>
-            
+                  <Tr>
+                    <Td>Bespoke</Td>
+                    <Td>Heels</Td>
+                    <Td>Sunglasses</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Tops</Td>
+                    <Td>Flat</Td>
+                    <Td>Wristwatches</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Trousers</Td>
+                    <Td>Sneakers</Td>
+                    <Td>Bags</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Skirts</Td>
+                    <Td></Td>
+                    <Td>Purses</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Hoodies & Sweatshirts</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Jackets & Blazers</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Swim Wear</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Lounge Wear</Td>
+                  </Tr>
+                
+                </Tbody>
+              </Table>
+              
           </TableContainer>
         </MenuList>
       </Menu>

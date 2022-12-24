@@ -24,7 +24,7 @@ const Account = () => {
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
-          Account &nbsp; {isOpen ? <AiOutlineUp style={{display: 'inline-grid'}}/> : <AiOutlineDown  style={{display: 'inline-grid'}}/>}
+           {isOpen ? <AiOutlineUp style={{display: 'inline-grid'}}/> : <AiOutlineDown  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 
         <MenuList 

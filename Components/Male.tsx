@@ -19,6 +19,7 @@ import {
   Td,
   TableCaption,
   TableContainer,
+  useDisclosure
 } from '@chakra-ui/react'
 
 
@@ -26,6 +27,9 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 
 const Male = () => {
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return ( 
     <Box>
       <Menu>
@@ -38,6 +42,8 @@ const Male = () => {
           _hover={{ bg: 'gray.400' }}
           _expanded={{ bg: 'blue.400' }}
           _focus={{ boxShadow: 'outline' }}
+          onMouseLeave={onClose}
+          onMouseEnter={onOpen}
         >
           Male<ChevronDownIcon />
         </MenuButton>
@@ -46,9 +52,15 @@ const Male = () => {
           <TableContainer display='flex' p={2}>
             <Image src= '/milo.png' width={450} height={500} alt='can' />
 
-            <Table variant='simple'>
+            <Table variant='unstyled'>
               <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+
               <Thead>
+                <Tr >
+                  <Th></Th>
+                  <Th textAlign={'center'}>Male Fashion</Th>
+                </Tr>
+
                 <Tr>
                   <Th>Clothing</Th>
                   <Th>Foot Wear</Th>

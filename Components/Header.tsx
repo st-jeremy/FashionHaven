@@ -32,9 +32,9 @@ const Header = () => {
 
           <Search />
 
-          <Account />
-
           <Help />
+
+          <Account />
     
           <GiShoppingCart 
             style={{
