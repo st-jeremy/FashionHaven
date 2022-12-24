@@ -2,43 +2,44 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Box,
-  Divider,
-  Center,
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
   TableCaption,
   TableContainer,
+  useDisclosure
 } from '@chakra-ui/react'
 import Image from 'next/image';
 
-import { ChevronDownIcon } from '@chakra-ui/icons';
+
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 
 const Female = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return ( 
     <Box>
-      <Menu>
+      <Menu  isOpen={isOpen}>
         <MenuButton
           px={4}
           py={2}
           transition='all 0.2s'
           borderRadius='md'
-          borderWidth='1px'
+          border= 'none'
+          width={150}
+          // borderWidth='1px'
           _hover={{ bg: 'gray.400' }}
           _expanded={{ bg: 'blue.400' }}
           _focus={{ boxShadow: 'outline' }}
+          onMouseLeave={onClose}
+          onMouseEnter={onOpen}
         >
-          Female <ChevronDownIcon />
+          Female &nbsp;
+          {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 
         <MenuList>
