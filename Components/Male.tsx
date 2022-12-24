@@ -41,15 +41,15 @@ const Male = () => {
     <Box>
       <Menu isOpen={isOpen}>
         <MenuButton
-          px={4}
+          px={3}
           py={2}
           transition='all 0.2s'
           borderRadius='md'
           border= 'none'
           width={120}
           // borderWidth='1px'
-          _hover={{ bg: 'gray.400' }}
-          _expanded={{ bg: 'blue.400' }}
+          _hover={{ bg: 'black' }}
+          _expanded={{ bg: 'black', color: 'white' }}
           _focus={{ boxShadow: 'outline' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
@@ -63,9 +63,9 @@ const Male = () => {
           onMouseEnter={onOpen}
         >
           <TableContainer display='flex' p={2}>
-            <Image src= '/milo.png' width={450} height={500} alt='can' />
+            <Image src= '/milo.png' width={300} height={300} alt='can' />
 
-            <Table variant='unstyled'>
+            <Table variant='unstyled' size="sm">
               <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
 
               <Thead>

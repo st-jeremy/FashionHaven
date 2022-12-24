@@ -33,7 +33,7 @@ const Female = () => {
           width={150}
           // borderWidth='1px'
           _hover={{ bg: 'gray.400' }}
-          _expanded={{ bg: 'blue.400' }}
+          _expanded={{ bg: 'black', color: 'white' }}
           _focus={{ boxShadow: 'outline' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
@@ -46,10 +46,11 @@ const Female = () => {
           <TableContainer display='flex' p={5}>
               <Image src= '/milo.png' width={450} height={500} alt='can' />
 
-              <Table variant='unstyled'>
+              <Table variant='unstyled' size='sm'>
                 <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+                
                 <Thead>
-                  <Tr >
+                  <Tr>
                     <Th></Th>
                     <Th>Female Fashion</Th>
                   </Tr>
