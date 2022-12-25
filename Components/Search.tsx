@@ -10,10 +10,10 @@ const Search = () => {
         id="search_field" 
         placeholder="Search products"
         marginLeft={2} 
-        maxWidth={600} 
+        width={450} 
         marginRight={2}
       />
-      <SearchIcon style={{position:'absolute', top:'15', right: '100'}}/>
+      <SearchIcon style={{position:'absolute', top:'13', right: '170'}}/>
     </FormControl>
    );
 }

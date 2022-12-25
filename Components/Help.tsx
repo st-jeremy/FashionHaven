@@ -8,7 +8,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react'
 import { BiHelpCircle } from 'react-icons/bi'
-import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai'
+import { ChevronUpIcon, ChevronDownIcon } from '@chakra-ui/icons'
 
 const HelpCenter = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,18 +19,23 @@ const HelpCenter = () => {
         <MenuButton 
           as={Button} 
           leftIcon={<BiHelpCircle />}
-          bgColor='blue.50'
-          _hover={{bgColor:'blue'}}
+          bgColor='black'
+          border= 'none'
+          width={120}
+          _hover={{ bg: 'black' }}
+          _expanded={{ bg: 'black', color: 'white' }}
+          _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
           Help
-          &nbsp; {isOpen ? <AiOutlineUp style={{display: 'inline-grid'}}/> : <AiOutlineDown  style={{display: 'inline-grid'}}/>}
+          &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
         
         <MenuList 
           onMouseLeave={onClose} 
           onMouseEnter={onOpen}
+          color={'black'}
         >
           <MenuItem>Help Center</MenuItem>
           <MenuItem>Customer Care</MenuItem>

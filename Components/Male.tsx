@@ -47,10 +47,9 @@ const Male = () => {
           borderRadius='md'
           border= 'none'
           width={120}
-          // borderWidth='1px'
           _hover={{ bg: 'black' }}
           _expanded={{ bg: 'black', color: 'white' }}
-          _focus={{ boxShadow: 'outline' }}
+          _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
         >
@@ -61,24 +60,21 @@ const Male = () => {
         <MenuList
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
+          zIndex={1000}
+          color={'black'}
         >
           <TableContainer display='flex' p={2}>
             <Image src= '/milo.png' width={300} height={300} alt='can' />
 
             <Table variant='unstyled' size="sm">
-              <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+              <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Male Fashion</TableCaption>
 
               <Thead>
-                <Tr >
-                  <Th></Th>
-                  <Th textAlign={'center'}>Male Fashion</Th>
-                </Tr>
-
                 <Tr>
-                  <Th onClick={ClothingClick}>Clothing</Th>
-                  <Th onClick={AccessoriesClick}>Foot Wear</Th>
-                  <Th onClick={HeadWearClick}>Head Wear</Th>
-                  <Th onClick={FootWearClick}>Accessories</Th>
+                  <Th onClick={ClothingClick} fontSize={'13pt'}>Clothing</Th>
+                  <Th onClick={AccessoriesClick} fontSize={'13pt'}>Foot Wear</Th>
+                  <Th onClick={HeadWearClick} fontSize={'13pt'}>Head Wear</Th>
+                  <Th onClick={FootWearClick} fontSize={'13pt'}>Accessories</Th>
                 </Tr>
               </Thead>
 
@@ -105,9 +101,8 @@ const Male = () => {
                   <Td>Black Tie</Td>
                 </Tr>
               </Tbody>
-              <Tfoot>
-               
-              </Tfoot>
+
+              <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
             </Table>
             
           </TableContainer>

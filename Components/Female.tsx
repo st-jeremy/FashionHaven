@@ -14,12 +14,26 @@ import {
   useDisclosure
 } from '@chakra-ui/react'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 
 const Female = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+  const ClothingClick =() =>{
+    router.push('./Categories/Clothing')
+  };
+  const AccessoriesClick =() =>{
+    router.push('./Categories/Accessories')
+  };
+  const FootWearClick =() =>{
+    router.push('./Categories/FootWear')
+  };
+  const HeadWearClick =() =>{
+    router.push('./Categories/HeadWear')
+  }
 
   return ( 
     <Box>
@@ -34,7 +48,7 @@ const Female = () => {
           // borderWidth='1px'
           _hover={{ bg: 'gray.400' }}
           _expanded={{ bg: 'black', color: 'white' }}
-          _focus={{ boxShadow: 'outline' }}
+          _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
         >
@@ -42,22 +56,24 @@ const Female = () => {
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 
-        <MenuList>
+        <MenuList
+          onMouseLeave={onClose}
+          onMouseEnter={onOpen}
+          zIndex={1000}
+          color={'black'}
+        >
           <TableContainer display='flex' p={5}>
               <Image src= '/milo.png' width={450} height={500} alt='can' />
 
               <Table variant='unstyled' size='sm'>
-                <TableCaption color={'red'}>Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+                <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Female Fashion</TableCaption>
                 
-                <Thead>
+                <Thead >
                   <Tr>
-                    <Th></Th>
-                    <Th>Female Fashion</Th>
-                  </Tr>
-                  <Tr>
-                    <Th>Clothing</Th>
-                    <Th>Foot Wear</Th>
-                    <Th>Accessories</Th>
+                    <Th onClick={ClothingClick} fontSize={'13pt'}>Clothing</Th>
+                    <Th onClick={AccessoriesClick} fontSize={'13pt'}>Foot Wear</Th>
+                    <Th onClick={HeadWearClick} fontSize={'13pt'}>Head Wear</Th>
+                    <Th onClick={FootWearClick} fontSize={'13pt'}>Accessories</Th>
                   </Tr>
                 </Thead>
 
@@ -66,20 +82,24 @@ const Female = () => {
                   <Tr>
                     <Td>Bespoke</Td>
                     <Td>Heels</Td>
+                    <Td>Hats</Td>
                     <Td>Sunglasses</Td>
                   </Tr>
                   <Tr>
                     <Td>Tops</Td>
                     <Td>Flat</Td>
+                    <Td>Scarfs</Td>
                     <Td>Wristwatches</Td>
                   </Tr>
                   <Tr>
                     <Td>Trousers</Td>
                     <Td>Sneakers</Td>
+                    <Td></Td>
                     <Td>Bags</Td>
                   </Tr>
                   <Tr>
                     <Td>Skirts</Td>
+                    <Td></Td>
                     <Td></Td>
                     <Td>Purses</Td>
                   </Tr>
@@ -97,6 +117,8 @@ const Female = () => {
                   </Tr>
                 
                 </Tbody>
+
+                <TableCaption color={'red'} >Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
               </Table>
               
           </TableContainer>

@@ -23,7 +23,7 @@ const Header = () => {
       <Box>
         <Heading fontSize={15} bgColor={'blackAlpha.100'} textAlign='center' p={2}>Welcome to Fashion Haven. Shop now!</Heading>
 
-        <Box display='flex' bgColor= 'white' p='1rem 2rem' >
+        <Box display='flex' bgColor= 'black' p='1rem 2rem' color={'white'}>
           <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width='550px'>Fashion Haven<sup>®</sup></Heading>
 
           <Male />
