@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Box display={'flex'} padding={10}>
+        <Box display={'flex'} paddingTop={10}>
           <Categories />
 
           <Slideshow />

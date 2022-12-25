@@ -25,11 +25,12 @@ const Slideshow = () => {
   return (
     <Box 
       // className="slide-container"
-      width={500}
+      width={'70vw'}
+      margin={'auto'}
     >
       <Zoom {...zoomOutProperties}>
         {images.map((each, index) => (
-          <Image key={index} width={500} height={500} src={each} alt='slide show'/>
+          <Image key={index} width={500} height={200} src={each} alt='slide show'/>
         ))}
       </Zoom>
     </Box>
