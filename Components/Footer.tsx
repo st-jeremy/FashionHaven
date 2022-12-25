@@ -5,6 +5,7 @@ import { BsFillPeopleFill, BsCreditCard2Back } from 'react-icons/bs'
 import { AiOutlineSafety } from 'react-icons/ai'
 import { useRouter } from "next/router";
 import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
+import import Link from 'next/link';
 
 const Footer = () => {
   const router = useRouter();
@@ -65,6 +66,14 @@ const Footer = () => {
             <SlSocialFacebook />
           </Box>
         </Box>
+      </Box>
+      <Box>
+        <Heading size={'md'}> Browse by Categories</Heading>
+
+        <Link href='/Categories/Clothing'>Clothing</Link>
+        <Link href='/Categories/FootWear'>FootWear</Link>
+        <Link href='/Categories/HeadWear'>HeadWear</Link>
+        <Link href='/Categories/Accessories'>Accessories</Link>
       </Box>
 
       <Box bgColor={'black'} color={'white'} textAlign={'center'}>

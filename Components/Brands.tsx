@@ -16,31 +16,59 @@ const Brands = () => {
       <List spacing={3}>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Bedspoke
+          Nike
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Suit
+          Louis Vuitton 
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Blazers and Jackets
+          Hermes
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Hoodie and Sweatshirt
+          Gucci
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Skirts
+          Zalando
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Trousers
+          Adidas
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
-          Swim and Lounge Wears
+          Zara
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Cartier
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Moncler
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Chanel
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Rolex
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Prada
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Burberry
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color='green.500' />
+          Polo Ralph Lauren
         </ListItem>
       </List>
       
