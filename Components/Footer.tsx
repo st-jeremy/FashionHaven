@@ -1,11 +1,11 @@
-import { Box, Heading, Input, InputGroup, InputRightAddon } from "@chakra-ui/react";
+import { Box, Heading, Input, InputGroup, InputRightAddon, List, ListItem } from "@chakra-ui/react";
 import { BiDollar } from 'react-icons/bi'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { BsFillPeopleFill, BsCreditCard2Back } from 'react-icons/bs'
 import { AiOutlineSafety } from 'react-icons/ai'
 import { useRouter } from "next/router";
 import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
-import import Link from 'next/link';
+import Link from 'next/link';
 
 const Footer = () => {
   const router = useRouter();
@@ -44,7 +44,7 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box display={'flex'} p={'5rem 3rem 10rem'} bgColor={'blackAlpha.900'}  color={'white'}>
+      <Box display={'flex'} p={'5rem 3rem 6rem'} bgColor={'blackAlpha.900'}  color={'white'}>
         <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width={'fit-content'}>Fashion Haven<sup>®</sup></Heading>
 
         <Box position={'absolute'} right={'25%'}>
@@ -67,18 +67,29 @@ const Footer = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
-        <Heading size={'md'}> Browse by Categories</Heading>
 
-        <Link href='/Categories/Clothing'>Clothing</Link>
-        <Link href='/Categories/FootWear'>FootWear</Link>
-        <Link href='/Categories/HeadWear'>HeadWear</Link>
-        <Link href='/Categories/Accessories'>Accessories</Link>
+      <Box bgColor={'blackAlpha.900'} color={'white'} pl={'48.5'} pb={'3'}>
+        <Heading size={'md'}> Browse by Categories</Heading>
+        <br />
+        <List  spacing={2}>
+          <ListItem>
+            <Link href='/Categories/Clothing'>Clothing</Link>
+          </ListItem>
+          <ListItem>
+            <Link href='/Categories/FootWear'>FootWear</Link>
+          </ListItem>
+          <ListItem>
+            <Link href='/Categories/HeadWear'>HeadWear</Link>
+          </ListItem>
+          <ListItem>
+            <Link href='/Categories/Accessories'>Accessories</Link>
+          </ListItem>
+        </List>
       </Box>
 
       <Box bgColor={'black'} color={'white'} textAlign={'center'}>
-          2022. All Rights Reserved.
-        </Box>
+        All Rights Reserved. Copyright © 2022
+      </Box>
     </Box>
    );
 }

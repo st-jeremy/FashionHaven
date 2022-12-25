@@ -16,7 +16,7 @@ import Link from 'next/link';
 
 import { ProductList } from '../../pages/ProductList';
 
-const MultiCarousel = () => {
+const LimitedStock = () => {
 
   const responsive = {
     superLargeDesktop: {
@@ -39,8 +39,8 @@ const MultiCarousel = () => {
   };
 
   return ( 
-    <Box   bgColor={'blackAlpha.700'} p={5}>
-      <Heading>Top Selling</Heading>
+    <Box   bgColor={'blackAlpha.600'} p={5} >
+      <Heading bgColor={'red'} pl={2}>Limited Stock</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -89,7 +89,7 @@ const MultiCarousel = () => {
    );
 }
  
-export default MultiCarousel;
+export default LimitedStock;
 
 
 
