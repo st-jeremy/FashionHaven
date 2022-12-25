@@ -14,7 +14,7 @@ const HelpCenter = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return ( 
-    <Box marginLeft={0}>
+    <Box marginLeft={'4.5'}>
       <Menu isOpen={isOpen}>
         <MenuButton 
           as={Button} 

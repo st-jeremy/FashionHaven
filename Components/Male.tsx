@@ -38,7 +38,7 @@ const Male = () => {
   }
 
   return ( 
-    <Box>
+    <Box ml={'9'}>
       <Menu isOpen={isOpen}>
         <MenuButton
           px={3}
@@ -47,7 +47,7 @@ const Male = () => {
           borderRadius='md'
           border= 'none'
           width={120}
-          _hover={{ bg: 'black' }}
+          _hover={{ bg: 'white' }}
           _expanded={{ bg: 'black', color: 'white' }}
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}

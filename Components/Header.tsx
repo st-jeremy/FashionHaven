@@ -1,12 +1,11 @@
 import Search from './Search';
-import { Box, Heading } from '@chakra-ui/react';
 import Account from './Account';
 import Help from './Help';
 import { GiShoppingCart } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 import Female from './Female';
 import Male from './Male';
-
+import { Icon, AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 
 const Header = () => {
 
@@ -15,7 +14,7 @@ const Header = () => {
     router.push('/')
   }
   const handleCartClick =() =>{
-    router.push('/')
+    router.push('/Cart')
   }
 
   return ( 
@@ -24,7 +23,7 @@ const Header = () => {
         <Heading fontSize={15} bgColor={'blackAlpha.100'} textAlign='center' p={2}>Welcome to Fashion Haven. Shop now!</Heading>
 
         <Box display='flex' bgColor= 'black' p='1rem 2rem' color={'white'}>
-          <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width='550px'>Fashion Haven<sup>®</sup></Heading>
+          <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width={'fit-content'}>Fashion Haven<sup>®</sup></Heading>
 
           <Male />
 
@@ -36,15 +35,19 @@ const Header = () => {
 
           <Account />
     
-          <GiShoppingCart 
+          <Avatar icon={<GiShoppingCart  fontSize='2.5rem'/>}
             style={{
               width: '70px', 
               height: '50px', 
               cursor: 'pointer',
-              marginLeft: '5px'
+              marginLeft: '85px'
             }} 
+            bgColor={'black'}
             onClick={handleCartClick}
-          />
+          >
+            <AvatarBadge boxSize='1.1em' bg='white' position={'absolute'} top={'0'}/>
+         
+          </Avatar>
         </Box>
 
       </Box>

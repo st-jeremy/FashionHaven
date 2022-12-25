@@ -19,8 +19,8 @@ const Account = () => {
         <MenuButton 
           as={Button}
           leftIcon={<BiUser />} 
-          bgColor='blue.50'
-          _hover={{bgColor:'blue'}}
+          bgColor='black'
+          _hover={{bgColor:'white'}}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
@@ -30,6 +30,7 @@ const Account = () => {
         <MenuList 
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
+          color={'black'}
         >
           <MenuItem>Sign In</MenuItem>
           <MenuItem>Sign Up</MenuItem>
