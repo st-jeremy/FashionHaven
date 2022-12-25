@@ -23,4 +23,60 @@
     "category": "Male",
     "sub_Category": "HeadWear"
   },
+  {
+    "id": 4,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 5,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 6,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 7,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 8,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 9,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
+  {
+    "id": 10,
+    "name": "Lfyhghjaces",
+    "image": "/public/milo.png",
+    "price": "7,000",
+    "category": "Male",
+    "sub_Category": "HeadWear"
+  },
 ]

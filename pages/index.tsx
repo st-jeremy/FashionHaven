@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css';
 import Slideshow from '../Components/Slideshow';
 import Categories from '../Components/Categories';
 import { Box } from '@chakra-ui/react';
+import Carousel from 'react-multi-carousel';
+import MultiCarousel from '../Components/MultiCarousel/MultiCarousel';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,8 +23,11 @@ export default function Home() {
       <main>
         <Box display={'flex'} padding={10}>
           <Categories />
+
           <Slideshow />
         </Box>
+
+        <MultiCarousel />
       </main>
     </>
   )
