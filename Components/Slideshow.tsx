@@ -25,8 +25,8 @@ const Slideshow = () => {
   return (
     <Box 
       // className="slide-container"
-      width={'70vw'}
-      margin={'auto'}
+      width={'57vw'}
+      margin={10}
     >
       <Zoom {...zoomOutProperties}>
         {images.map((each, index) => (

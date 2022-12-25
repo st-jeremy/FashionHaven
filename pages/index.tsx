@@ -7,6 +7,7 @@ import Categories from '../Components/Categories';
 import { Box } from '@chakra-ui/react';
 import Carousel from 'react-multi-carousel';
 import MultiCarousel from '../Components/MultiCarousel/MultiCarousel';
+import Brands from '../Components/Brands';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,8 @@ export default function Home() {
           <Categories />
 
           <Slideshow />
+
+          <Brands />
         </Box>
 
         <MultiCarousel />
