@@ -40,7 +40,7 @@ const LimitedStock = () => {
 
   return ( 
     <Box   bgColor={'blackAlpha.100'} p={5} >
-      <Heading bgColor={'red.700'} pl={2}>Limited Stock</Heading>
+      <Heading bgColor={'red.700'} pl={2} color={'white'}>Limited Stock</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}

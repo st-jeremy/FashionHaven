@@ -40,7 +40,7 @@ const MultiCarousel = () => {
 
   return ( 
     <Box   bgColor={'white'} p={5} mt={5}>
-      <Heading bg={'red.700'}>Top Selling</Heading>
+      <Heading bg={'red.700'} color={'white'}>Top Selling</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}

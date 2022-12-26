@@ -100,31 +100,31 @@ const Categories = () => {
             <AccordionPanel pb={4} pl={6}  color={'white'}>
               <List spacing={2}>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Heels
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Flats
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Sneakers
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Slides
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Loafers
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Mules
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  <ListIcon as={MdCheckCircle} color='red.700' />
                   Black Tie
                 </ListItem>
               </List>
