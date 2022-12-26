@@ -39,8 +39,8 @@ const LimitedStock = () => {
   };
 
   return ( 
-    <Box   bgColor={'blackAlpha.600'} p={5} >
-      <Heading bgColor={'red'} pl={2}>Limited Stock</Heading>
+    <Box   bgColor={'blackAlpha.100'} p={5} >
+      <Heading bgColor={'red.700'} pl={2}>Limited Stock</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -59,8 +59,8 @@ const LimitedStock = () => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'}>
-                <Card m={5} width={250} height={490}>
+              <Box key={product.id} borderRadius={'md'} >
+                <Card m={5} width={250} height={490} mb={35}>
 
                   <Image src={product.image} alt={product.name} width={700} height={300} />
 
@@ -71,15 +71,14 @@ const LimitedStock = () => {
                     <Text color='blue.600' fontSize='xl'>
                       <b>${product.price}</b>
                     </Text>
-                    <br />
-                    <s>${product.price}</s>
-                    
 
                     <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
                       Add to cart
                     </Button>
                   </CardFooter>
+                  {/* <s>${product.price + 200}</s> */}
                 </Card>
+
               </Box>
             )
           })

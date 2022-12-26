@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -24,7 +25,8 @@ const Account = () => {
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
         >
-           {isOpen ? <AiOutlineUp style={{display: 'inline-grid'}}/> : <AiOutlineDown  style={{display: 'inline-grid'}}/>}
+          Account
+          &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 
         <MenuList 

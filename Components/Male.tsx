@@ -63,10 +63,10 @@ const Male = () => {
           zIndex={1000}
           color={'black'}
         >
-          <TableContainer display='flex' p={2}>
-            <Image src= '/milo.png' width={300} height={300} alt='can' />
+          <TableContainer display='flex' p={3}>
+            <Image src= '/download.jpeg' width={300} height={300} alt='can' />
 
-            <Table variant='unstyled' size="sm">
+            <Table variant='unstyled' size="sm" ml={3}>
               <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Male Fashion</TableCaption>
 
               <Thead>

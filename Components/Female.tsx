@@ -63,9 +63,9 @@ const Female = () => {
           color={'black'}
         >
           <TableContainer display='flex' p={5}>
-              <Image src= '/milo.png' width={450} height={500} alt='can' />
+              <Image src= '/download.jpeg' width={450} height={500} alt='can' />
 
-              <Table variant='unstyled' size='sm'>
+              <Table variant='unstyled' size='sm' ml={3}>
                 <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Female Fashion</TableCaption>
                 
                 <Thead >

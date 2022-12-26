@@ -39,8 +39,8 @@ const MultiCarousel = () => {
   };
 
   return ( 
-    <Box   bgColor={'blackAlpha.700'} p={5}>
-      <Heading>Top Selling</Heading>
+    <Box   bgColor={'white'} p={5} mt={5}>
+      <Heading bg={'red.700'}>Top Selling</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -60,22 +60,18 @@ const MultiCarousel = () => {
           ProductList && ProductList.map(product =>{
             return(
               <Box key={product.id} borderRadius={'md'}>
-                <Card m={5}  height={300}>
-                  
-                  <CardBody>
-                    <Image src={product.image} alt={product.name} width={200} height={100} />
-                    <Stack mt='6' spacing='3'>
-                    </Stack>
-                  </CardBody>
+                <Card m={5} width={250} height={490}  mb={35}>
+                  <Image src={product.image} alt={product.name} width={700} height={300} />
 
                   <Divider />
+
                   <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
                   <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
                     <Text color='blue.600' fontSize='xl'>
                       <b>${product.price}</b>
                     </Text>
 
-                    <Button colorScheme='red' position={'absolute'} right={'2.5'} fontSize='l'>
+                    <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
                       Add to cart
                     </Button>
                   </CardFooter>
