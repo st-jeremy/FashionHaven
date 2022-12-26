@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Box display={'flex'} paddingTop={10} bgColor={'blackAlpha.300'}>
+        <Box display={'flex'} paddingTop={4} bgColor={'blackAlpha.300'}>
           <Categories />
 
           <Slideshow />

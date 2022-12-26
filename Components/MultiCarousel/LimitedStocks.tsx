@@ -63,7 +63,7 @@ const LimitedStock = () => {
                 <Card m={5}  height={300}>
                   
                   <CardBody>
-                    <Image src={product.image} alt={product.name} width={200} height={100} />
+                    <Image src={product.image} alt={product.name} width={'fit-content'} height={40} />
                     <Stack mt='6' spacing='3'>
                     </Stack>
                   </CardBody>
