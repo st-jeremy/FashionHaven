@@ -1,6 +1,13 @@
 import ProductCard from '../Components/ProductCard';
 import { getProducts } from './api/Products/index';
 
+interface product {
+  id: number;
+  product: string;
+  category: string;
+  image: string;
+  price: number;
+}
 
 const ShopPage = ({ products }) => {
   return (

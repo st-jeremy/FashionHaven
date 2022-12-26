@@ -1,14 +1,13 @@
 import { useRouter } from 'next/router';
 import ProductCard from '../../Components/ProductCard';
-import styles from '../../styles/ShopPage.module.css';
 import { getProductsByCategory } from '../api/Products/[category]';
 
 const CategoryPage = ({ products }) => {
   const router = useRouter();
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Results for {router.query.category}</h1>
-      <div className={styles.cards}>
+    <div>
+      <h1>Results for {router.query.category}</h1>
+      <div>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
