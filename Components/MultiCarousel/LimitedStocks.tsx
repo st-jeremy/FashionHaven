@@ -60,22 +60,22 @@ const LimitedStock = () => {
           ProductList && ProductList.map(product =>{
             return(
               <Box key={product.id} borderRadius={'md'}>
-                <Card m={5}  height={300}>
-                  
-                  <CardBody>
-                    <Image src={product.image} alt={product.name} width={'fit-content'} height={40} />
-                    <Stack mt='6' spacing='3'>
-                    </Stack>
-                  </CardBody>
+                <Card m={5} width={250} height={490}>
+
+                  <Image src={product.image} alt={product.name} width={700} height={300} />
 
                   <Divider />
+
                   <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
                   <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
                     <Text color='blue.600' fontSize='xl'>
                       <b>${product.price}</b>
                     </Text>
+                    <br />
+                    <s>${product.price}</s>
+                    
 
-                    <Button colorScheme='red' position={'absolute'} right={'2.5'} fontSize='l'>
+                    <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
                       Add to cart
                     </Button>
                   </CardFooter>
