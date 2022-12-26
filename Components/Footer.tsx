@@ -88,7 +88,7 @@ const Footer = () => {
       </Box>
 
       <Box bgColor={'black'} color={'white'} textAlign={'center'}>
-        All Rights Reserved. Copyright © 2022
+        All Rights Reserved. Copyright © {new Date().getFullYear()}
       </Box>
     </Box>
    );
