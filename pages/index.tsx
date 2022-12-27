@@ -32,8 +32,6 @@ export default function Home() {
           <Brands />
         </Box>
 
-        <Link href='/Shop'>All Products</Link>
-
         <MultiCarousel />
 
         <LimitedStock />

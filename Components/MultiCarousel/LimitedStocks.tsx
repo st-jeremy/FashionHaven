@@ -40,7 +40,12 @@ const LimitedStock = () => {
 
   return ( 
     <Box   bgColor={'blackAlpha.100'} p={5} >
-      <Heading bgColor={'red.700'} pl={2} color={'white'}>Limited Stock</Heading>
+      <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
+        <Heading pl={2} color={'white'}>All Stock</Heading>
+        <Link href='/Shop'>
+          <Button  bgColor={'red.700'} position={'absolute'} right={'7'} p={1}>View All</Button>
+        </Link>
+      </Box>
       <Carousel 
         responsive={responsive}
         swipeable={true}
