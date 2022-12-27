@@ -1,7 +1,7 @@
 import ProductCard from '../Components/ProductCard';
 import { getProducts } from './api/Products/index';
 import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 
 interface product {
   id: number;
@@ -14,7 +14,7 @@ interface product {
 const ShopPage = ({ products }) => {
   return (
     <Box>
-      <h1>All Results</h1>
+      <Heading>All Results</Heading>
 
       <Link href='/'>Home</Link>
 
