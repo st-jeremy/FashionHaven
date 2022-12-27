@@ -1,9 +1,11 @@
 import ProductCard from '../Components/ProductCard';
 import { getProducts } from './api/Products/index';
+import Link from 'next/link';
+import { Box } from '@chakra-ui/react';
 
 interface product {
   id: number;
-  product: string;
+  name: string;
   category: string;
   image: string;
   price: number;
@@ -11,15 +13,17 @@ interface product {
 
 const ShopPage = ({ products }) => {
   return (
-    <div>
+    <Box>
       <h1>All Results</h1>
+
+      <Link href='/'>Home</Link>
 
       <div>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </div>
+    </Box>
   );
 };
 

@@ -216,6 +216,9 @@ const Categories = () => {
     
     <Box display={'flex'} flexDirection={'column'} width={'fit-content'} bgColor={'blackAlpha.900'} ml={3} p={3}>
       <CategoryCard name="Clothing" />
+      <CategoryCard name="HeadWear" />
+      <CategoryCard name="FootWear" /> 
+      <CategoryCard name="Accessories" />
     </Box>
    );
 }

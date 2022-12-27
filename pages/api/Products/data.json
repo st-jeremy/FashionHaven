@@ -5,7 +5,7 @@
   "image": "/download.jpeg",
   "price": "1,000",
   "category": "Male",
-  "sub_Category": "Female"
+  "sub_Category": "Clothing"
 },
 {
   "id": 2,
@@ -37,14 +37,14 @@
   "image": "/download.jpeg",
   "price": "7,000",
   "category": "Male",
-  "sub_Category": "HeadWear"
+  "sub_Category": "Accessories"
 },
 {
   "id": 6,
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7,000",
-  "category": "Male",
+  "category": "Female",
   "sub_Category": "HeadWear"
 },
 {
@@ -53,7 +53,7 @@
   "image": "/download.jpeg",
   "price": "7,000",
   "category": "Male",
-  "sub_Category": "HeadWear"
+  "sub_Category": "Accessories"
 },
 {
   "id": 8,
@@ -69,7 +69,7 @@
   "image": "/milo.png",
   "price": "7,000",
   "category": "Male",
-  "sub_Category": "HeadWear"
+  "sub_Category": "FootWear"
 },
 {
   "id": 10,
@@ -77,6 +77,6 @@
   "image": "/milo.png",
   "price": "7,000",
   "category": "Male",
-  "sub_Category": "HeadWear"
-},
+  "sub_Category": "FootWear"
+}
 ]
