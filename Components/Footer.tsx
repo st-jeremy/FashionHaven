@@ -14,7 +14,7 @@ const Footer = () => {
   }
 
   return ( 
-    <Box>
+    <Box >
       <Box display={'flex'} textAlign={'center'} bgColor={'blackAlpha.400'} p={5} mt={20}>
         <Box >
           <BiDollar style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
@@ -87,7 +87,7 @@ const Footer = () => {
         </List>
       </Box> */}
 
-      <Box bgColor={'black'} color={'white'} textAlign={'center'}>
+      <Box bgColor={'black'} color={'white'} textAlign={'center'} pt={10}>
         All Rights Reserved. Copyright © {new Date().getFullYear()}
       </Box>
     </Box>
