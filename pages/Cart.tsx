@@ -13,7 +13,6 @@
 import Image from 'next/image';
 // Importing hooks from react-redux
 import { useSelector, useDispatch } from 'react-redux';
-import styles from '../styles/CartPage.module.css';
 import {
   incrementQuantity,
   decrementQuantity,
@@ -23,12 +22,10 @@ import {
 type cart ={
   cart: any,
 }
-const CartPage = () => {
+const Cart = () => {
 
-  // Extracting cart state from redux store 
   const cart = useSelector((state) => state.cart);
 
-  // Reference to the dispatch function from redux store
   const dispatch = useDispatch();
 
   const getTotalPrice = () => {
@@ -39,12 +36,12 @@ const CartPage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       {cart.length === 0 ? (
         <h1>Your Cart is Empty!</h1>
       ) : (
         <>
-          <div className={styles.header}>
+          <div>
             <div>Image</div>
             <div>Product</div>
             <div>Price</div>
@@ -71,4 +68,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+export default Cart;
