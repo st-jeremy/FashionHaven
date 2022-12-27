@@ -18,6 +18,7 @@ import {
   decrementQuantity,
   removeFromCart,
 } from '../redux/cart.slice';
+import { Box } from '@chakra-ui/react';
 
 type cart ={
   cart: any,
@@ -40,29 +41,33 @@ const Cart = () => {
       {cart.length === 0 ? (
         <h1>Your Cart is Empty!</h1>
       ) : (
-        <>
-          <div>
-            <div>Image</div>
-            <div>Product</div>
-            <div>Price</div>
-            <div>Quantity</div>
-            <div>Actions</div>
-            <div>Total Price</div>
-          </div>
+        <Box  >
+         
           {cart.map((item) => (
-            <div key={item.id}>
-              <div>
+            <Box key={item.id} display={'flex'}>
+              <Box>
                 <Image src={item.image} height="90" width="65" alt='cart'/>
-              </div>
-              <p>{item.product}</p>
+              </Box>
+              <p>{item.name}</p>
               <p>$ {item.price}</p>
               <p>{item.quantity}</p>
-              <div></div>
+
+              <button onClick={() => dispatch(incrementQuantity(item.id))}>
+                  +
+                </button>
+                <button onClick={() => dispatch(decrementQuantity(item.id))}>
+                  -
+                </button>
+                <button onClick={() => dispatch(removeFromCart(item.id))}>
+                  x
+                </button>
+              
+              
               <p>$ {item.quantity * item.price}</p>
-            </div>
+            </Box>
           ))}
           <h2>Grand Total: $ {getTotalPrice()}</h2>
-        </>
+        </Box>
       )}
     </div>
   );
