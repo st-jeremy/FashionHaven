@@ -20,6 +20,9 @@ import {
   removeFromCart,
 } from '../redux/cart.slice';
 
+type cart ={
+  cart: any,
+}
 const CartPage = () => {
 
   // Extracting cart state from redux store 

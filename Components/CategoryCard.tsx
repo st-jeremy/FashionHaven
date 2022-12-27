@@ -41,7 +41,8 @@ const CategoryCard = ({ name }) => {
                 // leftIcon={ <GiTravelDress />}
                 variant='solid'
               >
-                <Link href={`/category/${name.toLowerCase()}`}>{name}</Link>
+                <Link href={`/category/${name}`}>{name}</Link>
+                {/* <Link href={`/category/${name.toLowerCase()}`}>{name}</Link> */}
                 &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 
                 <AccordionIcon  style={{position:'absolute', right: '10'}}/>
               </Button>

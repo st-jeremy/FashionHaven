@@ -68,7 +68,7 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box bgColor={'blackAlpha.900'} color={'white'} pl={'48.5'} pb={'3'}>
+      {/* <Box bgColor={'blackAlpha.900'} color={'white'} pl={'48.5'} pb={'3'}>
         <Heading size={'md'}> Browse by Categories</Heading>
         <br />
         <List  spacing={2}>
@@ -85,7 +85,7 @@ const Footer = () => {
             <Link href='/Categories/Accessories'>Accessories</Link>
           </ListItem>
         </List>
-      </Box>
+      </Box> */}
 
       <Box bgColor={'black'} color={'white'} textAlign={'center'}>
         All Rights Reserved. Copyright © {new Date().getFullYear()}
