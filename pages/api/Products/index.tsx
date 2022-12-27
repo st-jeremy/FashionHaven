@@ -1,5 +1,14 @@
 import data from './data.json';
 
+type data = {
+  id: number,
+  product: string,
+  category: string,
+  image: string,
+  price: number
+}
+
+
 export function getProducts() {
   return data;
 }
