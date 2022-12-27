@@ -7,6 +7,8 @@ import Female from './Female';
 import Male from './Male';
 import { Icon, AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 
+import { useSelector } from 'react-redux';
+
 const Header = () => {
 
   const router = useRouter();
@@ -16,6 +18,14 @@ const Header = () => {
   const handleCartClick =() =>{
     router.push('/Cart')
   }
+
+   // Selecting cart from global state
+   const cart = useSelector((state) => state.cart);
+
+   // Getting the count of items
+   const getItemsCount = () => {
+     return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
+   };
 
   return ( 
     <>
@@ -45,7 +55,7 @@ const Header = () => {
             bgColor={'black'}
             onClick={handleCartClick}
           >
-            <AvatarBadge boxSize='1.1em' bg='white' position={'absolute'} top={'0'}/>
+            <AvatarBadge boxSize='1.1em' bg='white' color={'black'} position={'absolute'} top={'0'}>{getItemsCount()} </AvatarBadge>
          
           </Avatar>
         </Box>
