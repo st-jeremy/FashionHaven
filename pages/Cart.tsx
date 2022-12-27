@@ -20,9 +20,7 @@ import {
 } from '../redux/cart.slice';
 import { Box } from '@chakra-ui/react';
 
-type cart ={
-  cart: any,
-}
+
 const Cart = () => {
 
   const cart = useSelector((state) => state.cart);
@@ -51,6 +49,7 @@ const Cart = () => {
               <p>{item.name}</p>
               <p>$ {item.price}</p>
               <p>{item.quantity}</p>
+              
 
               <button onClick={() => dispatch(incrementQuantity(item.id))}>
                   +
