@@ -6,7 +6,7 @@ const SubCategoryPage = ({ products }) => {
   const router = useRouter();
   return (
     <div>
-      <h1>Results for {router.query.category}</h1>
+      <h1>Results for {router.query.subCategory}</h1>
       <div>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
@@ -19,7 +19,7 @@ const SubCategoryPage = ({ products }) => {
 export default SubCategoryPage;
 
 export async function getServerSideProps(ctx) {
-  const category = ctx.query.category;
-  const products = await getProductsBySubCategory(category);
+  const subCategory = ctx.query.subCategory;
+  const products = await getProductsBySubCategory(subCategory);
   return { props: { products } };
 }
