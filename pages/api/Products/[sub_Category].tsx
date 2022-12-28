@@ -5,7 +5,6 @@ export function getProductsBySubCategory(sub_Category) {
   return products;
 }
 
-
 export default function handler(req, res) {
 
   if (req.method !== 'GET') {

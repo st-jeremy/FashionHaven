@@ -10,6 +10,7 @@ import MultiCarousel from '../Components/MultiCarousel/MultiCarousel';
 import Brands from '../Components/Brands';
 import LimitedStock from '../Components/MultiCarousel/LimitedStocks';
 import Link from 'next/link';
+import SubCategory from '../Components/SubCategory';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,8 @@ export default function Home() {
 
           <Brands />
         </Box>
+
+        <SubCategory />
 
         <MultiCarousel />
 

@@ -1,10 +1,5 @@
 import data from './data.json';
 
-// export function getProductsBySubCategory(sub_Category) {
-//   const products = data.filter((product) => product.sub_Category === sub_Category);
-//   return products;
-// }
-
 export function getProductsByCategory(category) {
   const products = data.filter((product) => product.category === category);
   return products;
