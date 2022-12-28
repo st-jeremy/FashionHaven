@@ -3,7 +3,7 @@ import Account from './Account';
 import Help from './Help';
 import { GiShoppingCart } from 'react-icons/gi';
 import { useRouter } from 'next/router';
-import Female from './Hamburger';
+import Hamburger from './Hamburger';
 import Male from './Male';
 import { Icon, AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 
@@ -38,10 +38,8 @@ const Header = () => {
 
         <Box display='flex' bgColor= 'black' p='1rem 2rem' color={'white'}>
           <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width={'fit-content'}>Fashion Haven<sup>®</sup></Heading>
-
-          {/* <Male /> */}
-
-          <Female />
+          
+          <Hamburger />
 
           <Search />
 

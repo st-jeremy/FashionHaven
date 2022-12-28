@@ -4,7 +4,7 @@
   "name": "Laces",
   "image": "/download.jpeg",
   "price": "1000",
-  "category": "Male",
+  "category": "Clothing",
   "sub_Category": "Clothing"
 },
 {
@@ -12,7 +12,7 @@
   "name": "Lashes",
   "image": "/download.jpeg",
   "price": "2000",
-  "category": "Female",
+  "category": "Clothing",
   "sub_Category": "Clothing"
 },
 {
@@ -20,7 +20,7 @@
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Male",
+  "category": "HeadWear",
   "sub_Category": "HeadWear"
 },
 {
@@ -28,7 +28,7 @@
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Male",
+  "category": "HeadWear",
   "sub_Category": "HeadWear"
 },
 {
@@ -36,7 +36,7 @@
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Male",
+  "category": "Accessories",
   "sub_Category": "Accessories"
 },
 {
@@ -44,15 +44,15 @@
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Female",
-  "sub_Category": "HeadWear"
+  "category": "Accessories",
+  "sub_Category": "Accessories"
 },
 {
   "id": 7,
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Male",
+  "category": "Accessories",
   "sub_Category": "Accessories"
 },
 {
@@ -60,7 +60,7 @@
   "name": "Lfyhghjaces",
   "image": "/download.jpeg",
   "price": "7000",
-  "category": "Male",
+  "category": "HeadWear",
   "sub_Category": "HeadWear"
 },
 {
@@ -68,7 +68,7 @@
   "name": "Lfyhghjaces",
   "image": "/milo.png",
   "price": "7000",
-  "category": "Male",
+  "category": "FootWear",
   "sub_Category": "FootWear"
 },
 {
@@ -76,7 +76,7 @@
   "name": "Lfyhghjaces",
   "image": "/milo.png",
   "price": "7000",
-  "category": "Male",
+  "category": "FootWear",
   "sub_Category": "FootWear"
 }
 ]
