@@ -12,11 +12,7 @@ import {
   ListIcon,
 } from "@chakra-ui/react";
 import Link from 'next/link';
-import Image from 'next/image';
-
-import {MdCheckCircle} from 'react-icons/md'
-import HeadWear from '../pages/Categories/HeadWear';
-import Clothing from '../pages/Categories/Clothing';
+import { MdCheckCircle } from 'react-icons/md'
 
 const CategoryCard = ({ name }) => {
   return ( 
@@ -39,6 +35,18 @@ const CategoryCard = ({ name }) => {
             </Button>
             </AccordionButton>
           </Heading>
+          <AccordionPanel pb={4} pl={6} color={'white'}>
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color='green.500' />
+                Male
+              </ListItem>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color='green.500' />
+                Female
+              </ListItem>
+              </List>
+            </AccordionPanel>
 
           </AccordionItem>
         </Accordion>

@@ -46,7 +46,6 @@ const Female = () => {
           borderRadius='md'
           border= 'none'
           width={100}
-          // borderWidth='1px'
           _hover={{ bg: 'gray.400' }}
           _expanded={{ bg: 'black', color: 'white' }}
           _focus={{ boxShadow: 'none' }}
@@ -67,7 +66,7 @@ const Female = () => {
               <Image src= '/download.jpeg' width={450} height={500} alt='can' />
 
               <Table variant='unstyled' size='sm' ml={3}>
-                <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Female Fashion</TableCaption>
+                <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Fashion Haven</TableCaption>
                 
                 <Thead >
                   <Tr>
