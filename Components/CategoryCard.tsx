@@ -18,7 +18,7 @@ const CategoryCard = ({ name }) => {
   return ( 
     <Box>
       <Accordion  
-        defaultIndex={[0]}  
+        // defaultIndex={[0]}  
         allowToggle 
       >
         <AccordionItem>
@@ -32,9 +32,11 @@ const CategoryCard = ({ name }) => {
               variant='solid'
             >
               <Link href={`/category/${name}`}>{name}</Link>
+              <AccordionIcon  style={{position:'absolute', right: '10'}}/>
             </Button>
             </AccordionButton>
           </Heading>
+
           <AccordionPanel pb={4} pl={6} color={'white'}>
             <List spacing={3}>
               <ListItem>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import ProductCard from '../../Components/ProductCard';
-import { getProductsBySubCategory } from '../api/Products/[category]';
+import { getProductsByCategory } from '../api/Products/[category]';
 
 const CategoryPage = ({ products }) => {
   const router = useRouter();
@@ -19,7 +19,7 @@ const CategoryPage = ({ products }) => {
 export default CategoryPage;
 
 export async function getServerSideProps(ctx) {
-  const sub_Category = ctx.query.sub_Category;
-  const products = await getProductsBySubCategory(sub_Category);
+  const category = ctx.query.category;
+  const products = await getProductsByCategory(category);
   return { props: { products } };
 }
