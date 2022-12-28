@@ -23,8 +23,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Box display={'flex'} paddingTop={4} bgColor={'blackAlpha.300'}>
+      <Box bgColor={'blackAlpha.300'} >
+        <Box display={'flex'} paddingTop={4} m={'auto'}>
           <Categories />
 
           <Slideshow />
@@ -35,7 +35,7 @@ export default function Home() {
         <MultiCarousel />
 
         <LimitedStock />
-      </main>
+      </Box>
     </>
   )
 }
