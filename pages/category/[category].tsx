@@ -6,7 +6,7 @@ const CategoryPage = ({ products }) => {
   const router = useRouter();
   return (
     <div>
-      <h1>Results for {router.query.sub_Category}</h1>
+      <h1>Results for {router.query.category}</h1>
       <div>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

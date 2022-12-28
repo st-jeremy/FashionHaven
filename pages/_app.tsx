@@ -9,13 +9,11 @@ import Footer from '../Components/Footer'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Box minHeight={'150vh'} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
-        <ChakraProvider>
-          <Header />
-            <Component {...pageProps} />
-          <Footer />
-        </ChakraProvider>
-      </Box>
+      <ChakraProvider>
+        <Header />
+          <Component {...pageProps} />
+        <Footer />
+      </ChakraProvider>
     </Provider>
   )
 }
