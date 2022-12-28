@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
@@ -44,7 +45,7 @@ const Female = () => {
           transition='all 0.2s'
           borderRadius='md'
           border= 'none'
-          width={150}
+          width={100}
           // borderWidth='1px'
           _hover={{ bg: 'gray.400' }}
           _expanded={{ bg: 'black', color: 'white' }}
@@ -52,8 +53,8 @@ const Female = () => {
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
         >
-          Female &nbsp;
-          {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
+         <GiHamburgerMenu style={{display: 'inline-grid'}}/> &nbsp;
+          {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon  />}
         </MenuButton>
 
         <MenuList
