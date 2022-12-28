@@ -5,7 +5,6 @@ import { BsFillPeopleFill, BsCreditCard2Back } from 'react-icons/bs'
 import { AiOutlineSafety } from 'react-icons/ai'
 import { useRouter } from "next/router";
 import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
-import Link from 'next/link';
 
 const Footer = () => {
   const router = useRouter();

@@ -15,6 +15,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import {MdCheckCircle} from 'react-icons/md'
+import HeadWear from '../pages/Categories/HeadWear';
 
 const CategoryCard = ({ name }) => {
   return ( 
@@ -26,6 +27,7 @@ const CategoryCard = ({ name }) => {
           <p>SHOP NOW</p>
         </Box>
       </Link> */}
+      
       <Accordion  
           defaultIndex={[0]}  
           allowToggle 
@@ -42,16 +44,32 @@ const CategoryCard = ({ name }) => {
                 variant='solid'
               >
                 <Link href={`/category/${name}`}>{name}</Link>
-                {/* <Link href={`/category/${name.toLowerCase()}`}>{name}</Link> */}
+
                 &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 
+
                 <AccordionIcon  style={{position:'absolute', right: '10'}}/>
               </Button>
               </AccordionButton>
             </h2>
 
-            {/* <AccordionPanel pb={4} pl={6} color={'white'}>
+            <AccordionPanel pb={4} pl={6} color={'white'}>
               <List spacing={3}>
-                <ListItem>
+                if ({name} === Clothing){
+                  <ListItem>
+                  <ListIcon as={MdCheckCircle} color='green.500' />
+                  Bedspoke
+                  </ListItem>
+                }else if ({name} === HeadWear){
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Suit
+                </ListItem>
+                } else{
+                  'nothing'
+                }
+
+
+                {/* <ListItem>
                   <ListIcon as={MdCheckCircle} color='green.500' />
                   Bedspoke
                 </ListItem>
@@ -79,8 +97,9 @@ const CategoryCard = ({ name }) => {
                   <ListIcon as={MdCheckCircle} color='green.500' />
                   Swim and Lounge Wears
                 </ListItem>
+                } */}
               </List>
-            </AccordionPanel> */}
+            </AccordionPanel>
           </AccordionItem>
         </Accordion>
       
