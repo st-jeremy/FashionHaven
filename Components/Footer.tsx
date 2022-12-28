@@ -68,25 +68,6 @@ const Footer = () => {
         </Box>
       </Box>
 
-      {/* <Box bgColor={'blackAlpha.900'} color={'white'} pl={'48.5'} pb={'3'}>
-        <Heading size={'md'}> Browse by Categories</Heading>
-        <br />
-        <List  spacing={2}>
-          <ListItem>
-            <Link href='/Categories/Clothing'>Clothing</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='/Categories/FootWear'>FootWear</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='/Categories/HeadWear'>HeadWear</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='/Categories/Accessories'>Accessories</Link>
-          </ListItem>
-        </List>
-      </Box> */}
-
       <Box bgColor={'black'} color={'white'} textAlign={'center'} pt={10}>
         All Rights Reserved. Copyright © {new Date().getFullYear()}
       </Box>
