@@ -16,7 +16,7 @@ import Link from 'next/link';
 
 import { ProductList } from '../../pages/ProductList';
 
-const LimitedStock = () => {
+const MultiCarousel = () => {
 
   const responsive = {
     superLargeDesktop: {
@@ -39,13 +39,8 @@ const LimitedStock = () => {
   };
 
   return ( 
-    <Box   bgColor={'blackAlpha.100'} p={5} >
-      <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
-        <Heading pl={2} color={'white'}>All Stock</Heading>
-        <Link href='/Shop'>
-          <Button  bgColor={'red.700'} position={'absolute'} right={'7'} p={1}>View All</Button>
-        </Link>
-      </Box>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'}>
+      <Heading bg={'red.700'} color={'white'}>Top Selling</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -64,9 +59,8 @@ const LimitedStock = () => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'} >
-                <Card m={5} width={250} height={490} mb={35}>
-
+              <Box key={product.id} borderRadius={'md'}>
+                <Card m={5} width={250} height={490}  mb={35}>
                   <Image src={product.image} alt={product.name} width={700} height={300} />
 
                   <Divider />
@@ -81,9 +75,7 @@ const LimitedStock = () => {
                       Add to cart
                     </Button>
                   </CardFooter>
-                  {/* <s>${product.price + 200}</s> */}
                 </Card>
-
               </Box>
             )
           })
@@ -93,7 +85,7 @@ const LimitedStock = () => {
    );
 }
  
-export default LimitedStock;
+export default MultiCarousel;
 
 
 

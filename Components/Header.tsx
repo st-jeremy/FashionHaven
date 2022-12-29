@@ -32,17 +32,17 @@ const Header = () => {
    };
 
   return ( 
-    <Box>
+    <Box bgColor= 'black' >
       <Heading fontSize={10} bgColor={'red'} textAlign='center' p={1}>
         Welcome to Fashion Haven. Shop now!
       </Heading>
 
-      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} bgColor= 'black' p={{base: '5px', md: '1rem 2rem'}} color={'white'}>
+      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '5px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} margin={'auto'}>
         <Box textAlign={'center'} m={'auto'} p={3}>
           <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={{base: 'fit-content', md: '300px'}} >Fashion Haven<sup>®</sup></Heading>
         </Box>
 
-        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'100%'} p={1} bgColor={'black'}>
+        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
 
           <Search />

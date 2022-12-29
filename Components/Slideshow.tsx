@@ -24,7 +24,7 @@ const zoomOutProperties = {
 const Slideshow = () => {
   return (
     <Box 
-      width={'57vw'}
+      width={{base: '90%', md: '70%', lg: '750px', xl: '800px'}}
       margin={5}
     >
       <Zoom {...zoomOutProperties}>

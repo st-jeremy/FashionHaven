@@ -3,6 +3,7 @@ import {
   MenuButton,
   MenuList,
   Box,
+  Button,
   Table,
   Thead,
   Tbody,
@@ -15,8 +16,6 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { GiHamburgerMenu } from 'react-icons/gi'
-
 
 import { ImMenu3, ImMenu4 } from 'react-icons/im';
 
@@ -63,63 +62,65 @@ const Female = () => {
           color={'black'}
         >
           <TableContainer display='flex' p={5}>
+            <Box display={{base: 'none', lg: 'block'}}>
               <Image src= '/download.jpeg' width={450} height={500} alt='can' />
+            </Box>
 
-              <Table variant='unstyled' size='sm' ml={3}>
-                <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Fashion Haven</TableCaption>
-                
-                <Thead >
-                  <Tr>
-                    <Th onClick={ClothingClick} fontSize={'13pt'}>Clothing</Th>
-                    <Th onClick={AccessoriesClick} fontSize={'13pt'}>Foot Wear</Th>
-                    <Th onClick={HeadWearClick} fontSize={'13pt'}>Head Wear</Th>
-                    <Th onClick={FootWearClick} fontSize={'13pt'}>Accessories</Th>
-                  </Tr>
-                </Thead>
+            <Table variant='unstyled' size='sm' ml={3} width={'90%'}>
+              <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Fashion Haven</TableCaption>
+              
+              <Thead >
+                <Tr>
+                  <Th onClick={ClothingClick} fontSize={'13pt'}>Clothing</Th>
+                  <Th onClick={AccessoriesClick} fontSize={'13pt'}>Foot Wear</Th>
+                  <Th onClick={HeadWearClick} fontSize={'13pt'}>Head Wear</Th>
+                  <Th onClick={FootWearClick} fontSize={'13pt'}>Accessories</Th>
+                </Tr>
+              </Thead>
 
-                <Tbody>
+              <Tbody>
 
-                  <Tr>
-                    <Td>Bespoke</Td>
-                    <Td>Heels</Td>
-                    <Td>Hats</Td>
-                    <Td>Sunglasses</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Tops</Td>
-                    <Td>Flat</Td>
-                    <Td>Scarfs</Td>
-                    <Td>Wristwatches</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Trousers</Td>
-                    <Td>Sneakers</Td>
-                    <Td></Td>
-                    <Td>Bags</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Skirts</Td>
-                    <Td></Td>
-                    <Td></Td>
-                    <Td>Purses</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Hoodies & Sweatshirts</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Jackets & Blazers</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Swim Wear</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Lounge Wear</Td>
-                  </Tr>
-                
-                </Tbody>
+                <Tr>
+                  <Td>Bespoke</Td>
+                  <Td>Heels</Td>
+                  <Td>Hats</Td>
+                  <Td>Sunglasses</Td>
+                </Tr>
+                <Tr>
+                  <Td>Tops</Td>
+                  <Td>Flat</Td>
+                  <Td>Scarfs</Td>
+                  <Td>Wristwatches</Td>
+                </Tr>
+                <Tr>
+                  <Td>Trousers</Td>
+                  <Td>Sneakers</Td>
+                  <Td></Td>
+                  <Td>Bags</Td>
+                </Tr>
+                <Tr>
+                  <Td>Skirts</Td>
+                  <Td></Td>
+                  <Td></Td>
+                  <Td>Purses</Td>
+                </Tr>
+                <Tr>
+                  <Td>Hoodies & Sweatshirts</Td>
+                </Tr>
+                <Tr>
+                  <Td>Jackets & Blazers</Td>
+                </Tr>
+                <Tr>
+                  <Td>Swim Wear</Td>
+                </Tr>
+                <Tr>
+                  <Td>Lounge Wear</Td>
+                </Tr>
+              
+              </Tbody>
 
-                <TableCaption color={'red'} >Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
-              </Table>
+              <TableCaption color={'red'} >Fashion Haven!  &nbsp; &nbsp; <i>Everything fashion...</i></TableCaption>
+            </Table>
               
           </TableContainer>
         </MenuList>

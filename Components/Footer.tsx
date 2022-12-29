@@ -13,8 +13,8 @@ const Footer = () => {
   }
 
   return ( 
-    <Box >
-      <Box display={'flex'} textAlign={'center'} bgColor={'blackAlpha.400'} p={5} mt={20}>
+    <Box  bgColor={'blackAlpha.400'}>
+      <Box display={'flex'} textAlign={'center'} p={5} mt={20} maxWidth={'1400px'} margin={'auto'}>
         <Box >
           <BiDollar style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <br />
@@ -43,10 +43,10 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box display={'flex'} p={'5rem 3rem 6rem'} bgColor={'blackAlpha.900'}  color={'white'}>
+      <Box display={'flex'} p={'3rem 3rem 9rem'} bgColor={'blackAlpha.900'}  color={'white'} maxWidth={'1400px'} margin={'auto'}>
         <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width={'fit-content'}>Fashion Haven<sup>®</sup></Heading>
 
-        <Box position={'absolute'} right={'25%'}>
+        <Box position={'absolute'} right={{base:'25%', xl: '35%'}}>
           <Heading size={'md'}>Subscribe</Heading>
           <p>Subscribe to our newsletter to get updates on our latest offers!</p>
           <br />
@@ -56,7 +56,7 @@ const Footer = () => {
           </InputGroup>
         </Box>
 
-        <Box position={'absolute'} right={10}>
+        <Box position={'absolute'} right={{base: 10, xl: '13rem' }}>
           <Heading size={'md'}>Stay Connected</Heading>
           <br />
           <Box display={'flex'} >
@@ -67,7 +67,7 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box bgColor={'black'} color={'white'} textAlign={'center'} pt={10}>
+      <Box bgColor={'black'} color={'white'} textAlign={'center'} pt={5} pb={5}>
         All Rights Reserved. Copyright © {new Date().getFullYear()}
       </Box>
     </Box>
