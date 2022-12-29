@@ -19,13 +19,15 @@ const Search = () => {
       <Box display={{ base: 'flex', lg: 'none' }}>
         <Menu isOpen={isOpen}>
           <MenuButton
-            _hover={{ bgColor: 'black', color: 'white'}}
-            _expanded={{fontSize: '18pt',  bgColor: 'black',}}
+            _hover={{  color: 'white'}}
+            _expanded={{fontSize: '18pt', }}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
           >
-            <SearchIcon style={{ fontSize: '10pt' }} />
+            <SearchIcon 
+            // style={{ fontSize: '10pt' }} 
+            />
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>
 
@@ -35,7 +37,7 @@ const Search = () => {
             color={'black'}
             zIndex={'1000'}
           >
-            <MenuItem>Search Products</MenuItem>
+            <MenuItem fontWeight={'600'}>Search Products</MenuItem>
             <MenuDivider />
 
             <MenuItem width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>

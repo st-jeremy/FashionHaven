@@ -37,15 +37,12 @@ const Female = () => {
   }
 
   return ( 
-    <Box>
+    <Box margin={'auto'}>
       <Menu  isOpen={isOpen}>
         <MenuButton
-          px={4}
-          py={2}
           transition='all 0.2s'
           borderRadius='md'
           border= 'none'
-          width={100}
           _hover={{ bgColor: 'black', color: 'white'}}
           _expanded={{fontSize: '18pt',  bgColor: 'black',}}
           _focus={{ boxShadow: 'none' }}
@@ -53,7 +50,7 @@ const Female = () => {
           onMouseEnter={onOpen}
           paddingRight={0}
         >
-          {isOpen ? <ImMenu4 style={{width: '50px', height: '30px'}}/> : <ImMenu3 style={{width: '50px',  height: '30px'}} />}
+          {isOpen ? <ImMenu4 style={{width: '50px', height: '25px'}}/> : <ImMenu3 style={{width: '50px',  height: '20px'}} />}
         </MenuButton>
 
         <MenuList

@@ -42,7 +42,7 @@ const Header = () => {
           <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={'fit-content'} >Fashion Haven<sup>®</sup></Heading>
         </Box>
 
-        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'100%'}>
+        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'100%'} p={1} bgColor={'gray.700'}>
           <Hamburger />
 
           <Search />

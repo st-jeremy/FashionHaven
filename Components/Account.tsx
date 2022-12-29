@@ -5,7 +5,8 @@ import {
   MenuList,
   MenuItem,
   Button,
-  useDisclosure
+  useDisclosure,
+  MenuDivider
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
@@ -18,18 +19,14 @@ const Account = () => {
     <Box margin= 'auto'>
       <Menu  isOpen={isOpen}>
         <MenuButton 
-          as={Button}
-          leftIcon={<BiUser />} 
-          bgColor='black'
-          _hover={{ bgColor: 'black', color: 'white'}}
-          _expanded={{fontSize: '18pt',  bgColor: 'black',}}
+          _hover={{ color: 'white'}}
+          _expanded={{fontSize: '18pt' }}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
           fontSize={{base: '12pt', md: '30pt'}}
-        >
-          {/* Account */}
-          {/* &nbsp;  */}
+          width={'fit-content'}
+        ><BiUser />
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 
@@ -39,6 +36,8 @@ const Account = () => {
           color={'black'}
           zIndex={'1000'}
         >
+          <MenuItem fontWeight={'600'} >Account</MenuItem>
+          <MenuDivider/>
           <MenuItem>Sign In</MenuItem>
           <MenuItem>Sign Up</MenuItem>
         </MenuList>
