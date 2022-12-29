@@ -21,10 +21,12 @@ const Account = () => {
           as={Button}
           leftIcon={<BiUser />} 
           bgColor='black'
-          _hover={{bgColor:'white'}}
+          _hover={{bgColor:'white', color: 'black'}}
+          _expanded={{ bgColor: 'white', color: 'black' }}
+          _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '8pt', md: '30pt'}}
+          fontSize={{base: '12pt', md: '30pt'}}
         >
           Account
           &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
@@ -34,6 +36,7 @@ const Account = () => {
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
           color={'black'}
+          zIndex={'1000'}
         >
           <MenuItem>Sign In</MenuItem>
           <MenuItem>Sign Up</MenuItem>

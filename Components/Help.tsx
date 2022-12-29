@@ -21,13 +21,13 @@ const HelpCenter = () => {
           leftIcon={<BiHelpCircle />}
           bgColor='black'
           border= 'none'
-          width={120}
-          _hover={{ bg: 'black' }}
-          _expanded={{ bg: 'black', color: 'white' }}
+          _hover={{ bgColor: 'white', color: 'red' }}
+          _expanded={{ bgColor: 'white', color: 'black' }}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '8pt', md: '30pt'}}
+          fontSize={{base: '12pt', md: '30pt'}}
+          paddingTop={0}
         >
           Help
           &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
@@ -37,6 +37,7 @@ const HelpCenter = () => {
           onMouseLeave={onClose} 
           onMouseEnter={onOpen}
           color={'black'}
+          zIndex={'1000'}
         >
           <MenuItem>Help Center</MenuItem>
           <MenuItem>Customer Care</MenuItem>

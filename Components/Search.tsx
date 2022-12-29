@@ -11,10 +11,10 @@ const Search = () => {
           id="search_field" 
           placeholder="Search products"
           width={{base: '250px', lg: '450'}} 
-          height={{base: '6', lg: 'auto'}}
+          height={{base: '7', lg: 'auto'}}
           marginTop={'2'}
         />
-        <SearchIcon style={{position:'absolute', top:'13', right: '30'}}/>
+        <SearchIcon style={{position:'absolute', top:'18', right: '12'}}/>
       </FormControl>
 
     </Box>

@@ -51,8 +51,10 @@ const Female = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
+          display={'flex'}
+          flexDirection={'row'}
         >
-         <GiHamburgerMenu style={{display: 'inline-grid'}}/> &nbsp;
+         <GiHamburgerMenu/> 
           {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon  />}
         </MenuButton>
 
