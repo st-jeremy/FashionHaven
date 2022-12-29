@@ -9,13 +9,10 @@ type data = {
   price: number
 }
 
-
-// it exports a function that takes in an HTTP request as its first parameter and returns the data object as its second parameter.
 export function getProducts() {
   return data;
 }
 
-// function that handles HTTP requests to this endpoint.
 export default function handler(req, res) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
