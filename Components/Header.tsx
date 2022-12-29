@@ -46,9 +46,6 @@ const Header = () => {
           <Hamburger />
 
           <Search />
-        </Box>
-
-        <Box  display='flex' flexDirection={'row'} padding={'auto'}>
 
           <Help />
 
