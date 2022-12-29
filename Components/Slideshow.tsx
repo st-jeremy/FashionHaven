@@ -24,7 +24,6 @@ const zoomOutProperties = {
 const Slideshow = () => {
   return (
     <Box 
-      // className="slide-container"
       width={'57vw'}
       margin={5}
     >

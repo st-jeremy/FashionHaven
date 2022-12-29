@@ -1,15 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google';
-import styles from '../styles/Home.module.css';
 import Slideshow from '../Components/Slideshow';
 import Categories from '../Components/Categories';
 import { Box } from '@chakra-ui/react';
-import Carousel from 'react-multi-carousel';
 import MultiCarousel from '../Components/MultiCarousel/MultiCarousel';
 import Brands from '../Components/Brands';
 import LimitedStock from '../Components/MultiCarousel/LimitedStocks';
-import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box bgColor={'blackAlpha.300'} >
+      <Box bgColor={'blackAlpha.300'} width={{ base: '24px', md: '40px', lg: '56px' }}>
         <Box display={'flex'} paddingTop={4} m={'auto'}>
           <Categories />
 

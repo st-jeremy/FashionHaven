@@ -13,6 +13,7 @@ const CategoryCard = ({ name }) => {
         width='200px'
         border='2px'
         variant='solid'
+        mb={4}
       >
         <Link href={`/category/${name}`}>{name}</Link>
       </Button>
