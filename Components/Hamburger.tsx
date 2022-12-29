@@ -40,6 +40,8 @@ const Female = () => {
     <Box margin={'auto'}>
       <Menu  isOpen={isOpen}>
         <MenuButton
+          as={Button}
+          bgColor={'black'}
           transition='all 0.2s'
           borderRadius='md'
           border= 'none'
@@ -49,8 +51,9 @@ const Female = () => {
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
           paddingRight={0}
+          fontSize={'20pt'}
         >
-          {isOpen ? <ImMenu4 style={{width: '50px', height: '25px'}}/> : <ImMenu3 style={{width: '50px',  height: '20px'}} />}
+          {isOpen ? <ImMenu4 /> : <ImMenu3 />}
         </MenuButton>
 
         <MenuList

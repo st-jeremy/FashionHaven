@@ -7,7 +7,8 @@ import {
   MenuList,
   MenuItem,
   MenuDivider,
-  useDisclosure
+  useDisclosure,
+  Button
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
@@ -19,15 +20,15 @@ const Search = () => {
       <Box display={{ base: 'flex', lg: 'none' }}>
         <Menu isOpen={isOpen}>
           <MenuButton
+            as={Button}
+            leftIcon={<SearchIcon />}
+            bgColor={'black'}
             _hover={{  color: 'white'}}
             _expanded={{fontSize: '18pt', }}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
           >
-            <SearchIcon 
-            // style={{ fontSize: '10pt' }} 
-            />
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>
 
