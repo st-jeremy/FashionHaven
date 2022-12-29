@@ -19,6 +19,9 @@ const Account = () => {
     <Box margin= 'auto'>
       <Menu  isOpen={isOpen}>
         <MenuButton 
+          as={Button}
+          leftIcon={<BiUser />}
+          bgColor={'black'}
           _hover={{ color: 'white'}}
           _expanded={{fontSize: '18pt' }}
           _focus={{ boxShadow: 'none' }}
@@ -26,7 +29,7 @@ const Account = () => {
           onMouseLeave={onClose}
           fontSize={{base: '12pt', md: '30pt'}}
           width={'fit-content'}
-        ><BiUser />
+        >
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
 

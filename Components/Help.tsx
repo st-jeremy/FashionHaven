@@ -18,6 +18,9 @@ const HelpCenter = () => {
     <Box margin= 'auto'>
       <Menu isOpen={isOpen}>
         <MenuButton
+          as={Button}
+          leftIcon={<BiHelpCircle />}
+          bgColor={'black'}
           border= 'none'
           _hover={{ color: 'white'}}
           _expanded={{fontSize: '14pt'}}
@@ -26,9 +29,8 @@ const HelpCenter = () => {
           onMouseLeave={onClose}
           fontSize={{base: '12pt', md: '30pt'}}
           paddingTop={0}
-          width={'fit-content'}
+          width={'100px'}
         >
-          <BiHelpCircle />
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
         
