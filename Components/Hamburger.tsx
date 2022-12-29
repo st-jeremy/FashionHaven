@@ -18,7 +18,7 @@ import { useRouter } from 'next/router';
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+import { ImMenu3, ImMenu4 } from 'react-icons/im';
 
 const Female = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -51,11 +51,9 @@ const Female = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
-          display={'flex'}
-          flexDirection={'row'}
+          paddingRight={0}
         >
-         <GiHamburgerMenu/> 
-          {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon  />}
+          {isOpen ? <ImMenu4 style={{width: '50px', height: '30px'}}/> : <ImMenu3 style={{width: '50px',  height: '30px'}} />}
         </MenuButton>
 
         <MenuList
