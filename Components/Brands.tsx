@@ -9,11 +9,11 @@ import {MdCheckCircle} from 'react-icons/md'
 
 const Brands = () => {
   return ( 
-    <Box bgColor={'black'} color={'white'} p={5}>
+    <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}}>
       <Heading>Top Brands</Heading>
       <br />
 
-      <List spacing={3}>
+      <List spacing={3} >
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
           Nike

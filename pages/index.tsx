@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
+    <Box  bgColor={'blackAlpha.300'}>
       <Head>
         <title>Fashion Haven</title>
         <meta name="description" content="eCommerce Fashion Website" />
@@ -19,11 +19,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box bgColor={'blackAlpha.300'} width={{ base: '24px', md: '40px', lg: '56px' }}>
-        <Box display={'flex'} paddingTop={4} m={'auto'}>
-          <Categories />
+      <Box>
+        <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} paddingTop={4} m={'auto'}>
+          <Box display={'flex'} flexDirection={'row'} >
+            <Categories />
 
-          <Slideshow />
+            <Slideshow />
+          </Box>
 
           <Brands />
         </Box>
@@ -32,6 +34,6 @@ export default function Home() {
 
         <LimitedStock />
       </Box>
-    </>
+    </Box>
   )
 }
