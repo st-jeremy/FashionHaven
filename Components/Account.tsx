@@ -15,7 +15,7 @@ const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   
   return ( 
-    <Box marginLeft={5}>
+    <Box>
       <Menu  isOpen={isOpen}>
         <MenuButton 
           as={Button}
@@ -24,6 +24,7 @@ const Account = () => {
           _hover={{bgColor:'white'}}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
+          fontSize={{base: '8pt', md: '30pt'}}
         >
           Account
           &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}

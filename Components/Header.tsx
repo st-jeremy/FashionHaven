@@ -32,13 +32,17 @@ const Header = () => {
    };
 
   return ( 
-    <>
-      <Box>
-        <Heading fontSize={15} bgColor={'blackAlpha.100'} textAlign='center' p={2}>Welcome to Fashion Haven. Shop now!</Heading>
+    <Box>
+      <Heading fontSize={15} bgColor={'blackAlpha.100'} textAlign='center' p={2}>
+        Welcome to Fashion Haven. Shop now!
+      </Heading>
 
-        <Box display='flex' bgColor= 'black' p='1rem 2rem' color={'white'}>
-          <Heading fontSize={30} onClick={handleHomeClick} cursor='pointer' width={'fit-content'}>Fashion Haven<sup>®</sup></Heading>
-          
+      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} bgColor= 'black' p={{base: '5px', md: '1rem 2rem'}} color={'white'}>
+        <Box textAlign={'center'} m={'auto'}>
+          <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={'fit-content'} >Fashion Haven<sup>®</sup></Heading>
+        </Box>
+
+        <Box display='flex' flexDirection={'row'} >
           <Hamburger />
 
           <Search />
@@ -47,23 +51,23 @@ const Header = () => {
 
           <Account />
     
-          <Avatar icon={<GiShoppingCart  fontSize='2.5rem'/>}
+          <Avatar 
+            icon={<GiShoppingCart  fontSize='2.1rem'/>}
             style={{
-              width: '70px', 
+              width: '30px', 
               height: '50px', 
               cursor: 'pointer',
-              marginLeft: '85px'
             }} 
             bgColor={'black'}
             onClick={handleCartClick}
           >
-            <AvatarBadge boxSize='1.1em' bg='white' color={'black'} position={'absolute'} top={'0'}>{getItemsCount()} </AvatarBadge>
-         
+            <AvatarBadge boxSize='1em' bgColor={'red'} color={'white'} position={'absolute'} top={'0'} border={'none'} fontSize='12pt'>{getItemsCount()} </AvatarBadge>
           </Avatar>
         </Box>
-
       </Box>
-    </>
+
+    </Box>
+
    );
 }
  

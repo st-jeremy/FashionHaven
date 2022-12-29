@@ -4,7 +4,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 const Search = () => {
   return ( 
     <Box>
-      <FormControl display='flex' width={'fit-content'}>
+      <FormControl width={'fit-content'} display={{base: 'none', lg: 'flex'}}>
         <Input 
           type="text" 
           name="Search" 
@@ -17,7 +17,7 @@ const Search = () => {
         <SearchIcon style={{position:'absolute', top:'13', right: '30'}}/>
       </FormControl>
 
-      <FormControl>
+      <FormControl display={{base: 'flex', lg: 'none'}} position={'absolute'} top={5} right={0}>
         <SearchIcon />
       </FormControl>
     </Box>

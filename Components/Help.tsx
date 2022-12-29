@@ -14,7 +14,7 @@ const HelpCenter = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return ( 
-    <Box marginLeft={'4.5'}>
+    <Box>
       <Menu isOpen={isOpen}>
         <MenuButton 
           as={Button} 
@@ -27,6 +27,7 @@ const HelpCenter = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
+          fontSize={{base: '8pt', md: '30pt'}}
         >
           Help
           &nbsp; {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
