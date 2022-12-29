@@ -46,8 +46,8 @@ const Female = () => {
           borderRadius='md'
           border= 'none'
           width={100}
-          _hover={{ bg: 'gray.400' }}
-          _expanded={{ bg: 'black', color: 'white' }}
+          _hover={{ bgColor: 'black', color: 'white'}}
+          _expanded={{fontSize: '18pt',  bgColor: 'black',}}
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}

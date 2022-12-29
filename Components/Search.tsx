@@ -15,19 +15,30 @@ const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return ( 
-    <Box>
+    <Box  margin= 'auto'>
       <Box display={{ base: 'flex', lg: 'none' }}>
         <Menu isOpen={isOpen}>
-          <MenuButton>
-            <SearchIcon />
+          <MenuButton
+            _hover={{ bgColor: 'black', color: 'white'}}
+            _expanded={{fontSize: '18pt',  bgColor: 'black',}}
+            onMouseEnter={onOpen}
+            onMouseLeave={onClose}
+            width={'fit-content'}
+          >
+            <SearchIcon style={{ fontSize: '10pt' }} />
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>
 
-          <MenuList bgColor={'black'} color={'white'}>
+          <MenuList 
+            onMouseLeave={onClose} 
+            onMouseEnter={onOpen}
+            color={'black'}
+            zIndex={'1000'}
+          >
             <MenuItem>Search Products</MenuItem>
             <MenuDivider />
 
-            <FormControl width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>
+            <MenuItem width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>
               <Input
                 type="text"
                 name="Search"
@@ -36,8 +47,8 @@ const Search = () => {
                 width={{ base: '250px', lg: '450' }}
                 height={{ base: '7', lg: 'auto' }}
                 marginTop={'2'} />
-              <SearchIcon style={{ position: 'relative', top: '18', right: '12' }} />
-            </FormControl>
+              <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} />
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>

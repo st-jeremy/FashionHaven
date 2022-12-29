@@ -38,11 +38,11 @@ const Header = () => {
       </Heading>
 
       <Box display='flex' flexDirection={{base: 'column', md: 'row'}} bgColor= 'black' p={{base: '5px', md: '1rem 2rem'}} color={'white'}>
-        <Box textAlign={'center'} m={'auto'} pd={3}>
+        <Box textAlign={'center'} m={'auto'} p={3}>
           <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={'fit-content'} >Fashion Haven<sup>®</sup></Heading>
         </Box>
 
-        <Box display='flex' flexDirection={'row'} margin={'auto'} >
+        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'100%'}>
           <Hamburger />
 
           <Search />

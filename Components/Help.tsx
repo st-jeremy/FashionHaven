@@ -21,16 +21,14 @@ const HelpCenter = () => {
           leftIcon={<BiHelpCircle />}
           bgColor='black'
           border= 'none'
-          _hover={{ bgColor: 'white', color: 'red' }}
-          _expanded={{ bgColor: 'white', color: 'black' }}
+          _hover={{ bgColor: 'black', color: 'white'}}
+          _expanded={{fontSize: '18pt',  bgColor: 'black',}}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
           fontSize={{base: '12pt', md: '30pt'}}
           paddingTop={0}
         >
-          {/* Help */}
-          {/* &nbsp;  */}
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
         
