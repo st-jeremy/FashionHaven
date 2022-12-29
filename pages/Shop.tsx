@@ -18,11 +18,11 @@ const ShopPage = ({ products }) => {
 
       <Link href='/'>Home</Link>
 
-      <div>
+      <Box>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </div>
+      </Box>
     </Box>
   );
 };

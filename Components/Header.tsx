@@ -4,8 +4,7 @@ import Help from './Help';
 import { GiShoppingCart } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 import Hamburger from './Hamburger';
-import Male from './Male';
-import { Icon, AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
+import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 
 import { useSelector } from 'react-redux';
 
@@ -38,7 +37,8 @@ const Header = () => {
       </Heading>
 
       <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '5px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} margin={'auto'}>
-        <Box textAlign={'center'} m={'auto'} p={3}>
+
+        <Box textAlign={'center'} m={'auto'}>
           <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={{base: 'fit-content', md: '300px'}} >Fashion Haven<sup>®</sup></Heading>
         </Box>
 
@@ -52,7 +52,7 @@ const Header = () => {
           <Account />
     
           <Avatar 
-            icon={<GiShoppingCart  fontSize='2.1rem'/>}
+            icon={<GiShoppingCart  fontSize='25pt'/>}
             style={{
               width: '30px', 
               height: '50px', 

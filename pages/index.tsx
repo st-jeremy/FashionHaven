@@ -6,6 +6,7 @@ import { Box } from '@chakra-ui/react';
 import MultiCarousel from '../Components/MultiCarousel/TopSelling';
 import Brands from '../Components/Brands';
 import LimitedStock from '../Components/MultiCarousel/AllStocks';
+import Value from '../Components/Value';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,7 @@ export default function Home() {
       </Head>
 
       <Box>
-        <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} paddingTop={4} m={'auto'} maxWidth={'1400px'}>
+        <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} padding={5} m={'auto'} maxWidth={'1400px'}>
           <Box display={'flex'} flexDirection={'row'} >
             <Categories />
 
@@ -33,6 +34,8 @@ export default function Home() {
         <MultiCarousel />
 
         <LimitedStock />
+
+        <Value />
       </Box>
     </Box>
   )

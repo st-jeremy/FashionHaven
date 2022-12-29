@@ -1,9 +1,7 @@
 import { 
   Box, 
-  CardBody, 
   CardFooter, 
   Card, 
-  Stack, 
   Divider, 
   Heading, 
   Text, 
@@ -12,15 +10,14 @@ import {
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { ProductList } from '../../pages/ProductList';
+
 
 const MultiCarousel = () => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -39,8 +36,8 @@ const MultiCarousel = () => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'}>
-      <Heading bg={'red.700'} color={'white'}>Top Selling</Heading>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'blackAlpha.100'} p={5}>
+      <Heading bg={'red.700'} color={'white'} pl={5}>Top Selling</Heading>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -59,8 +56,9 @@ const MultiCarousel = () => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'}>
-                <Card m={5} width={250} height={490}  mb={35}>
+              <Box key={product.id} borderRadius={'md'} mb={'5rem'}>
+
+                <Card m={5} width={250} height={490}>
                   <Image src={product.image} alt={product.name} width={700} height={300} />
 
                   <Divider />
@@ -68,7 +66,8 @@ const MultiCarousel = () => {
                   <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
                   <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
                     <Text color='blue.600' fontSize='xl'>
-                      <b>${product.price}</b>
+                      <b>${product.price}</b> <br />
+                      <s>${~~product.price * 1.5}</s>
                     </Text>
 
                     <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>

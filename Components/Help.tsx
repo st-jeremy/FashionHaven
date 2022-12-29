@@ -27,7 +27,7 @@ const HelpCenter = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '12pt', md: '30pt'}}
+          fontSize={{base: '20pt', md: '25pt'}}
           paddingTop={0}
           width={'100px'}
         >

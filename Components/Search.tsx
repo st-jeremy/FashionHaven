@@ -16,7 +16,7 @@ const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return ( 
-    <Box  margin= 'auto'>
+    <Box margin= 'auto'>
       <Box display={{ base: 'flex', lg: 'none' }}>
         <Menu isOpen={isOpen}>
           <MenuButton
@@ -28,6 +28,7 @@ const Search = () => {
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
+            fontSize={{base: '18pt', md: '25pt'}}
           >
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>

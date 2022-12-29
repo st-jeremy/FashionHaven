@@ -34,7 +34,6 @@ const ProductCard = ({ product }) => {
             Add to cart
           </Button>
         </CardFooter>
-        {/* <s>${product.price + 200}</s> */}
       </Card>
     </div>
   );

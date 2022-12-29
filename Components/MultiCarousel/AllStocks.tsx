@@ -39,13 +39,15 @@ const LimitedStock = () => {
   };
 
   return ( 
-    <Box   bgColor={'blackAlpha.100'} p={5} maxWidth={'1400px'} m={'auto'}>
+    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} p={5}>
+
       <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
-        <Heading pl={2} color={'white'}>All Stock</Heading>
+        <Heading pl={5} color={'white'}>All Stock</Heading>
         <Link href='/Shop'>
           <Button  bgColor={'red.700'} position={'absolute'} right={'13rem'} p={1}>View All</Button>
         </Link>
       </Box>
+
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -81,7 +83,6 @@ const LimitedStock = () => {
                       Add to cart
                     </Button>
                   </CardFooter>
-                  {/* <s>${product.price + 200}</s> */}
                 </Card>
 
               </Box>

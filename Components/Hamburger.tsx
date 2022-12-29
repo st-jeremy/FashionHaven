@@ -45,12 +45,12 @@ const Female = () => {
           borderRadius='md'
           border= 'none'
           _hover={{ bgColor: 'black', color: 'white'}}
-          _expanded={{fontSize: '18pt',  bgColor: 'black',}}
+          _expanded={{fontSize: '30pt',  bgColor: 'black',}}
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
           paddingRight={0}
-          fontSize={'20pt'}
+          fontSize={'30pt'}
         >
           {isOpen ? <ImMenu4 /> : <ImMenu3 />}
         </MenuButton>

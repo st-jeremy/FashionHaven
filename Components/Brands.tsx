@@ -54,22 +54,7 @@ const Brands = () => {
           <ListIcon as={MdCheckCircle} color='green.500' />
           Chanel
         </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='green.500' />
-          Rolex
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='green.500' />
-          Prada
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='green.500' />
-          Burberry
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='green.500' />
-          Polo Ralph Lauren
-        </ListItem>
+        
       </List>
       
     </Box>
