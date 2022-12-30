@@ -16,23 +16,22 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
 import { ImMenu3, ImMenu4 } from 'react-icons/im';
 
 const Female = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const ClothingClick =() =>{
-    router.push('./Categories/Clothing')
+    router.push('/category/Clothing')
   };
   const AccessoriesClick =() =>{
-    router.push('./Categories/Accessories')
+    router.push('/category/Accessories')
   };
   const FootWearClick =() =>{
-    router.push('./Categories/FootWear')
+    router.push('/category/FootWear')
   };
   const HeadWearClick =() =>{
-    router.push('./Categories/HeadWear')
+    router.push('/category/HeadWear')
   }
 
   return ( 
@@ -63,18 +62,18 @@ const Female = () => {
         >
           <TableContainer display='flex' p={5}>
             <Box display={{base: 'none', lg: 'block'}}>
-              <Image src= '/download.jpeg' width={450} height={500} alt='can' />
+              <Image src= '/beach-hoodie.jpeg' width={450} height={500} alt='can' />
             </Box>
 
             <Table variant='unstyled' size='sm' ml={3} width={'90%'}>
               <TableCaption color={'white'} bgColor={'black'} fontSize={'18pt'} placement={'top'} mb={5}>Fashion Haven</TableCaption>
               
               <Thead >
-                <Tr>
-                  <Th onClick={ClothingClick} fontSize={'13pt'}>Clothing</Th>
-                  <Th onClick={AccessoriesClick} fontSize={'13pt'}>Foot Wear</Th>
-                  <Th onClick={HeadWearClick} fontSize={'13pt'}>Head Wear</Th>
-                  <Th onClick={FootWearClick} fontSize={'13pt'}>Accessories</Th>
+                <Tr cursor={'pointer'}>
+                  <Th onClick={ClothingClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Clothing</Th>
+                  <Th onClick={FootWearClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Foot Wear</Th>
+                  <Th onClick={HeadWearClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Head Wear</Th>
+                  <Th onClick={AccessoriesClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Accessories</Th>
                 </Tr>
               </Thead>
 

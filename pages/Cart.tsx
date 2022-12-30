@@ -1,14 +1,17 @@
-// import { Box } from "@chakra-ui/react";
-
-// const Cart = () => {
-//   return ( 
-//     <Box>
-//       Cart
-//     </Box>
-//    );
-// }
- 
-// export default Cart;
+import {
+  Table,
+  Thead,
+  Tbody,
+  Button,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  Heading,
+  TableContainer,
+  Box,
+  Tfoot
+} from '@chakra-ui/react'
 
 import Image from 'next/image';
 // Importing hooks from react-redux
@@ -18,7 +21,7 @@ import {
   decrementQuantity,
   removeFromCart,
 } from '../redux/cart.slice';
-import { Box } from '@chakra-ui/react';
+import { GiShoppingCart } from 'react-icons/gi'
 
 
 const Cart = () => {
@@ -26,6 +29,9 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
+  const handleIncrement= () =>{
+    
+  }
 
   const getTotalPrice = () => {
     return cart.reduce(
@@ -35,40 +41,80 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <Box p={5} maxWidth={'1400px'} margin={'auto'}>
       {cart.length === 0 ? (
-        <h1>Your Cart is Empty!</h1>
+        <Heading textAlign={'center'}> Your Cart is Empty! </Heading>
       ) : (
-        <Box  >
-         
-          {cart.map((item) => (
-            <Box key={item.id} display={'flex'}>
-              <Box>
-                <Image src={item.image} height="90" width="65" alt='cart'/>
-              </Box>
-              <p>{item.name}</p>
-              <p>$ {item.price}</p>
-              <p>{item.quantity}</p>
-              
+          <Box >
+            <Heading textAlign={'center'}> Your Cart</Heading>
+            <TableContainer>
+              <Table >
+                <Thead fontWeight={'extrabold'}>
+                  <Tr>
+                    <Th  p={15} width={70}>Image</Th>
+                    <Th  p={15} width={270}>Name</Th>
+                    <Th isNumeric p={15} width={150}>Price</Th>
+                    <Th isNumeric p={15} width={145}>Quantity</Th>
+                    <Th textAlign={'center'} p={15} width={250}>Action</Th>
+                    <Th isNumeric p={15} width={150}>Total</Th>
+                  </Tr>
+                </Thead>
+                </Table>
+              </TableContainer>
+          
+            {cart.map((item) => (
+              <Box key={item.id} display={'flex'}>
+                <Table>
+                    <Tbody fontSize={'sm'}>
+                      <Tr>
+                        <Td p={15} width={70}><Image src={item.image} height="90" width="65" alt='cart'/></Td>
+                        <Td  p={15} width={270}>{item.name}</Td>
+                        <Td  p={15} isNumeric width={150}>$ {item.price}</Td>
+                        <Td  p={15} textAlign={'center'} width={145}>{item.quantity}</Td>
+                        <Td  p={15} width={225}>
+                          <Button 
+                            width={'35px'} 
+                            height={'35px'} 
+                            bgColor={'blue'} 
+                            onClick={() => dispatch(incrementQuantity(item.id))}
+                          >
+                            +
+                          </Button>&nbsp;
 
-              <button onClick={() => dispatch(incrementQuantity(item.id))}>
-                  +
-                </button>
-                <button onClick={() => dispatch(decrementQuantity(item.id))}>
-                  -
-                </button>
-                <button onClick={() => dispatch(removeFromCart(item.id))}>
-                  x
-                </button>
-              
-              
-              <p>$ {item.quantity * item.price}</p>
-            </Box>
-          ))}
-          <h2>Grand Total: $ {getTotalPrice()}</h2>
-        </Box>
+                          <Button 
+                            width={'35px'} 
+                            height={'35px'}  
+                            bgColor={'yellow'} 
+                            onClick={() => dispatch(decrementQuantity(item.id))}
+                          >
+                            -
+                          </Button>&nbsp;
+
+                          <Button 
+                            width={'35px'} 
+                            height={'35px'}  
+                            bgColor={'red'}  
+                            onClick={() => dispatch(removeFromCart(item.id))}
+                          >
+                            x
+                          </Button>
+                        </Td>
+                        <Td isNumeric p={15} width={150}>$ {item.quantity * item.price}</Td>
+                      </Tr>
+                    </Tbody>
+                  </Table>
+              </Box>
+            ))}
+
+            <Table>
+              <Tr>
+                <Th width={700}></Th>
+                <Th>Grand Total: $ {getTotalPrice()}</Th>
+              </Tr>
+            </Table>
+          </Box>
       )}
-    </div>
+    </Box>
   );
 };
 

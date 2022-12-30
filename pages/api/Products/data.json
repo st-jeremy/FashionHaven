@@ -37,8 +37,8 @@
   {
     "id": 6,
     "name": "Masaaki Shirt",
-    "image": "/masaaki-shirt.jpeg",
-    "price": "7000",
+    "image": "/kukuvaja-shirt.jpeg",
+    "price": "00",
     "category": "Clothing"
   },
   {
@@ -88,14 +88,14 @@
     "name": "Nike Aero Fit",
     "image": "/nike-aero-fit.png",
     "price": "7000",
-    "category": "FootWear"
+    "category": "HeadWear"
   },
   {
     "id": 14,
     "name": "Nike DRI Fit",
     "image": "/nike-dri-fit.png",
     "price": "23000",
-    "category": "FootWear"
+    "category": "HeadWear"
   },
   {
     "id": 15,
@@ -109,14 +109,14 @@
     "name": "Nike Dunk High",
     "image": "/nike-dunk-high.png",
     "price": "17000",
-    "category": "HeadWear"
+    "category": "FootWear"
   },
   {
     "id": 17,
     "name": "Nike Heritage",
     "image": "/nike-heritage.png",
     "price": "750",
-    "category": "HeadWear"
+    "category": "Accessories"
   },
   {
     "id": 18,
@@ -137,34 +137,34 @@
     "name": "Nike Just Do It",
     "image": "/nike-just-do-it.png",
     "price": "7000",
-    "category": "FootWear"
+    "category": "HeadWear"
   },
   {
     "id": 21,
     "name": "Nike Pinky",
     "image": "/nike-pinky.png",
     "price": "890",
-    "category": "FootWear"
+    "category": "Accessories"
   },
   {
     "id": 22,
     "name": "Nike Sport Lite",
     "image": "/nike-sport-lite.png",
     "price": "7000",
-    "category": "FootWear"
+    "category": "Accessories"
   },
   {
     "id": 23,
     "name": "Nike Sportwear",
     "image": "/nike-sportwear.png",
     "price": "699",
-    "category": "FootWear"
+    "category": "HeadWear"
   },
   {
     "id": 24,
     "name": "Nike White DRI Fit",
     "image": "/nike-white-dri-fit.png",
     "price": "780",
-    "category": "FootWear"
+    "category": "HeadWear"
   }
 ]

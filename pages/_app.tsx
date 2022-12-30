@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <ChakraProvider>
-        <Box>
+        <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'100vh'} >
           <Header />
             <Component {...pageProps} />
           <Footer />
