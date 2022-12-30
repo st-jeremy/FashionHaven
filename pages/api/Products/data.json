@@ -1,82 +1,170 @@
 [
   {
-  "id": 1,
-  "name": "Laces",
-  "image": "/download.jpeg",
-  "price": "1000",
-  "category": "Clothing",
-  "subCategory": "Bottom"
-},
-{
-  "id": 2,
-  "name": "Lashes",
-  "image": "/download.jpeg",
-  "price": "2000",
-  "category": "Clothing",
-  "subCategory": "Top"
-},
-{
-  "id": 3,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "HeadWear",
-  "subCategory": "Top"
-},
-{
-  "id": 4,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "HeadWear",
-  "subCategory": "Top"
-},
-{
-  "id": 5,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "Accessories",
-  "subCategory": "Bottom"
-},
-{
-  "id": 6,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "Accessories",
-  "subCategory": "Top"
-},
-{
-  "id": 7,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "Accessories",
-  "subCategory": "Bottom"
-},
-{
-  "id": 8,
-  "name": "Lfyhghjaces",
-  "image": "/download.jpeg",
-  "price": "7000",
-  "category": "HeadWear",
-  "subCategory": "Bottom"
-},
-{
-  "id": 9,
-  "name": "Lfyhghjaces",
-  "image": "/milo.png",
-  "price": "7000",
-  "category": "FootWear",
-  "subCategory": "Bottom"
-},
-{
-  "id": 10,
-  "name": "Lfyhghjaces",
-  "image": "/milo.png",
-  "price": "7000",
-  "category": "FootWear",
-  "subCategory": "Top"
-}
+    "id": 1,
+    "name": "705 Shirt",
+    "image": "/705-shirt.jpeg",
+    "price": "1000",
+    "category": "Clothing"
+  },
+  {
+    "id": 2,
+    "name": "Beach Hoodie",
+    "image": "/beach-hoodie.jpeg",
+    "price": "2000",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Black Female Singlet",
+    "image": "/black-siglet.jpeg",
+    "price": "2000",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Black Female Top",
+    "image": "/black-top.jpeg",
+    "price": "3400",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Kukuvaja Shirt",
+    "image": "/kukuvaja-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 6,
+    "name": "Masaaki Shirt",
+    "image": "/masaaki-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 7,
+    "name": "Nible-made Shirt",
+    "image": "/nible-made-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Plain Shirt",
+    "image": "/plain-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 9,
+    "name": "Stay Rich Shirt",
+    "image": "/stay-rich-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 10,
+    "name": "Taylor Shirt",
+    "image": "/taylor-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 11,
+    "name": "Yahweh Shirt",
+    "image": "/Yahweh-shirt.jpeg",
+    "price": "7000",
+    "category": "Clothing"
+  },
+  {
+    "id": 12,
+    "name": "black Nike Boot",
+    "image": "/black-nike-boot.png",
+    "price": "7000",
+    "category": "FootWear"
+  },
+  {
+    "id": 13,
+    "name": "Nike Aero Fit",
+    "image": "/nike-aero-fit.png",
+    "price": "7000",
+    "category": "FootWear"
+  },
+  {
+    "id": 14,
+    "name": "Nike DRI Fit",
+    "image": "/nike-dri-fit.png",
+    "price": "23000",
+    "category": "FootWear"
+  },
+  {
+    "id": 15,
+    "name": "Nike Duffel Bag",
+    "image": "/nike-duffel-bag.png",
+    "price": "12000",
+    "category": "Accessories"
+  },
+  {
+    "id": 16,
+    "name": "Nike Dunk High",
+    "image": "/nike-dunk-high.png",
+    "price": "17000",
+    "category": "HeadWear"
+  },
+  {
+    "id": 17,
+    "name": "Nike Heritage",
+    "image": "/nike-heritage.png",
+    "price": "750",
+    "category": "HeadWear"
+  },
+  {
+    "id": 18,
+    "name": "Nike Jordan",
+    "image": "/nike-jordan.png",
+    "price": "640",
+    "category": "FootWear"
+  },
+  {
+    "id": 19,
+    "name": "Nike Just Do It Bag",
+    "image": "/nike-just-do-it-bag.png",
+    "price": "900",
+    "category": "Accessories"
+  },
+  {
+    "id": 20,
+    "name": "Nike Just Do It",
+    "image": "/nike-just-do-it.png",
+    "price": "7000",
+    "category": "FootWear"
+  },
+  {
+    "id": 21,
+    "name": "Nike Pinky",
+    "image": "/nike-pinky.png",
+    "price": "890",
+    "category": "FootWear"
+  },
+  {
+    "id": 22,
+    "name": "Nike Sport Lite",
+    "image": "/nike-sport-lite.png",
+    "price": "7000",
+    "category": "FootWear"
+  },
+  {
+    "id": 23,
+    "name": "Nike Sportwear",
+    "image": "/nike-sportwear.png",
+    "price": "699",
+    "category": "FootWear"
+  },
+  {
+    "id": 24,
+    "name": "Nike White DRI Fit",
+    "image": "/nike-white-dri-fit.png",
+    "price": "780",
+    "category": "FootWear"
+  }
 ]
