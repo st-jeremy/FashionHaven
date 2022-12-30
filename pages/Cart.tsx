@@ -42,7 +42,7 @@ const Cart = () => {
       isClosable: true,
     })
   }
-  
+
   const getTotalPrice = () => {
     return cart.reduce(
       (accumulator, item) => accumulator + item.quantity * item.price,
@@ -82,26 +82,14 @@ const Cart = () => {
                         <Td  p={15} isNumeric width={150}>$ {item.price}</Td>
                         <Td  p={15} textAlign={'center'} width={145}>{item.quantity}</Td>
                         <Td  p={15} width={225}>
-                        <Button onClick={() => 
-                              toast({
-                                title: 'Account created.',
-                                description: "We've created your account for you.",
-                                status: 'success',
-                                duration: 9000,
-                                isClosable: true,
-                              })
-                            }>
                           <Button 
                             width={'35px'} 
                             height={'35px'} 
                             bgColor={'blue'} 
-                            onClick={() => 
-                              dispatch(incrementQuantity(item.id))
-                            }
+                            onClick={() => {dispatch(incrementQuantity(item.id)); increment() }}
                           >
                             +
                           </Button>&nbsp;
-                          </Button>
 
                           <Button 
                             width={'35px'} 
