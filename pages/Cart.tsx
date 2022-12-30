@@ -72,22 +72,26 @@ const Cart = () => {
                         <Td  p={15} isNumeric width={150}>$ {item.price}</Td>
                         <Td  p={15} textAlign={'center'} width={145}>{item.quantity}</Td>
                         <Td  p={15} width={225}>
+                        <Button onClick={() => 
+                              toast({
+                                title: 'Account created.',
+                                description: "We've created your account for you.",
+                                status: 'success',
+                                duration: 9000,
+                                isClosable: true,
+                              })
+                            }>
                           <Button 
                             width={'35px'} 
                             height={'35px'} 
                             bgColor={'blue'} 
                             onClick={() => 
-                              dispatch(incrementQuantity(item.id)); 
-                              toast({
-                              title: 'Cart.',
-                              description: "Item added successfully to cart.",
-                              status: 'success',
-                              duration: 5000,
-                              isClosable: true,
-                            })}
+                              dispatch(incrementQuantity(item.id))
+                            }
                           >
                             +
                           </Button>&nbsp;
+                          </Button>
 
                           <Button 
                             width={'35px'} 
