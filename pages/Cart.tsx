@@ -33,6 +33,16 @@ const Cart = () => {
   const dispatch = useDispatch();
   const toast = useToast();
 
+  const increment =() => {
+    toast({
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
+  }
+  
   const getTotalPrice = () => {
     return cart.reduce(
       (accumulator, item) => accumulator + item.quantity * item.price,
