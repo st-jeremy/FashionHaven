@@ -33,12 +33,30 @@ const Cart = () => {
   const dispatch = useDispatch();
   const toast = useToast();
 
-  const increment =() => {
+  const handleIncrement =() => {
     toast({
-      title: 'Account created.',
-      description: "We've created your account for you.",
+      title: 'Add Item',
+      description: "Item added successfully.",
       status: 'success',
-      duration: 9000,
+      duration: 3000,
+      isClosable: true,
+    })
+  }
+  const handleDecrement =() => {
+    toast({
+      title: 'Subtract Item',
+      description: "Item subtracted successfully.",
+      status: 'warning',
+      duration: 3000,
+      isClosable: true,
+    })
+  }
+  const handleRemoval =() => {
+    toast({
+      title: 'Add Item',
+      description: "Item removed successfully.",
+      status: 'danger',
+      duration: 3000,
       isClosable: true,
     })
   }
