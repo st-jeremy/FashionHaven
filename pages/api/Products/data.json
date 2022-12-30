@@ -3,14 +3,14 @@
     "id": 1,
     "name": "705 Shirt",
     "image": "/705-shirt.jpeg",
-    "price": "1000",
+    "price": "575",
     "category": "Clothing"
   },
   {
     "id": 2,
     "name": "Beach Hoodie",
     "image": "/beach-hoodie.jpeg",
-    "price": "2000",
+    "price": "679",
     "category": "Clothing"
   },
   {
@@ -24,91 +24,91 @@
     "id": 4,
     "name": "Black Female Top",
     "image": "/black-top.jpeg",
-    "price": "3400",
+    "price": "340",
     "category": "Clothing"
   },
   {
     "id": 5,
     "name": "Kukuvaja Shirt",
     "image": "/kukuvaja-shirt.jpeg",
-    "price": "7000",
+    "price": "780",
     "category": "Clothing"
   },
   {
     "id": 6,
     "name": "Masaaki Shirt",
     "image": "/kukuvaja-shirt.jpeg",
-    "price": "00",
+    "price": "500",
     "category": "Clothing"
   },
   {
     "id": 7,
     "name": "Nible-made Shirt",
     "image": "/nible-made-shirt.jpeg",
-    "price": "7000",
+    "price": "700",
     "category": "Clothing"
   },
   {
     "id": 8,
     "name": "Plain Shirt",
     "image": "/plain-shirt.jpeg",
-    "price": "7000",
+    "price": "700",
     "category": "Clothing"
   },
   {
     "id": 9,
     "name": "Stay Rich Shirt",
     "image": "/stay-rich-shirt.jpeg",
-    "price": "7000",
+    "price": "670",
     "category": "Clothing"
   },
   {
     "id": 10,
     "name": "Taylor Shirt",
     "image": "/taylor-shirt.jpeg",
-    "price": "7000",
+    "price": "760",
     "category": "Clothing"
   },
   {
     "id": 11,
     "name": "Yahweh Shirt",
     "image": "/Yahweh-shirt.jpeg",
-    "price": "7000",
+    "price": "787",
     "category": "Clothing"
   },
   {
     "id": 12,
     "name": "black Nike Boot",
     "image": "/black-nike-boot.png",
-    "price": "7000",
+    "price": "708",
     "category": "FootWear"
   },
   {
     "id": 13,
     "name": "Nike Aero Fit",
     "image": "/nike-aero-fit.png",
-    "price": "7000",
+    "price": "756",
     "category": "HeadWear"
   },
   {
     "id": 14,
     "name": "Nike DRI Fit",
     "image": "/nike-dri-fit.png",
-    "price": "23000",
+    "price": "2300",
     "category": "HeadWear"
   },
   {
     "id": 15,
     "name": "Nike Duffel Bag",
     "image": "/nike-duffel-bag.png",
-    "price": "12000",
+    "price": "1200",
     "category": "Accessories"
   },
   {
     "id": 16,
     "name": "Nike Dunk High",
     "image": "/nike-dunk-high.png",
-    "price": "17000",
+    "price": "1700",
     "category": "FootWear"
   },
   {
@@ -136,7 +136,7 @@
     "id": 20,
     "name": "Nike Just Do It",
     "image": "/nike-just-do-it.png",
-    "price": "7000",
+    "price": "670",
     "category": "HeadWear"
   },
   {
@@ -150,7 +150,7 @@
     "id": 22,
     "name": "Nike Sport Lite",
     "image": "/nike-sport-lite.png",
-    "price": "7000",
+    "price": "867",
     "category": "Accessories"
   },
   {

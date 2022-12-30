@@ -4,7 +4,6 @@ type data = {
   id: number,
   name: string,
   category: string,
-  sub_Category: string,
   image: string,
   price: number
 }

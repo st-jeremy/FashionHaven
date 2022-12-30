@@ -94,7 +94,7 @@ const Cart = () => {
                         <Td  p={15} width={270}>{item.name}</Td>
                         <Td  p={15} isNumeric width={150}>$ {item.price}</Td>
                         <Td  p={15} textAlign={'center'} width={145}>{item.quantity}</Td>
-                        <Td  p={15} width={225}>
+                        <Td textAlign={'center'} p={15} width={225}>
                           <Button 
                             width={'35px'} 
                             height={'35px'} 
@@ -132,7 +132,7 @@ const Cart = () => {
             <Table>
               <Tr>
                 <Th width={900}></Th>
-                <Th isNumeric fontWeight={'700'} fontSize={'20pt'}>Grand Total: $ {getTotalPrice()}</Th>
+                <Th isNumeric fontWeight={'700'} fontSize={'20pt'}  p={1}>Grand Total: $ {getTotalPrice()}</Th>
               </Tr>
             </Table>
           </Box>
