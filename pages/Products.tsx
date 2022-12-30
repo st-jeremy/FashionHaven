@@ -10,7 +10,7 @@ import {
   Button,
   SimpleGrid
 } from '@chakra-ui/react';
-import {ProductList} from './ProductList'
+import {ProductList} from '../Components/MultiCarousel/ProductList'
 import Head from 'next/head';
 import Image from 'next/image';
 

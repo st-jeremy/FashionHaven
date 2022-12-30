@@ -17,7 +17,8 @@ import { addToCart } from '../redux/cart.slice';
 const ProductCard = ({ product }) => {
 
   const toast = useToast();
-
+  const dispatch = useDispatch();
+  
   const handleClick =() =>{
     dispatch(addToCart(product));
     toast({
@@ -29,7 +30,6 @@ const ProductCard = ({ product }) => {
     })
   };
 
-  const dispatch = useDispatch();
   return (
     <Box>
       <Card m={5} width={250} height={450} mb={50} boxShadow={'lg'}>

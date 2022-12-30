@@ -6,15 +6,18 @@ import {
   Heading, 
   Text, 
   Button,
+  useToast
 } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 
-import { ProductList } from '../../pages/ProductList';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cart.slice';
+import { ProductList } from './ProductList'
 
 
-const MultiCarousel = () => {
+const MultiCarousel = ({ product }) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -34,6 +37,9 @@ const MultiCarousel = () => {
       items: 1
     }
   };
+
+  const dispatch = useDispatch();
+  const toast = useToast();
 
   const handleClick =() =>{
     dispatch(addToCart(product));
