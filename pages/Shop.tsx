@@ -1,7 +1,7 @@
 import ProductCard from '../Components/ProductCard';
 import { getProducts } from './api/Products/index';
 import Link from 'next/link';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Button } from '@chakra-ui/react';
 
 interface product {
   id: number;
@@ -13,16 +13,17 @@ interface product {
 
 const ShopPage = ({ products }) => {
   return (
-    <Box>
+    <Box maxWidth={'1400px'} margin={'auto'} p={5}>
+
       <Heading>All Results</Heading>
 
-      <Link href='/'>Home</Link>
+      <Link href='/'><Button bgColor={"black"} color={'white'}>Back to Home</Button></Link>
 
-      <Box>
+      <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </Box>
+      </div>
     </Box>
   );
 };

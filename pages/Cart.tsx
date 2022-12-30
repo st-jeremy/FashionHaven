@@ -6,24 +6,19 @@ import {
   Tr,
   Th,
   Td,
-  TableCaption,
   Heading,
   TableContainer,
   Box,
-  Tfoot,
   useToast
 } from '@chakra-ui/react'
-
 import Image from 'next/image';
-// Importing hooks from react-redux
 import { useSelector, useDispatch } from 'react-redux';
 import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
 } from '../redux/cart.slice';
-import { GiShoppingCart } from 'react-icons/gi'
-import { title } from 'process';
+import Link from 'next/link';
 
 
 const Cart = () => {
@@ -53,9 +48,9 @@ const Cart = () => {
   }
   const handleRemoval =() => {
     toast({
-      title: 'Add Item',
+      title: 'Remove Item',
       description: "Item removed successfully.",
-      status: 'danger',
+      status: 'error',
       duration: 3000,
       isClosable: true,
     })
@@ -104,7 +99,7 @@ const Cart = () => {
                             width={'35px'} 
                             height={'35px'} 
                             bgColor={'blue'} 
-                            onClick={() => {dispatch(incrementQuantity(item.id)); increment() }}
+                            onClick={() => {dispatch(incrementQuantity(item.id)); handleIncrement() }}
                           >
                             +
                           </Button>&nbsp;
@@ -113,7 +108,7 @@ const Cart = () => {
                             width={'35px'} 
                             height={'35px'}  
                             bgColor={'yellow'} 
-                            onClick={() => dispatch(decrementQuantity(item.id))}
+                            onClick={() => {dispatch(decrementQuantity(item.id)); handleDecrement()}}
                           >
                             -
                           </Button>&nbsp;
@@ -122,7 +117,7 @@ const Cart = () => {
                             width={'35px'} 
                             height={'35px'}  
                             bgColor={'red'}  
-                            onClick={() => dispatch(removeFromCart(item.id)) }
+                            onClick={() => {dispatch(removeFromCart(item.id)); handleRemoval() }}
                           >
                             x
                           </Button>
@@ -142,6 +137,9 @@ const Cart = () => {
             </Table>
           </Box>
       )}
+      <Box mt={5}>
+        <Link href='/Shop'><Button bgColor={"black"} color={'white'}>Continue Shopping</Button></Link>
+      </Box>
     </Box>
   );
 };
