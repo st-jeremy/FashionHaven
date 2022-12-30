@@ -35,6 +35,17 @@ const MultiCarousel = () => {
     }
   };
 
+  const handleClick =() =>{
+    dispatch(addToCart(product));
+    toast({
+      title: 'Cart.',
+      description: "Item added successfully to cart.",
+      status: 'success',
+      duration: 5000,
+      isClosable: true,
+    })
+  };
+
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'blackAlpha.100'} p={5}>
       <Heading bg={'red.700'} color={'white'} pl={5}>Top Selling</Heading>
@@ -70,7 +81,7 @@ const MultiCarousel = () => {
                       <s>${~~product.price * 1.5}</s>
                     </Text>
 
-                    <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
+                    <Button onClick={handleClick} colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
                       Add to cart
                     </Button>
                   </CardFooter>

@@ -31,8 +31,8 @@ const Header = () => {
    };
 
   return ( 
-    <Box bgColor= 'black' >
-      <Heading fontSize={10} bgColor={'red'} textAlign='center' p={1}>
+    <Box bgColor= 'black' position={'fixed'} zIndex={'1000'} margin={'auto'} width={'100%'}>
+      <Heading fontSize={12} bgColor={'red'} textAlign='center' p={1}>
         Welcome to Fashion Haven. Shop now!
       </Heading>
 

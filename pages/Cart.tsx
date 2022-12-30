@@ -33,7 +33,7 @@ const Cart = () => {
       title: 'Add Item',
       description: "Item added successfully.",
       status: 'success',
-      duration: 3000,
+      duration: 700,
       isClosable: true,
     })
   }
@@ -42,7 +42,7 @@ const Cart = () => {
       title: 'Subtract Item',
       description: "Item subtracted successfully.",
       status: 'warning',
-      duration: 3000,
+      duration: 700,
       isClosable: true,
     })
   }
@@ -51,7 +51,7 @@ const Cart = () => {
       title: 'Remove Item',
       description: "Item removed successfully.",
       status: 'error',
-      duration: 3000,
+      duration: 700,
       isClosable: true,
     })
   }
@@ -64,7 +64,7 @@ const Cart = () => {
   };
 
   return (
-    <Box p={5} maxWidth={'1400px'} margin={'auto'}>
+    <Box p={5} maxWidth={'1400px'} margin={'auto'} mt={'6rem'}>
       {cart.length === 0 ? (
         <Heading textAlign={'center'}> Your Cart is Empty! </Heading>
       ) : (

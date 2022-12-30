@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
       title: 'Cart.',
       description: "Item added successfully to cart.",
       status: 'success',
-      duration: 5000,
+      duration: 900,
       isClosable: true,
     })
   };

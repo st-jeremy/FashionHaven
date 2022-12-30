@@ -20,8 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box>
-        <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} padding={5} m={'auto'} maxWidth={'1400px'}>
+      <Box >
+        <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} padding={5} m={'auto'} maxWidth={'1400px'} mt={'6rem'}>
           <Box display={'flex'} flexDirection={'row'} >
             <Categories />
 
