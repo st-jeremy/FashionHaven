@@ -10,7 +10,8 @@ import {
   Heading,
   TableContainer,
   Box,
-  Tfoot
+  Tfoot,
+  useToast
 } from '@chakra-ui/react'
 
 import Image from 'next/image';
@@ -22,6 +23,7 @@ import {
   removeFromCart,
 } from '../redux/cart.slice';
 import { GiShoppingCart } from 'react-icons/gi'
+import { title } from 'process';
 
 
 const Cart = () => {
@@ -29,9 +31,7 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
-  const handleIncrement= () =>{
-    
-  }
+  const toast = useToast();
 
   const getTotalPrice = () => {
     return cart.reduce(
@@ -76,7 +76,15 @@ const Cart = () => {
                             width={'35px'} 
                             height={'35px'} 
                             bgColor={'blue'} 
-                            onClick={() => dispatch(incrementQuantity(item.id))}
+                            onClick={() => 
+                              dispatch(incrementQuantity(item.id)); 
+                              toast({
+                              title: 'Cart.',
+                              description: "Item added successfully to cart.",
+                              status: 'success',
+                              duration: 5000,
+                              isClosable: true,
+                            })}
                           >
                             +
                           </Button>&nbsp;
@@ -94,7 +102,7 @@ const Cart = () => {
                             width={'35px'} 
                             height={'35px'}  
                             bgColor={'red'}  
-                            onClick={() => dispatch(removeFromCart(item.id))}
+                            onClick={() => dispatch(removeFromCart(item.id)) }
                           >
                             x
                           </Button>
@@ -108,8 +116,8 @@ const Cart = () => {
 
             <Table>
               <Tr>
-                <Th width={700}></Th>
-                <Th>Grand Total: $ {getTotalPrice()}</Th>
+                <Th width={900}></Th>
+                <Th isNumeric fontWeight={'700'} fontSize={'20pt'}>Grand Total: $ {getTotalPrice()}</Th>
               </Tr>
             </Table>
           </Box>
