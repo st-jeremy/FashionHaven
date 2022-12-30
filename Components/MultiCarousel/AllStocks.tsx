@@ -13,10 +13,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import Link from 'next/link';
+import ProductCard from '../Components/ProductCard';
 
 import { ProductList } from '../../pages/ProductList';
 
-const LimitedStock = () => {
+const LimitedStock = ({products}) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -63,7 +64,7 @@ const LimitedStock = () => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {
+        {/* {
           ProductList && ProductList.map(product =>{
             return(
               <Box key={product.id} borderRadius={'md'} >
@@ -88,7 +89,14 @@ const LimitedStock = () => {
               </Box>
             )
           })
-        }
+        } */}
+
+        <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
+                {products.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+
       </Carousel>
     </Box>
    );
