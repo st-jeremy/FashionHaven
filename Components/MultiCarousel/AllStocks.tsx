@@ -89,8 +89,6 @@ const LimitedStock = ({products}) => {
             )
           })
         } 
-
-        <Shop />
         
 
       </Carousel>
