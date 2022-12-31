@@ -11,6 +11,7 @@ import {
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cart.slice';
+import AddtoCartButton from './AddToCartButton';
 
 const ProductCard = ({ product }) => {
 
@@ -44,9 +45,10 @@ const ProductCard = ({ product }) => {
             <b>${product.price}</b>
           </Text>
 
-          <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm' onClick={handleClick}>
+          {/* <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm' onClick={handleClick}>
             Add to cart
-          </Button>
+          </Button> */}
+          <AddtoCartButton product={undefined} />
         </CardFooter>
       </Card>
     </Box>
