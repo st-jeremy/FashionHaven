@@ -31,9 +31,9 @@ export default function Home() {
           <Brands />
         </Box>
 
-        <TopSelling />
+        <TopSelling product={undefined} />
 
-        <AllStock />
+        <AllStock product={undefined} />
 
         <Value />
       </Box>

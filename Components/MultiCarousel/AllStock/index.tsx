@@ -26,7 +26,7 @@ const AllStock = ({product}) => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 5.2
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -39,7 +39,7 @@ const AllStock = ({product}) => {
   };
 
   return ( 
-    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} p={5}>
+    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} mt={7}>
 
       <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
         <Heading pl={5} color={'white'}>All Stock</Heading>
@@ -66,7 +66,7 @@ const AllStock = ({product}) => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'} >
+              <Box key={product.id} borderRadius={'md'} p={2}>
                 <Card m={5} width={250} height={490}>
                   <Box minHeight={365} bgColor={'white'} margin={'auto'}>
                     <Image src={product.image} alt={product.name} width={700} height={300} />
