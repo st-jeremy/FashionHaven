@@ -15,7 +15,7 @@ import { SearchIcon, ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleSearch = ()=>{
-    input.value ===
+    // input.value ===
   }
 
   return ( 
