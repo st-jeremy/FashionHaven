@@ -8,17 +8,18 @@ import {
   Heading, 
   Text, 
   Button,
+  useToast
 } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductList } from './ProductList';
+import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cart.slice';
-import { useDispatch } from 'react-redux';
 
-const AllStock = ({products}) => {
+const AllStock = ({product}) => {
 
   const responsive = {
     superLargeDesktop: {
