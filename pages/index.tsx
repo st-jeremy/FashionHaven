@@ -31,9 +31,9 @@ export default function Home() {
           <Brands />
         </Box>
 
-        <MultiCarousel />
+        {/* <MultiCarousel /> */}
 
-        <LimitedStock />
+        {/* <LimitedStock /> */}
 
         <Value />
       </Box>

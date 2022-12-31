@@ -14,6 +14,7 @@ import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductList } from './ProductList';
+import Shop from '../Shop'
 
 const LimitedStock = ({products}) => {
 
@@ -89,6 +90,7 @@ const LimitedStock = ({products}) => {
           })
         } 
 
+        <Shop />
         
 
       </Carousel>

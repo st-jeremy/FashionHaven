@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import {
   Menu,
   MenuButton,
@@ -6,10 +5,10 @@ import {
   MenuItem,
   Button,
   useDisclosure,
-  MenuDivider
+  MenuDivider,
+  Box
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
-import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 
 const Account = () => {

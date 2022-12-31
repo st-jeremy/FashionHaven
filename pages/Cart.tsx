@@ -19,6 +19,7 @@ import {
   removeFromCart,
 } from '../redux/cart.slice';
 import Link from 'next/link';
+import React from 'react';
 
 
 const Cart = () => {
@@ -27,6 +28,7 @@ const Cart = () => {
 
   const dispatch = useDispatch();
   const toast = useToast();
+  const toastIdRef = React.useRef()
 
   const handleIncrement =() => {
     toast({
@@ -36,7 +38,8 @@ const Cart = () => {
       duration: 700,
       isClosable: true,
     })
-  }
+  };
+
   const handleDecrement =() => {
     toast({
       title: 'Subtract Item',

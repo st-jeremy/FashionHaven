@@ -5,15 +5,17 @@ import {
   ListItem,
   ListIcon, 
 } from '@chakra-ui/react';
-import {MdCheckCircle} from 'react-icons/md'
+import {MdCheckCircle} from 'react-icons/md';
+import { getBrands } from '../pages/api/Brands';
+import { Key, ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
-const Brands = () => {
+const Brands = ({ brands }) => {
   return ( 
     <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}}>
       <Heading>Top Brands</Heading>
       <br />
 
-      <List spacing={3} >
+      {/* <List spacing={3} >
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
           Nike
@@ -55,10 +57,24 @@ const Brands = () => {
           Chanel
         </ListItem>
         
-      </List>
+      </List> */}
       
+      <div>
+        {brands && !brands.map((brand: { id: Key; name: string })=>( 
+          <div key={brand.id}>
+            <li>{brand.name}</li>
+          </div>
+        ))}
+      </div>
+
+
     </Box>
    );
 }
  
 export default Brands;
+
+export async function getStaticProps() {
+  const brands = await getBrands();
+  return { props: { brands } };
+}
