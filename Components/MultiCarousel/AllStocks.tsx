@@ -14,7 +14,9 @@ import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductList } from './ProductList';
-import Shop from '../Shop'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cart.slice';
+import { useDispatch } from 'react-redux';
 
 const AllStock = ({products}) => {
 
@@ -37,6 +39,11 @@ const AllStock = ({products}) => {
       items: 1
     }
   };
+
+
+  const toast = useToast();
+  const dispatch = useDispatch();
+
   const handleClick =() =>{
     dispatch(addToCart(product));
     toast({
