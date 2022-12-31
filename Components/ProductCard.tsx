@@ -4,30 +4,12 @@ import {
   Card, 
   Divider, 
   Heading, 
-  Text, 
-  Button,
-  useToast
+  Text
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/cart.slice';
 import AddtoCartButton from './AddToCartButton';
 
 const ProductCard = ({ product }) => {
-
-  const toast = useToast();
-  const dispatch = useDispatch();
-
-  const handleClick =() =>{
-    dispatch(addToCart(product));
-    toast({
-      title: 'Cart.',
-      description: "Item added successfully to cart.",
-      status: 'success',
-      duration: 900,
-      isClosable: true,
-    })
-  };
 
   return (
     <Box>
@@ -45,10 +27,7 @@ const ProductCard = ({ product }) => {
             <b>${product.price}</b>
           </Text>
 
-          {/* <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm' onClick={handleClick}>
-            Add to cart
-          </Button> */}
-          <AddtoCartButton product={undefined} />
+          <AddtoCartButton product={product} />
         </CardFooter>
       </Card>
     </Box>

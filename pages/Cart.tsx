@@ -140,7 +140,7 @@ const Cart = () => {
             </Table>
           </Box>
       )}
-      <Box mt={5}>
+      <Box mt={15} textAlign={'center'}>
         <Link href='/Shop'><Button bgColor={"black"} color={'white'}>Continue Shopping</Button></Link>
       </Box>
     </Box>

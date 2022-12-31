@@ -15,15 +15,12 @@ import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductList } from './ProductList';
-import React, { useCallback } from 'react'
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/cart.slice';
+import AddtoCartButton from '../AddToCartButton';
 
 const AllStock = ({product}) => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -39,21 +36,6 @@ const AllStock = ({product}) => {
       breakpoint: { max: 464, min: 0 },
       items: 1
     }
-  };
-
-
-  const toast = useToast();
-  const dispatch = useDispatch();
-
-  const handleClick =() =>{
-    dispatch(addToCart(product));
-    toast({
-      title: 'Cart.',
-      description: "Item added successfully to cart.",
-      status: 'success',
-      duration: 900,
-      isClosable: true,
-    })
   };
 
   return ( 
@@ -97,9 +79,7 @@ const AllStock = ({product}) => {
                       <b>${product.price}</b>
                     </Text>
 
-                    <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
-                      Add to cart
-                    </Button>
+                    <AddtoCartButton product={product} />
                   </CardFooter>
                 </Card>
 
