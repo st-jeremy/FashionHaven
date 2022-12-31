@@ -6,7 +6,6 @@ import {
   ListIcon, 
 } from '@chakra-ui/react';
 import {MdCheckCircle} from 'react-icons/md';
-import { getBrands } from '../pages/api/Brands';
 
 const Brands = ({ brands }) => {
   return ( 
@@ -62,8 +61,3 @@ const Brands = ({ brands }) => {
 }
  
 export default Brands;
-
-export async function getStaticProps() {
-  const brands = await getBrands();
-  return { props: { brands } };
-}
