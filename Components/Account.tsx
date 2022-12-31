@@ -10,12 +10,13 @@ import {
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import SignIn from './SignIn';
+import { useRouter } from 'next/router';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter;
   const handleSignIn = () => {
-    <SignIn />
+    router.push('/Authentication/SignIn')
   }
   
   return ( 
