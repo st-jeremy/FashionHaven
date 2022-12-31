@@ -7,7 +7,6 @@ import {
 } from '@chakra-ui/react';
 import {MdCheckCircle} from 'react-icons/md';
 import { getBrands } from '../pages/api/Brands';
-import { Key, ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
 const Brands = ({ brands }) => {
   return ( 
@@ -15,7 +14,7 @@ const Brands = ({ brands }) => {
       <Heading>Top Brands</Heading>
       <br />
 
-      {/* <List spacing={3} >
+      <List spacing={3} >
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green.500' />
           Nike
@@ -57,17 +56,7 @@ const Brands = ({ brands }) => {
           Chanel
         </ListItem>
         
-      </List> */}
-      
-      <div>
-        {brands && !brands.map((brand: { id: Key; name: string })=>( 
-          <div key={brand.id}>
-            <li>{brand.name}</li>
-          </div>
-        ))}
-      </div>
-
-
+      </List> 
     </Box>
    );
 }
