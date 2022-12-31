@@ -6,7 +6,6 @@ import image3 from "../public/milo.png";
 import image4 from "../public/milo.png";
 import image5 from "../public/milo.png";
 import Image from "next/image";
-// style was imported in index.css
 
 import 'react-slideshow-image/dist/styles.css'
 import { Box } from "@chakra-ui/react";

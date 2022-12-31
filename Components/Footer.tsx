@@ -1,4 +1,4 @@
-import { Box, Heading, Input, InputGroup, InputRightAddon, List, ListItem } from "@chakra-ui/react";
+import { Box, Heading, Input, InputGroup, InputRightAddon} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
 

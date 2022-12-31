@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import {MdCheckCircle} from 'react-icons/md';
 
-const Brands = ({ brands }) => {
+const Brands = () => {
   return ( 
     <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}}>
       <Heading>Top Brands</Heading>

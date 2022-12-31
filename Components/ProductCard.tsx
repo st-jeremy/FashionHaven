@@ -1,9 +1,7 @@
 import { 
   Box, 
-  CardBody, 
   CardFooter, 
   Card, 
-  Stack, 
   Divider, 
   Heading, 
   Text, 
@@ -18,7 +16,7 @@ const ProductCard = ({ product }) => {
 
   const toast = useToast();
   const dispatch = useDispatch();
-  
+
   const handleClick =() =>{
     dispatch(addToCart(product));
     toast({

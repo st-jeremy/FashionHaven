@@ -28,7 +28,7 @@ export default function Home() {
             <Slideshow />
           </Box>
 
-          <Brands />
+          <Brands brands={undefined} />
         </Box>
 
         {/* <MultiCarousel /> */}
