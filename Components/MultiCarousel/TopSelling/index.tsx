@@ -1,23 +1,21 @@
 import { 
   Box, 
-  CardBody, 
   CardFooter, 
   Card, 
-  Stack, 
   Divider, 
   Heading, 
   Text, 
-  Button,
-  useToast
+  AvatarBadge,
+  Avatar
 } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
-import Link from 'next/link';
-import { ProductList } from './ProductList';
-import AddtoCartButton from '../AddToCartButton';
+import { ProductList } from '../TopSelling/ProductList'
+import AddtoCartButton from '../../AddToCartButton';
 
-const AllStock = ({product}) => {
+
+const MultiCarousel = ({ product }) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -39,20 +37,14 @@ const AllStock = ({product}) => {
   };
 
   return ( 
-    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} p={5}>
-
-      <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
-        <Heading pl={5} color={'white'}>All Stock</Heading>
-        <Link href='/Shop'>
-          <Button  bgColor={'red.700'} position={'absolute'} right={'13rem'} p={1}>View All</Button>
-        </Link>
-      </Box>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'red'} p={5}>
+      <Heading bg={'black'} color={'white'} pl={5}>Top Selling</Heading>
 
       <Carousel 
         responsive={responsive}
         swipeable={true}
         draggable={true}
-        showDots={true}
+        showDots={false}
         infinite={true}
         autoPlaySpeed={1000}
         keyBoardControl={true}
@@ -67,29 +59,35 @@ const AllStock = ({product}) => {
           ProductList && ProductList.map(product =>{
             return(
               <Box key={product.id} borderRadius={'md'} >
-                <Card m={5} width={250} height={490} mb={35}>
 
-                  <Image src={product.image} alt={product.name} width={700} height={300} />
+                <Card m={5} width={250} height={490}>
+                  <Box minHeight={365} bgColor={'white'} margin={'auto'}>
+                    <Image src={product.image} alt={product.name} width={700} height={365} />
+                    <Text borderRadius={'none'} fontSize='12pt' position={'absolute'} top={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={2}>50% Off</Text>
+                  </Box>
 
                   <Divider />
 
                   <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
                   <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
                     <Text color='blue.600' fontSize='xl'>
-                      <b>${product.price}</b>
+                      <b>${product.price}</b> <br />
+                      <Text color={'red'} fontSize={'sm'}><s>${~~product.price * 2}</s></Text>
                     </Text>
 
                     <AddtoCartButton product={product} />
                   </CardFooter>
                 </Card>
-
               </Box>
             )
           })
-        } 
+        }
       </Carousel>
     </Box>
    );
 }
  
-export default AllStock;
+export default MultiCarousel;
+
+
+

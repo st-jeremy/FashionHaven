@@ -14,6 +14,9 @@ import { SearchIcon, ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
 const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleSearch = ()=>{
+    input.value ===
+  }
 
   return ( 
     <Box margin= 'auto'>
@@ -43,6 +46,7 @@ const Search = () => {
             <MenuDivider />
 
             <MenuItem width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>
+              <form action="" method="get" onSubmit={handleSearch}>
               <Input
                 type="text"
                 name="Search"
@@ -51,7 +55,8 @@ const Search = () => {
                 width={{ base: '250px', lg: '450' }}
                 height={{ base: '7', lg: 'auto' }}
                 marginTop={'2'} />
-              <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} />
+              <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} type='submit' />
+              </form>
             </MenuItem>
           </MenuList>
         </Menu>

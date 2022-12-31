@@ -5,7 +5,7 @@ import Categories from '../Components/Categories';
 import { Box } from '@chakra-ui/react';
 import TopSelling from '../Components/MultiCarousel/TopSelling';
 import Brands from '../Components/Brands';
-import AllStock from '../Components/MultiCarousel/AllStocks';
+import AllStock from '../Components/MultiCarousel/AllStock';
 import Value from '../Components/Value';
 
 const inter = Inter({ subsets: ['latin'] })

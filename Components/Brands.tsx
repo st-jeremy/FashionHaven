@@ -3,14 +3,17 @@ import {
   Heading,
   List,
   ListItem,
-  ListIcon, 
+  ListIcon,
+  Divider, 
 } from '@chakra-ui/react';
 import {MdCheckCircle} from 'react-icons/md';
 
 const Brands = () => {
   return ( 
     <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}}>
-      <Heading fontSize={'2xl'}>Top Brands</Heading>
+      <Heading fontSize={'2xl'} p={3}>Top Brands</Heading>
+
+      <Divider />
       <br />
 
       <List spacing={3} >

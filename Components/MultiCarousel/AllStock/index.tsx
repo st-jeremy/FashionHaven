@@ -1,7 +1,9 @@
 import { 
   Box, 
+  CardBody, 
   CardFooter, 
   Card, 
+  Stack, 
   Divider, 
   Heading, 
   Text, 
@@ -11,13 +13,11 @@ import {
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
+import Link from 'next/link';
+import { ProductList } from './ProductList';
+import AddtoCartButton from '../../AddToCartButton';
 
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/cart.slice';
-import { ProductList } from './ProductList'
-
-
-const MultiCarousel = ({ product }) => {
+const AllStock = ({product}) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -38,23 +38,16 @@ const MultiCarousel = ({ product }) => {
     }
   };
 
-  const dispatch = useDispatch();
-  const toast = useToast();
-
-  const handleClick =() =>{
-    dispatch(addToCart(product));
-    toast({
-      title: 'Cart.',
-      description: "Item added successfully to cart.",
-      status: 'success',
-      duration: 5000,
-      isClosable: true,
-    })
-  };
-
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'blackAlpha.100'} p={5}>
-      <Heading bg={'red.700'} color={'white'} pl={5}>Top Selling</Heading>
+    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} p={5}>
+
+      <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
+        <Heading pl={5} color={'white'}>All Stock</Heading>
+        <Link href='/Shop'>
+          <Button  bgColor={'red.700'} position={'absolute'} right={'7rem'} p={1} _hover={{textDecoration:'underline', fontSize: '20pt'}}>View All</Button>
+        </Link>
+      </Box>
+
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -73,35 +66,31 @@ const MultiCarousel = ({ product }) => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'} mb={'5rem'}>
-
+              <Box key={product.id} borderRadius={'md'} >
                 <Card m={5} width={250} height={490}>
-                  <Image src={product.image} alt={product.name} width={700} height={300} />
+                  <Box minHeight={365} bgColor={'white'} margin={'auto'}>
+                    <Image src={product.image} alt={product.name} width={700} height={300} />
+                  </Box>
 
                   <Divider />
 
                   <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
                   <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
                     <Text color='blue.600' fontSize='xl'>
-                      <b>${product.price}</b> <br />
-                      <s>${~~product.price * 1.5}</s>
+                      <b>${product.price}</b>
                     </Text>
 
-                    <Button onClick={handleClick} colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm'>
-                      Add to cart
-                    </Button>
+                    <AddtoCartButton product={product} />
                   </CardFooter>
                 </Card>
+
               </Box>
             )
           })
-        }
+        } 
       </Carousel>
     </Box>
    );
 }
  
-export default MultiCarousel;
-
-
-
+export default AllStock;

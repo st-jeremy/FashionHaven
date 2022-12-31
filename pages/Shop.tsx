@@ -13,7 +13,7 @@ interface product {
 
 const ShopPage = ({ products }) => {
   return (
-    <Box maxWidth={'1400px'} margin={'auto'} p={5}>
+    <Box maxWidth={'1400px'} margin={'auto'} p={5}  pt={'9rem'}>
 
       <Heading>All Results</Heading>
 

@@ -9,62 +9,19 @@ import {
   Heading,
   TableContainer,
   Box,
-  useToast
 } from '@chakra-ui/react'
 import Image from 'next/image';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  incrementQuantity,
-  decrementQuantity,
-  removeFromCart,
-} from '../redux/cart.slice';
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
-import React from 'react';
+import IncrementBtn from '../Components/IncrementBtn';
+import DecrementBtn from '../Components/DecrementBtn';
+import RemovalBtn from '../Components/RemovalBtn';
+import TotalPrice from '../Components/TotalPrice';
 
-
-const Cart = () => {
+const Cart = ({ item }) => {
 
   const cart = useSelector((state) => state.cart);
 
-  const dispatch = useDispatch();
-  const toast = useToast();
-  const toastIdRef = React.useRef()
-
-  const handleIncrement =() => {
-    toast({
-      title: 'Add Item',
-      description: "Item added successfully.",
-      status: 'success',
-      duration: 700,
-      isClosable: true,
-    })
-  };
-
-  const handleDecrement =() => {
-    toast({
-      title: 'Subtract Item',
-      description: "Item subtracted successfully.",
-      status: 'warning',
-      duration: 700,
-      isClosable: true,
-    })
-  }
-  const handleRemoval =() => {
-    toast({
-      title: 'Remove Item',
-      description: "Item removed successfully.",
-      status: 'error',
-      duration: 700,
-      isClosable: true,
-    })
-  }
-
-  const getTotalPrice = () => {
-    return cart.reduce(
-      (accumulator, item) => accumulator + item.quantity * item.price,
-      0
-    );
-  };
 
   return (
     <Box p={5} maxWidth={'1400px'} margin={'auto'} mt={'6rem'}>
@@ -86,7 +43,7 @@ const Cart = () => {
                   </Tr>
                 </Thead>
                 </Table>
-              </TableContainer>
+            </TableContainer>
           
             {cart.map((item) => (
               <Box key={item.id} display={'flex'}>
@@ -98,32 +55,9 @@ const Cart = () => {
                         <Td  p={15} isNumeric width={150}>$ {item.price}</Td>
                         <Td  p={15} textAlign={'center'} width={145}>{item.quantity}</Td>
                         <Td textAlign={'center'} p={15} width={225}>
-                          <Button 
-                            width={'35px'} 
-                            height={'35px'} 
-                            bgColor={'blue'} 
-                            onClick={() => {dispatch(incrementQuantity(item.id)); handleIncrement() }}
-                          >
-                            +
-                          </Button>&nbsp;
-
-                          <Button 
-                            width={'35px'} 
-                            height={'35px'}  
-                            bgColor={'yellow'} 
-                            onClick={() => {dispatch(decrementQuantity(item.id)); handleDecrement()}}
-                          >
-                            -
-                          </Button>&nbsp;
-
-                          <Button 
-                            width={'35px'} 
-                            height={'35px'}  
-                            bgColor={'red'}  
-                            onClick={() => {dispatch(removeFromCart(item.id)); handleRemoval() }}
-                          >
-                            x
-                          </Button>
+                          <IncrementBtn item={item} /> &nbsp;
+                          <DecrementBtn item={item} /> &nbsp;
+                          <RemovalBtn item={item} />
                         </Td>
                         <Td isNumeric p={15} width={150}>$ {item.quantity * item.price}</Td>
                       </Tr>
@@ -132,12 +66,7 @@ const Cart = () => {
               </Box>
             ))}
 
-            <Table>
-              <Tr>
-                <Th width={900}></Th>
-                <Th isNumeric fontWeight={'700'} fontSize={'20pt'}  p={1}>Grand Total: $ {getTotalPrice()}</Th>
-              </Tr>
-            </Table>
+            <TotalPrice />
           </Box>
       )}
       <Box mt={15} textAlign={'center'}>

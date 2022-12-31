@@ -101,14 +101,14 @@
     "id": 15,
     "name": "Nike Duffel Bag",
     "image": "/nike-duffel-bag.png",
-    "price": "1200",
+    "price": "230",
     "category": "Accessories"
   },
   {
     "id": 16,
     "name": "Nike Dunk High",
     "image": "/nike-dunk-high.png",
-    "price": "1700",
+    "price": "170",
     "category": "FootWear"
   },
   {
