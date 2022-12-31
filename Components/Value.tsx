@@ -7,7 +7,7 @@ import { Box, Heading } from "@chakra-ui/react";
 const Value = () => {
 
   return ( 
-    <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} textAlign={'center'} p={5} mt={'20rem'} maxWidth={'1400px'} margin={'auto'}>
+    <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} textAlign={'center'} p={5} pt={'6rem'} maxWidth={'1400px'} margin={'auto'}>
       <Box display={{base: 'block', md: 'flex'}} mb={7}>
         <Box mr={3}>
           <BiDollar style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
