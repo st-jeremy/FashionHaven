@@ -16,7 +16,7 @@ import Link from 'next/link';
 import { ProductList } from './ProductList';
 import Shop from '../Shop'
 
-const LimitedStock = ({products}) => {
+const AllStock = ({products}) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -36,6 +36,16 @@ const LimitedStock = ({products}) => {
       breakpoint: { max: 464, min: 0 },
       items: 1
     }
+  };
+  const handleClick =() =>{
+    dispatch(addToCart(product));
+    toast({
+      title: 'Cart.',
+      description: "Item added successfully to cart.",
+      status: 'success',
+      duration: 900,
+      isClosable: true,
+    })
   };
 
   return ( 
@@ -89,11 +99,9 @@ const LimitedStock = ({products}) => {
             )
           })
         } 
-        
-
       </Carousel>
     </Box>
    );
 }
  
-export default LimitedStock;
+export default AllStock;

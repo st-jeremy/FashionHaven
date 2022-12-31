@@ -3,9 +3,9 @@ import { Inter } from '@next/font/google';
 import Slideshow from '../Components/Slideshow';
 import Categories from '../Components/Categories';
 import { Box } from '@chakra-ui/react';
-import MultiCarousel from '../Components/MultiCarousel/TopSelling';
+import TopSelling from '../Components/MultiCarousel/TopSelling';
 import Brands from '../Components/Brands';
-import LimitedStock from '../Components/MultiCarousel/AllStocks';
+import AllStock from '../Components/MultiCarousel/AllStocks';
 import Value from '../Components/Value';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,9 +31,9 @@ export default function Home() {
           <Brands />
         </Box>
 
-        {/* <MultiCarousel /> */}
+        <TopSelling />
 
-        {/* <LimitedStock /> */}
+        <AllStock />
 
         <Value />
       </Box>
