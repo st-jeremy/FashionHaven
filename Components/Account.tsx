@@ -6,7 +6,8 @@ import {
   Button,
   useDisclosure,
   MenuDivider,
-  Box
+  Box,
+  Divider
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
@@ -43,7 +44,12 @@ const Account = () => {
           <MenuItem fontWeight={'600'} >Account</MenuItem>
           <MenuDivider/>
           <MenuItem><LoginBtn /></MenuItem>
-          <MenuItem>Sign Up</MenuItem>
+          <Divider />
+          <MenuItem>
+            <Button leftIcon={<BiUser />}>
+              My Account
+            </Button>
+          </MenuItem>
         </MenuList>
       </Menu>
     </Box>
