@@ -9,7 +9,7 @@ import {
   Heading,
   TableContainer,
   Box,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
@@ -18,9 +18,20 @@ import DecrementBtn from '../Components/DecrementBtn';
 import RemovalBtn from '../Components/RemovalBtn';
 import TotalPrice from '../Components/TotalPrice';
 
+interface State {
+  cart: {
+    map(arg0: (item: any) => JSX.Element): import("react").ReactNode;
+    length: number;
+    items: string[],
+  },
+  user: {
+    name: string,
+  },
+}
+
 const Cart = ({ item }) => {
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: State) => state.cart);
 
 
   return (
