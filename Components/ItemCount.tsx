@@ -1,9 +1,7 @@
-import { useRouter } from 'next/router';
-import { AvatarBadge, Avatar  } from '@chakra-ui/react'
 import { useSelector } from 'react-redux';
 import { State } from './Types';
 
-const CartIcon = () => {
+const ItemCount = () => {
   
   const cart = useSelector((state: State) => state.cart);
 
@@ -19,4 +17,4 @@ const CartIcon = () => {
   );
 }
  
-export default CartIcon;
+export default ItemCount;
