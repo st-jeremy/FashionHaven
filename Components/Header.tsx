@@ -5,9 +5,7 @@ import { GiShoppingCart } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 import Hamburger from './Hamburger';
 import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
-
-import { useSelector } from 'react-redux';
-import { State } from './Types';
+import ItemCount from './ItemCount';
 
 
 
@@ -20,16 +18,6 @@ const Header = () => {
   const handleCartClick =() =>{
     router.push('/Cart')
   }
-
-   // Selecting cart from global state
-  const cart = useSelector((state: State) => state.cart);
-
-   // Getting the count of items
-  const getItemsCount = () => {
-    return (
-      cart.reduce((accumulator, item) => accumulator + item.quantity, 0)
-    )
-   };
 
   return ( 
     <Box bgColor= 'black' position={'fixed'} zIndex={'1000'} margin={'auto'} width={'100%'}>
@@ -63,7 +51,7 @@ const Header = () => {
             bgColor={'black'}
             onClick={handleCartClick}
           >
-            <AvatarBadge boxSize='1em' bgColor={'red'} color={'white'} position={'absolute'} top={'0'} border={'none'} fontSize='12pt'>{getItemsCount()} </AvatarBadge>
+            <AvatarBadge boxSize='1em' bgColor={'red'} color={'white'} position={'absolute'} top={'0'} border={'none'} fontSize='12pt'>< ItemCount/></AvatarBadge>
           </Avatar>
         </Box>
       </Box>
