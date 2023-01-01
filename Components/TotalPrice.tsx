@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { State } from '../Components/Types';
+import { State } from './Types';
 
 const TotalPrice = () => {
 

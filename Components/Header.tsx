@@ -7,6 +7,7 @@ import Hamburger from './Hamburger';
 import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 
 import { useSelector } from 'react-redux';
+import { State } from './Types';
 
 
 
@@ -21,7 +22,7 @@ const Header = () => {
   }
 
    // Selecting cart from global state
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: State) => state.cart);
 
    // Getting the count of items
   const getItemsCount = () => {

@@ -9,3 +9,12 @@ export interface State {
     name: string,
   },
 }
+
+
+export interface Data {
+  id: number,
+  name: string,
+  category: string,
+  image: string,
+  price: number
+}
