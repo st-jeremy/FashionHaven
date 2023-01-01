@@ -10,14 +10,10 @@ import {
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const router = useRouter;
-  const handleSignIn = () => {
-    router.push('/Authentication/SignIn')
-  }
   
   return ( 
     <Box margin= 'auto'>
@@ -45,7 +41,7 @@ const Account = () => {
         >
           <MenuItem fontWeight={'600'} >Account</MenuItem>
           <MenuDivider/>
-          <MenuItem><Button onClick={handleSignIn}>Sign In</Button> </MenuItem>
+          <MenuItem><Link href='/Authentication/SignIn'>Sign In</Link> </MenuItem>
           <MenuItem>Sign Up</MenuItem>
         </MenuList>
       </Menu>
