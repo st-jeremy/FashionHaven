@@ -1,4 +1,4 @@
-import { configureStore, createStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { cartReducer } from './cart.slice';
 
 import storage from 'redux-persist/lib/storage';

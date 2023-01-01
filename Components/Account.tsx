@@ -11,6 +11,7 @@ import {
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
+import LoginBtn from '../pages/Authentication/LoginBtn';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -41,7 +42,7 @@ const Account = () => {
         >
           <MenuItem fontWeight={'600'} >Account</MenuItem>
           <MenuDivider/>
-          <MenuItem><Link href='/Authentication/SignIn'>Sign In</Link> </MenuItem>
+          <MenuItem><LoginBtn /></MenuItem>
           <MenuItem>Sign Up</MenuItem>
         </MenuList>
       </Menu>
