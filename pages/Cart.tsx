@@ -18,8 +18,9 @@ import DecrementBtn from '../Components/DecrementBtn';
 import RemovalBtn from '../Components/RemovalBtn';
 import TotalPrice from '../Components/TotalPrice';
 
-interface State {
+export interface State {
   cart: {
+    reduce(arg0: (accumulator: any, item: any) => any, arg1: number): unknown;
     map(arg0: (item: any) => JSX.Element): import("react").ReactNode;
     length: number;
     items: string[],
