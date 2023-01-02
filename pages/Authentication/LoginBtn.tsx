@@ -6,7 +6,7 @@ export default function Component() {
   if (session) {
     return (
       <>
-        <Button onClick={() => signOut()}>Sign out</Button>
+        {session.user.image}<Button onClick={() => signOut()}>Sign out</Button>
       </>
     )
   }
