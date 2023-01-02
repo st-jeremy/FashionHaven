@@ -12,7 +12,7 @@ export default function Component() {
   }
   return (
     <>
-      <Button onClick={() => signIn()}>Sign in</Button>
+      <Button onClick={() => signIn('', {callbackUrl:'/Cart'})}>Sign in</Button>
     </>
   )
 }
