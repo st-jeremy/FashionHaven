@@ -1,18 +1,26 @@
-import { Button } from "@chakra-ui/react"
+import { Button, Text } from "@chakra-ui/react"
 import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Component() {
-  const { data: session } = useSession()
+  const { data: session, status } = useSession();
+  const userName = session?.user.name;
+
+  if (status === "loading") {
+    return <p>Hang on there...</p>
+  }
+
   if (session) {
     return (
       <>
-        <Button onClick={() => signOut()}>Sign out</Button>
+        <Text>Signed in as {userName}</Text>
+        <Button bgColor={'red'} color={'white'} onClick={() => signOut()}>Sign out</Button>
       </>
     )
   }
   return (
     <>
-      <Button onClick={() => signIn('', {callbackUrl:'/Cart'})}>Sign in</Button>
+      <Text>Not signed in yet.</Text>  &nbsp; &nbsp;
+      <Button  bgColor={'black'} color={'white'} onClick={() => signIn('', {callbackUrl:'/Cart'})}>Sign in</Button>
     </>
   )
 }

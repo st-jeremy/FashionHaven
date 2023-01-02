@@ -7,17 +7,21 @@ import {
   useDisclosure,
   MenuDivider,
   Box,
-  Divider
+  Divider,
+  Avatar
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import LoginBtn from '../pages/Authentication/LoginBtn';
-import { useSession } from 'next-auth/react';
+import { useSession, getSession } from 'next-auth/react';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const { data: session } = useSession();
+  const { data: session } = useSession();
+
+  const userImage = session?.user.image;
+  const userName = session?.user.name;
 
   return ( 
     <Box margin= 'auto'>
@@ -43,12 +47,14 @@ const Account = () => {
           color={'black'}
           zIndex={'1000'}
         >
-          <MenuItem fontWeight={'600'} >Account</MenuItem>
+          <MenuItem fontWeight={'600'}>Account</MenuItem>
           <MenuDivider/>
+
           <MenuItem><LoginBtn /></MenuItem>
           <Divider />
           <MenuItem>
-            <Link href='../pages/MyAccount'>
+            <Link href='/MyAccount'>
+              <Avatar name={userName} src={userImage} /> &nbsp; &nbsp;
               My Account
             </Link>
           </MenuItem>
@@ -59,3 +65,4 @@ const Account = () => {
 }
  
 export default Account;
+

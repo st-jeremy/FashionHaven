@@ -15,9 +15,7 @@ export const authOptions = {
     })
   ],
   secret: process.env.NEXTAUTH_SECRET,
-  // pages: {
-  //   signIn: '/Authentication/SignIn',
-  // },
+ 
   callbacks: {
     session({ session, token, user }) {
       return session // The return type will match the one returned in `useSession()`
@@ -31,6 +29,9 @@ export const authOptions = {
       return randomUUID?.() ?? randomBytes(32).toString("hex")
     }
   },
+  theme:{
+    logo: "/logo.png", 
+  }
 }
 
 export default NextAuth(authOptions)
