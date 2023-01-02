@@ -13,7 +13,7 @@ import {
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
-import LoginBtn from '../pages/Authentication/LoginBtn';
+import LoginBtn from './LoginBtn';
 import { useSession, getSession } from 'next-auth/react';
 
 const Account = () => {
@@ -50,7 +50,7 @@ const Account = () => {
           <MenuItem fontWeight={'600'}>Account</MenuItem>
           <MenuDivider/>
 
-          <MenuItem><LoginBtn /></MenuItem>
+          <MenuItem display={'block'}><LoginBtn /></MenuItem>
           <Divider />
           <MenuItem>
             <Link href='/MyAccount'>
