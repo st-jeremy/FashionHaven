@@ -18,6 +18,11 @@ export const authOptions = {
   // pages: {
   //   signIn: '/Authentication/SignIn',
   // },
+  callbacks: {
+    session({ session, token, user }) {
+      return session // The return type will match the one returned in `useSession()`
+    },
+  },
 
   session : {
     maxAge : 1*60*60*24,
