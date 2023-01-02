@@ -17,8 +17,8 @@ import { useSession } from 'next-auth/react';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
+
   return ( 
     <Box margin= 'auto'>
       <Menu  isOpen={isOpen}>
@@ -49,7 +49,6 @@ const Account = () => {
           <Divider />
           <MenuItem>
             <Link href='../pages/MyAccount'>
-              {session.user.name}
               My Account
             </Link>
           </MenuItem>
