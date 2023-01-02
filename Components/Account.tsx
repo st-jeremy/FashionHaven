@@ -48,8 +48,8 @@ const Account = () => {
           <MenuItem><LoginBtn /></MenuItem>
           <Divider />
           <MenuItem>
-            <Link href='/MyAccount'>
-              {session.user.image}
+            <Link href='../pages/MyAccount'>
+              {session.user.name}
               My Account
             </Link>
           </MenuItem>
