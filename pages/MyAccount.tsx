@@ -2,12 +2,12 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
   TableCaption,
   TableContainer,
+  Avatar,
 } from '@chakra-ui/react'
 import { Box, Text } from "@chakra-ui/react";
 import { getSession, useSession } from "next-auth/react"
@@ -30,7 +30,8 @@ const MyAccount = () => {
 
   return ( 
     <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'9rem'}>
-      <Image src={userImage} alt={userName} width={500} height={500} style={style} />
+      {/* <Image src={userImage} alt={userName} width={500} height={500} style={style} /> */}
+      <Avatar src={userImage} name={userName}  size='2xl'/>
       <Text>{userName}</Text>
       <Text>{userEmail}</Text>
 
