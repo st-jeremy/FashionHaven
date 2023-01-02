@@ -1,3 +1,4 @@
+import { randomBytes, randomUUID } from "crypto";
 import NextAuth from "next-auth";
 import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
@@ -17,6 +18,14 @@ export const authOptions = {
   // pages: {
   //   signIn: '/Authentication/SignIn',
   // },
+
+  session : {
+    maxAge : 1*60*60*24,
+    updateAge: 24 * 60 * 60,
+    generateSessionToken: () => {
+      return randomUUID?.() ?? randomBytes(32).toString("hex")
+    }
+  }
 }
 
 export default NextAuth(authOptions)
