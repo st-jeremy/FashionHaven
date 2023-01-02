@@ -13,10 +13,12 @@ import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import LoginBtn from '../pages/Authentication/LoginBtn';
+import { useSession } from 'next-auth/react';
 
 const Account = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   
+  const { data: session } = useSession();
   return ( 
     <Box margin= 'auto'>
       <Menu  isOpen={isOpen}>
@@ -46,9 +48,10 @@ const Account = () => {
           <MenuItem><LoginBtn /></MenuItem>
           <Divider />
           <MenuItem>
-            <Button leftIcon={<BiUser />}>
+            <Link href='/MyAccount'>
+              {session.user.image}
               My Account
-            </Button>
+            </Link>
           </MenuItem>
         </MenuList>
       </Menu>
