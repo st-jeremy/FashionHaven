@@ -11,12 +11,31 @@ import {
   Button
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
+import { Key, useState } from 'react';
+import ProductCard from '../Components/ProductCard';
 
-const Search = () => {
+const Search = ({ products }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleSearch = ()=>{
-    // input.value ===
-  }
+
+  const [inputText, setInputText] = useState("");
+  let inputHandler = (e) => {
+    //convert input text to lower case
+    var lowerCase = e.target.value.toLowerCase();
+    setInputText(lowerCase);
+  };
+
+  const allProducts = products?.map((product: { id: Key; }) => (
+    <ProductCard key={product.id} product={product} />
+  ));
+  
+  const filteredData = allProducts?.filter((filtered) => {
+    if (inputText === '') {
+        return filtered;
+    }
+    else {
+        return filtered.text.toLowerCase().includes(setInputText)
+    }
+  });
 
   return ( 
     <Box margin= 'auto'>
@@ -46,7 +65,7 @@ const Search = () => {
             <MenuDivider />
 
             <MenuItem width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>
-              <form action="" method="get" onSubmit={handleSearch}>
+              <form action="" method="get">
               <Input
                 type="text"
                 name="Search"
@@ -54,10 +73,15 @@ const Search = () => {
                 placeholder="Search products"
                 width={{ base: '250px', lg: '450' }}
                 height={{ base: '7', lg: 'auto' }}
-                marginTop={'2'} />
+                marginTop={'2'} 
+                value= {inputText}
+                onChange={inputHandler}
+              />
               <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} type='submit' />
               </form>
             </MenuItem>
+
+            
           </MenuList>
         </Menu>
       </Box>

@@ -29,26 +29,25 @@ const MyAccount = () => {
   }
 
   return ( 
-    <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'9rem'}>
-      {/* <Image src={userImage} alt={userName} width={500} height={500} style={style} /> */}
-      <Avatar src={userImage} name={userName}  size='2xl'/>
-      <Text>{userName}</Text>
-      <Text>{userEmail}</Text>
+    <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'5rem'}>
+      <Avatar src={userImage} name={userName}  size='full'/>
+      <Text>Name: {userName}</Text>
+      <Text>Email: {userEmail}</Text>
 
-      <Box>
+      <Box mt={3}>
         <TableContainer>
           <Table variant='striped' colorScheme='blackAlpha'>
-            <TableCaption>My Orders</TableCaption>
+            <TableCaption placement='top'>My Orders</TableCaption>
             <Thead>
               <Tr>
-                <Th>Property</Th>
+                <Th></Th>
                 <Th isNumeric>Value</Th>
               </Tr>
             </Thead>
 
             <Tbody>
               <Tr>
-                <Td>Item Count</Td>
+                <Td>Total Item Count</Td>
                 <Td isNumeric><ItemCount /></Td>
               </Tr>
               <Tr>

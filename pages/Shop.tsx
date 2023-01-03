@@ -3,14 +3,6 @@ import { getProducts } from './api/Products/index';
 import Link from 'next/link';
 import { Box, Heading, Button } from '@chakra-ui/react';
 
-interface product {
-  id: number;
-  name: string;
-  category: string;
-  image: string;
-  price: number;
-}
-
 const ShopPage = ({ products }) => {
   return (
     <Box maxWidth={'1400px'} margin={'auto'} p={5}  pt={'9rem'}>
