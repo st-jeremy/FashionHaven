@@ -28,13 +28,20 @@ const Header = () => {
       <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '5px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} margin={'auto'}>
 
         <Box textAlign={'center'} m={'auto'}>
-          <Heading fontSize={{base: '16pt', md: '30pt'}} onClick={handleHomeClick} cursor='pointer' width={{base: 'fit-content', md: '300px'}} >Fashion Haven<sup>®</sup></Heading>
+          <Heading 
+            fontSize={{base: '16pt', md: '30pt'}} 
+            onClick={handleHomeClick} 
+            cursor='pointer' 
+            width={{base: 'fit-content', md: '300px'}} 
+          >
+            Fashion Haven<sup>®</sup>
+          </Heading>
         </Box>
 
         <Box display='flex' flexDirection={'row'} margin={'auto'} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
 
-          <Search />
+          {/* <Search /> */}
 
           <Help />
 
