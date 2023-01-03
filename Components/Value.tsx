@@ -8,6 +8,7 @@ const Value = () => {
 
   return ( 
     <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} textAlign={'center'} p={5} pt={'6rem'} maxWidth={'1400px'} margin={'auto'}>
+
       <Box display={{base: 'block', md: 'flex'}} mb={7}>
         <Box mr={3}>
           <BiDollar style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
@@ -15,11 +16,13 @@ const Value = () => {
           <Heading size='md'>Great Value</Heading>
           <p>We offer competitive prices on over 100 million items.</p>
         </Box>
+
         <Box mr={3}>
           <TbTruckDelivery style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}} />
           <Heading  size='md'>Worldwide Delivery</Heading>
           <p>We ship to all continents of the world.</p>
         </Box>
+
         <Box>
           <BsCreditCard2Back  style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <Heading  size='md'>Safe payment</Heading>
@@ -33,6 +36,7 @@ const Value = () => {
           <Heading  size='md'>Shop with confidence</Heading>
           <p>Our Buyer Protection policy covers your entire purchase journey.</p>
         </Box>
+        
         <Box mr={3}>
           <BsFillPeopleFill style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <Heading  size='md'>Help center</Heading>
