@@ -8,7 +8,7 @@ const DecrementBtn = ({item}) => {
   const dispatch = useDispatch();
   const toast = useToast();
 
-  const handleDecrement =() => {
+  const handleItemDecrement =() => {
     dispatch(decrementQuantity(item.id)); 
     toast({
       title: 'Subtract Item',
@@ -24,7 +24,7 @@ const DecrementBtn = ({item}) => {
       width={'35px'} 
       height={'35px'}  
       bgColor={'yellow'} 
-      onClick={handleDecrement}
+      onClick={handleItemDecrement}
     >
       -
     </Button>
