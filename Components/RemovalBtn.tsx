@@ -7,7 +7,7 @@ const RemovalBtn = ({item}) => {
   const dispatch = useDispatch();
   const toast = useToast();
 
-  const handleRemoval =() => {
+  const handleItemRemoval =() => {
     dispatch(removeFromCart(item.id)); 
     toast({
       title: 'Remove Item',
@@ -23,7 +23,7 @@ const RemovalBtn = ({item}) => {
       width={'35px'} 
       height={'35px'}  
       bgColor={'red'}  
-      onClick={handleRemoval}
+      onClick={handleItemRemoval}
     >
       x
     </Button>
