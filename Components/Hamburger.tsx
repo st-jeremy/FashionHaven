@@ -18,7 +18,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { ImMenu3, ImMenu4 } from 'react-icons/im';
 
-const Female = () => {
+const Hamburger = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const ClothingClick =() =>{
@@ -128,4 +128,4 @@ const Female = () => {
    );
 }
  
-export default Female;
+export default Hamburger;
