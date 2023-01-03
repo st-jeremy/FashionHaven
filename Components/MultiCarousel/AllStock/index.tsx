@@ -29,7 +29,11 @@ const AllStock = ({product}) => {
       items: 4
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 768 },
+      items: 2
+    },
+    miniTablet:{
+      breakpoint: { max: 768, min: 600 },
       items: 2
     },
     mobile: {
