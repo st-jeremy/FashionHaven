@@ -24,9 +24,16 @@ const AddtoCartButton = ({ product }) => {
 
   return ( 
     <Box>
-      <Button colorScheme='red' position={'absolute'} right={'2.5'} p={1} fontSize='sm' onClick={handleClick}>
-            Add to cart
-          </Button>
+      <Button 
+        colorScheme='red' 
+        position={'absolute'} 
+        right={'2.5'} 
+        p={1} 
+        fontSize='sm' 
+        onClick={handleClick}
+      >
+        Add to cart
+      </Button>
     </Box>
 
    );
