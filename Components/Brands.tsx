@@ -6,7 +6,7 @@ import {
   ListIcon,
   Divider, 
 } from '@chakra-ui/react';
-import {MdCheckCircle} from 'react-icons/md';
+import { MdCheckCircle } from 'react-icons/md';
 
 const Brands = () => {
   return ( 
