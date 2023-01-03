@@ -25,12 +25,12 @@ const Filter = ({ details }) => {
 
   return ( 
     <Box>
-      <input 
+      {/* <input 
           className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
           type = "search" 
           placeholder = "Search People" 
           onChange = {handleChange}
-        />
+        /> */}
         {FilteredList}
     </Box>
    );
