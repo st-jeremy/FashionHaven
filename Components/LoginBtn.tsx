@@ -13,14 +13,29 @@ export default function Component() {
     return (
       <>
         <Text>Signed in as {userName}.</Text>
-        <Button bgColor={'red'} color={'white'} onClick={() => signOut()} _hover={{ color: 'red', bgColor: 'white', border: '1px solid red'}}>Sign out</Button>
+        <Button 
+          bgColor={'red'} 
+          color={'white'} 
+          onClick={() => signOut()} 
+          _hover={{ color: 'red', bgColor: 'white', border: '1px solid red'}}
+        >
+          Sign out
+        </Button>
       </>
     )
   }
+
   return (
     <>
       <Text>Not signed in yet.</Text> 
-      <Button  bgColor={'black'} color={'white'} onClick={() => signIn('', {callbackUrl:'/Cart'})} _hover={{ color: 'black', bgColor:'white', border: '1px solid black'}}>Sign in</Button>
+      <Button  
+        bgColor={'black'} 
+        color={'white'} 
+        onClick={() => signIn('', {callbackUrl:'/'})} 
+        _hover={{ color: 'black', bgColor:'white', border: '1px solid black'}}
+      >
+        Sign in
+      </Button>
     </>
   )
 }
