@@ -16,10 +16,9 @@ import ProductCard from '../Components/ProductCard';
 
 const Search = ({ products }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const [inputText, setInputText] = useState("");
+
   let inputHandler = (e) => {
-    //convert input text to lower case
     var lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   };
@@ -80,8 +79,6 @@ const Search = ({ products }) => {
               <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} type='submit' />
               </form>
             </MenuItem>
-
-            
           </MenuList>
         </Menu>
       </Box>
@@ -99,7 +96,7 @@ const Search = ({ products }) => {
       </FormControl>
     </Box>
 
-   );
+  );
 }
  
 export default Search;

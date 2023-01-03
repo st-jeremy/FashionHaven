@@ -1,10 +1,7 @@
 import { Button, useToast } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux';
-import {
-  removeFromCart,
-} from '../redux/cart.slice';
+import { removeFromCart } from '../redux/cart.slice';
 import React from 'react';
-
 
 const RemovalBtn = ({item}) => {
   const dispatch = useDispatch();
