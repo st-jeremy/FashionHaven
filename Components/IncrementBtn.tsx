@@ -1,4 +1,4 @@
-import { Button, useToast } from '@chakra-ui/react'
+import { Button, useToast, Tooltip } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux';
 import { incrementQuantity } from '../redux/cart.slice';
 
@@ -19,14 +19,15 @@ const IncrementBtn = ({item}) => {
   };
 
   return ( 
-    <Button 
-      width={'35px'} 
-      height={'35px'} 
-      bgColor={'blue'} 
-      onClick={handleIncrement}
-    >
-      +
-    </Button>
+    <Tooltip label="Increase" aria-label='A tooltip' closeDelay={600} hasArrow arrowSize={15} bgColor='black' > 
+      <Button 
+        width={'35px'} 
+        height={'35px'} 
+        onClick={handleIncrement}
+      >
+        +
+      </Button>
+    </Tooltip>
    );
 }
  
