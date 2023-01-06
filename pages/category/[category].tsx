@@ -2,19 +2,29 @@ import { useRouter } from 'next/router';
 import ProductCard from '../../Components/ProductCard';
 import { getProductsByCategory } from '../api/Products/[category]';
 import { Heading, Box } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const CategoryPage = ({ products }) => {
   const router = useRouter();
+  
   return (
-    <Box p={5} maxWidth={'1400px'} margin={'auto'}>
-      <Heading p={5}>Results for {router.query.category}</Heading>
+    <>
+      <Head>
+        <title>Fashion Haven</title>
+        <meta name="description" content="eCommerce Fashion Website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
+      <Box p={5} maxWidth={'1400px'} margin={'auto'}>
+        <Heading p={5}>Results for {router.query.category}</Heading>
 
-      <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </Box>
+        <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </Box>
+    </>
   );
 };
 

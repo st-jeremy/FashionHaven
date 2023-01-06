@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { Box, Text } from "@chakra-ui/react";
 import { getSession, useSession } from "next-auth/react"
-import Image from "next/image";
+import Head from 'next/head';
 import ItemCount from '../Components/ItemCount';
 import TotalPrice from '../Components/TotalPrice';
 
@@ -24,43 +24,48 @@ const MyAccount = () => {
   const userName = session?.user.name;
   const userImage = session?.user.image;
 
-  const style ={
-    borderRadius: '50px'
-  }
-
   return ( 
-    <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'5rem'}>
-      <Avatar src={userImage} name={userName}  size='full'/>
-      <Text>Name: {userName}</Text>
-      <Text>Email: {userEmail}</Text>
+    <>
+      <Head>
+        <title>Fashion Haven</title>
+        <meta name="description" content="eCommerce Fashion Website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
 
-      <Box mt={3}>
-        <TableContainer>
-          <Table variant='striped' colorScheme='blackAlpha'>
-            <TableCaption placement='top'>My Orders</TableCaption>
-            <Thead>
-              <Tr>
-                <Th></Th>
-                <Th isNumeric>Value</Th>
-              </Tr>
-            </Thead>
+      <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'5rem'}>
+        <Avatar src={userImage} name={userName}  size='full'/>
+        <Text>Name: {userName}</Text>
+        <Text>Email: {userEmail}</Text>
 
-            <Tbody>
-              <Tr>
-                <Td>Total Item Count</Td>
-                <Td isNumeric><ItemCount /></Td>
-              </Tr>
-              <Tr>
-                <Td>Total Order Price </Td>
-                <Td isNumeric><TotalPrice /> </Td>
-              </Tr>
-            </Tbody>
+        <Box mt={3}>
+          <TableContainer>
+            <Table variant='striped' colorScheme='blackAlpha'>
+              <TableCaption placement='top'>My Orders</TableCaption>
+              <Thead>
+                <Tr>
+                  <Th></Th>
+                  <Th isNumeric>Value</Th>
+                </Tr>
+              </Thead>
 
-          </Table>
-        </TableContainer>
+              <Tbody>
+                <Tr>
+                  <Td>Total Item Count</Td>
+                  <Td isNumeric><ItemCount /></Td>
+                </Tr>
+                <Tr>
+                  <Td>Total Order Price </Td>
+                  <Td isNumeric><TotalPrice /> </Td>
+                </Tr>
+              </Tbody>
+
+            </Table>
+          </TableContainer>
+        </Box>
+          
       </Box>
-        
-    </Box>
+    </>
    );
 }
  
