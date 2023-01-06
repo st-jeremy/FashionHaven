@@ -24,7 +24,8 @@ const Header = () => {
 
       <Heading 
         fontSize={12} 
-        bgColor={'red'} 
+        bgColor={'grey'}
+        color={'white'}
         textAlign='center' 
         p={1}
       >
@@ -47,7 +48,7 @@ const Header = () => {
         <Box display='flex' flexDirection={'row'} margin={'auto'} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
 
-          {/* <Search /> */}
+          <Search products={undefined} />
 
           <Help />
 
