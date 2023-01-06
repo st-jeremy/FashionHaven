@@ -11,7 +11,7 @@ import Logo from './Logo';
 const Header = () => {
 
   return ( 
-    <Box bgColor= 'black' position={'fixed'} zIndex={'1000'} margin={'auto'} width={'100%'}>
+    <Box bgColor= 'black' position={'fixed'} zIndex={'1000'} width={'100%'}>
 
       <Heading 
         fontSize={12} 
@@ -24,7 +24,7 @@ const Header = () => {
         Welcome to Fashion Haven. Shop now!
       </Heading>
 
-      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '5px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} margin={'auto'}>
+      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '2px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} >
 
         <Logo />
 

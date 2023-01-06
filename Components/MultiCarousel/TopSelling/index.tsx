@@ -62,7 +62,7 @@ const MultiCarousel = ({ product }) => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'}>
+              <Box key={product.id} borderRadius={'md'} maxWidth={220}>
 
                 <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
                    <Box maxHeight={200} minHeight={200} >
