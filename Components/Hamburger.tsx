@@ -67,22 +67,22 @@ const Hamburger = () => {
             <Heading>Categories</Heading>
             <Divider />
 
-            <Button  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={ClothingClick}>
+            <Button width={'10rem'} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={ClothingClick}>
               Clothing
             </Button>
             <br />
 
-            <Button onClick={FootWearClick}  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+            <Button width={'10rem'} onClick={FootWearClick}  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
               Foot Wear
             </Button>
             <br />
             
-            <Button variant={'ghost'} onClick={HeadWearClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+            <Button width={'10rem'}  onClick={HeadWearClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
               Head Wear
             </Button>
             <br />
 
-            <Button variant={'ghost'} onClick={AccessoriesClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+            <Button width={'10rem'} onClick={AccessoriesClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
               Accessories
             </Button>
           </Box>
