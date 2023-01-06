@@ -23,12 +23,11 @@ const AddtoCartButton = ({ product }) => {
   };
 
   return ( 
-    <Box>
-      <Button 
-        position={'absolute'} 
-        right={'2.5'} 
+    <Box textAlign={'center'}>
+      <Button
         fontSize='sm' 
         onClick={handleClick}
+        _hover={{bgColor: 'black', color: 'white'}}
       >
         Add to cart
       </Button>
