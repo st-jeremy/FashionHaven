@@ -32,19 +32,19 @@ const ShopPage = ({ products }) => {
           </Button>
         </Link>
 
-        <div 
+        <Box 
           style={{
             display: 'grid', 
             flexDirection: 'column', 
-            columnCount: '4', 
+            columnCount: '5', 
             width: '95%', 
-            gridTemplateColumns: 'auto auto auto auto'
+            gridTemplateColumns: 'auto auto auto auto auto'
           }}
         >
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
+        </Box>
       </Box>
     </>
   );

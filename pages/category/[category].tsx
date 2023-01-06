@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const CategoryPage = ({ products }) => {
   const router = useRouter();
-  
+
   return (
     <>
       <Head>
@@ -15,10 +15,11 @@ const CategoryPage = ({ products }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <Box p={5} maxWidth={'1400px'} margin={'auto'}>
+
+      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'}>
         <Heading p={5}>Results for {router.query.category}</Heading>
 
-        <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
+        <div style={{display: 'grid', flexDirection: 'column', columnCount: '5', width: '100%', gridTemplateColumns: 'auto auto auto auto auto', margin: '0'}}>
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
