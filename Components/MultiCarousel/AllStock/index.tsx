@@ -22,11 +22,11 @@ const AllStock = ({product}) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 6
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
@@ -45,7 +45,7 @@ const AllStock = ({product}) => {
   return ( 
     <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} mt={7}>
 
-      <Box  bgColor={'red.700'} display={'flex'} color={'white'}>
+      <Box  bgColor={'black'} display={'flex'} color={'white'}>
         <Heading pl={5} color={'white'}>All Stock</Heading>
         <Link href='/Shop'>
           <Button  bgColor={'red.700'} position={'absolute'} right={'7rem'} p={1} _hover={{textDecoration:'underline', fontSize: '20pt'}}>View All</Button>
@@ -70,22 +70,19 @@ const AllStock = ({product}) => {
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'} p={2}>
-                <Card m={5} width={250} height={490}>
-                  <Box minHeight={365} bgColor={'white'} margin={'auto'}>
-                    <Image src={product.image} alt={product.name} width={700} height={300} />
+              <Box key={product.id} borderRadius={'md'} >
+                <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
+                  <Box maxHeight={200} minHeight={200} >
+                    <Image src={product.image} alt={product.name} width={200} height={250} priority />
                   </Box>
 
-                  <Divider />
+                  <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
+                    <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
 
-                  <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
-                  <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
-                    <Text color='blue.600' fontSize='xl'>
-                      <b>${product.price}</b>
-                    </Text>
-
+                    <Text fontWeight={'bold'}textAlign={'center'}>${product.price}</Text>
+                    
                     <AddtoCartButton product={product} />
-                  </CardFooter>
+                  </Box>
                 </Card>
 
               </Box>

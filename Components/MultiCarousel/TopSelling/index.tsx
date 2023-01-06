@@ -41,19 +41,19 @@ const MultiCarousel = ({ product }) => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'red.200'} p={5}>
-      <Heading bg={'black'} color={'white'} pl={5}>Top Selling</Heading>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'} p={5}>
+      <Heading bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
       <Carousel 
         responsive={responsive}
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         infinite={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={10000}
         keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
+        customTransition="all 4.5"
+        transitionDuration={50000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
@@ -70,13 +70,14 @@ const MultiCarousel = ({ product }) => {
                       <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
                   </Box>
 
-                  {/* <Divider /> */}
-
-                  <Box bgColor={'white'} borderRadius={'0  0 13px 13px'}>
+                  <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
                     <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
-                    <Text>${product.price} </Text>
-                    <Text color={'red'} fontSize={'sm'}><s>$</s></Text>
 
+                    <Box display={'flex'} margin={'auto'} textAlign={'center'}>
+                      <Text fontWeight={'bold'} ml={7} mr={2}>${product.price}</Text>
+                      <Text color={'red'} fontSize={'sm'}><s>${~~product.price * 2}</s></Text>
+                    </Box>
+                    
                     <AddtoCartButton product={product} />
                   </Box>
                 </Card>
