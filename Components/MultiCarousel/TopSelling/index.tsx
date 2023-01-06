@@ -42,7 +42,7 @@ const MultiCarousel = ({ product }) => {
 
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'} p={5}>
-      <Heading bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
+      <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
       <Carousel 
         responsive={responsive}

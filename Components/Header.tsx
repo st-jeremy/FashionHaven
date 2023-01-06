@@ -19,6 +19,7 @@ const Header = () => {
         color={'white'}
         textAlign='center' 
         p={1}
+        zIndex={'1000'}
       >
         Welcome to Fashion Haven. Shop now!
       </Heading>

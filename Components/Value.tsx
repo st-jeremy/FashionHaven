@@ -31,7 +31,7 @@ const Value = () => {
       </Box>
 
       <Box display={{base: 'block', md: 'flex'}} margin={'auto'}>
-        <Box mr={3}>
+        <Box mr={8}>
           <AiOutlineSafety style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <Heading  size='md'>Shop with confidence</Heading>
           <p>Our Buyer Protection policy covers your entire purchase journey.</p>

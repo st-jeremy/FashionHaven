@@ -35,10 +35,6 @@ const Brands = () => {
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='white.500' />
-          Zalando
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
           Adidas
         </ListItem>
         <ListItem>
