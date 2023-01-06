@@ -73,9 +73,9 @@ const MultiCarousel = ({ product }) => {
                   <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
                     <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
 
-                    <Box display={'flex'} margin={'auto'} textAlign={'center'}>
+                    <Box display={'inline-flex'} margin={'auto'} textAlign={'center'}>
                       <Text fontWeight={'bold'} ml={7} mr={2}>${product.price}</Text>
-                      <Text color={'red'} fontSize={'sm'}><s>${~~product.price * 2}</s></Text>
+                      <Text color={'red'} fontSize={'sm'} mt={.5}><s>${~~product.price * 2}</s></Text>
                     </Box>
                     
                     <AddtoCartButton product={product} />
