@@ -91,8 +91,9 @@ const Search = ({ products }) => {
           placeholder="Search products"
           width={ '450px' }
           height={ '2.4rem' }
-          marginTop={'2'} />
-        <SearchIcon style={{ position: 'absolute', top: '24', right: '12' }} />
+          marginTop={'0'} 
+        />
+        <SearchIcon style={{ position: 'absolute', top: '15', right: '15' }} />
       </FormControl>
     </Box>
 

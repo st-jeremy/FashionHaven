@@ -23,7 +23,6 @@ const DecrementBtn = ({item}) => {
     <Button 
       width={'35px'} 
       height={'35px'}  
-      bgColor={'yellow'} 
       onClick={handleItemDecrement}
     >
       -

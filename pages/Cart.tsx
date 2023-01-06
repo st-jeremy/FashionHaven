@@ -34,13 +34,13 @@ const Cart = ({ item }) => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <Box p={5} maxWidth={'1400px'} margin={'auto'} mt={'6rem'}>
+      <Box p={5} maxWidth={'1400px'} margin={'auto'} mt={'8rem'}>
         {cart.length === 0 ? (
           <Heading textAlign={'center'}> Your Cart is Empty! </Heading>
         ) : (
-            <Box >
+            <Box>
               <Heading textAlign={'center'}> Your Cart</Heading>
-              <TableContainer>
+              <TableContainer  mt={5}>
                 <Table >
                   <Thead fontWeight={'extrabold'}>
                     <Tr>
@@ -85,7 +85,7 @@ const Cart = ({ item }) => {
             </Box>
         )}
         <Box mt={15} textAlign={'center'}>
-          <Link href='/Shop'><Button bgColor={"black"} color={'white'}>Continue Shopping</Button></Link>
+          <Link href='/Shop'><Button bgColor={"black"} color={'white'} border={'1px solid black'} _hover={{color: 'black', bgColor: 'white'}}>Continue Shopping</Button></Link>
         </Box>
       </Box>
     </>

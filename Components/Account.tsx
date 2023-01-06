@@ -46,6 +46,7 @@ const Account = () => {
           onMouseEnter={onOpen}
           color={'black'}
           zIndex={'1000'}
+          marginTop={'-.4rem'}
         >
           <MenuItem fontWeight={'600'}>Account</MenuItem>
           <MenuDivider/>

@@ -58,7 +58,7 @@ const Hamburger = () => {
           onMouseEnter={onOpen}
           zIndex={1000}
           color={'black'}
-          marginTop={'-.3rem'}
+          marginTop={'-.4rem'}
         >
           <TableContainer display='flex' p={5}>
             <Box display={{base: 'none', lg: 'block'}}>
