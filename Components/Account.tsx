@@ -31,7 +31,7 @@ const Account = () => {
           leftIcon={<BiUser />}
           bgColor={'black'}
           _hover={{ color: 'white'}}
-          _expanded={{fontSize: '18pt' }}
+          _expanded={{bgColor: 'white', color: 'black'}}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}

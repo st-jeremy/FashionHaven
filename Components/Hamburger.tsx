@@ -44,11 +44,10 @@ const Hamburger = () => {
           borderRadius='md'
           border= 'none'
           _hover={{ bgColor: 'black', color: 'white'}}
-          _expanded={{fontSize: '30pt',  bgColor: 'black',}}
+          _expanded={{ bgColor: 'white', color: 'black'}}
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
-          paddingRight={0}
           fontSize={'30pt'}
         >
           {isOpen ? <ImMenu4 /> : <ImMenu3 />}

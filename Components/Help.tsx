@@ -23,7 +23,7 @@ const HelpCenter = () => {
           bgColor={'black'}
           border= 'none'
           _hover={{ color: 'white'}}
-          _expanded={{fontSize: '14pt'}}
+          _expanded={{bgColor: 'white', color: 'black'}}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
