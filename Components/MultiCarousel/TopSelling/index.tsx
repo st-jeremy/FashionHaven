@@ -41,7 +41,7 @@ const MultiCarousel = ({ product }) => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'} p={5}>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}>
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
       <Carousel 

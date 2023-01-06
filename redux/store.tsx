@@ -21,7 +21,8 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 const reducer = {
-  cart: persistedReducer,
+  // cart: persistedReducer,
+  cart: cartReducer,
 };
 
 
