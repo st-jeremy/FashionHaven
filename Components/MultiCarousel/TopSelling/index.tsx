@@ -20,11 +20,11 @@ const MultiCarousel = ({ product }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 6
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
@@ -64,23 +64,21 @@ const MultiCarousel = ({ product }) => {
             return(
               <Box key={product.id} borderRadius={'md'}>
 
-                <Card m={5} width={250} height={490}>
-                  <Box minHeight={365} bgColor={'white'} margin={'auto'}>
-                    <Image src={product.image} alt={product.name} width={700} height={365} />
-                    <Text borderRadius={'none'} fontSize='12pt' position={'absolute'} top={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={2}>50% Off</Text>
+                <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
+                   <Box maxHeight={200} minHeight={200} >
+                      <Image src={product.image} alt={product.name} width={200} height={250} priority />
+                      <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
                   </Box>
 
-                  <Divider />
+                  {/* <Divider /> */}
 
-                  <Heading size='md' bgColor={'white'} textAlign={'center'}>{product.name}</Heading>
-                  <CardFooter bgColor={'white'} borderRadius={'0  0 13px 13px'}>
-                    <Text color='blue.600' fontSize='xl'>
-                      <b>${product.price}</b> <br />
-                      <Text color={'red'} fontSize={'sm'}><s>${~~product.price * 2}</s></Text>
-                    </Text>
+                  <Box bgColor={'white'} borderRadius={'0  0 13px 13px'}>
+                    <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
+                    <Text>${product.price} </Text>
+                    <Text color={'red'} fontSize={'sm'}><s>$</s></Text>
 
                     <AddtoCartButton product={product} />
-                  </CardFooter>
+                  </Box>
                 </Card>
               </Box>
             )

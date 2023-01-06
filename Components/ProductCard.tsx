@@ -13,7 +13,7 @@ import { BiBox } from 'react-icons/bi';
 const ProductCard = ({ product }) => {
 
   return (
-    <Card m={5} width={200} height={325} mb={50} boxShadow={'lg'}>
+    <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
 
       <Box maxHeight={200} minHeight={200} >
         <Image src={product.image} alt={product.name} width={200} height={250} priority />
