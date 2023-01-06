@@ -17,8 +17,7 @@ export default function Home() {
         <title>Fashion Haven</title>
         <meta name="description" content="eCommerce Fashion Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <Box >

@@ -1,11 +1,8 @@
 import Search from './Search';
 import Account from './Account';
 import Help from './Help';
-import { GiShoppingCart } from 'react-icons/gi';
-import { useRouter } from 'next/router';
 import Hamburger from './Hamburger';
-import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
-import ItemCount from './ItemCount';
+import { Box, Heading  } from '@chakra-ui/react';
 import CartIcon from './CartIcon';
 import Logo from './Logo';
 
