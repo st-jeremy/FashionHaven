@@ -44,8 +44,7 @@ const Search = ({ products }) => {
             as={Button}
             leftIcon={<SearchIcon />}
             bgColor={'black'}
-            _hover={{  color: 'white'}}
-            _expanded={{fontSize: '18pt', }}
+            _expanded={{fontSize: '18pt', bgColor: 'white', color: 'black' }}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
@@ -60,10 +59,10 @@ const Search = ({ products }) => {
             color={'black'}
             zIndex={'1000'}
           >
-            <MenuItem fontWeight={'600'}>Search Products</MenuItem>
+            <MenuItem fontWeight={'600'} _hover={{bgColor: 'white'}}>Search Products</MenuItem>
             <MenuDivider />
 
-            <MenuItem width={{ base: '250px', lg: 'fit-content' }} display={'flex'} id='search'>
+            <MenuItem width={{ base: '250px', lg: 'fit-content' }} _hover={{bgColor: 'white'}} display={'flex'} id='search'>
               <form action="" method="get">
               <Input
                 type="text"
@@ -71,12 +70,15 @@ const Search = ({ products }) => {
                 id="search_field"
                 placeholder="Search products"
                 width={{ base: '250px', lg: '450' }}
-                height={{ base: '7', lg: 'auto' }}
-                marginTop={'2'} 
+                height={{ base: '8', lg: 'auto' }}
+                marginBottom={'2'} 
                 value= {inputText}
                 onChange={inputHandler}
-              />
-              <SearchIcon style={{ position: 'relative', top: '6', right: '25' }} type='submit' />
+              /> 
+              <Button bgColor={'black'} color={'white'}  _hover={{bgColor: 'white', border: '1px solid black', color: 'black'}} type='submit' >
+                Search &nbsp;
+                <SearchIcon />
+              </Button>
               </form>
             </MenuItem>
           </MenuList>

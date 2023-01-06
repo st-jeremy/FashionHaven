@@ -7,12 +7,14 @@ import {
   Table,
   Thead,
   Tbody,
+  Heading,
   Tr,
   Th,
   Td,
   TableCaption,
   TableContainer,
-  useDisclosure
+  useDisclosure,
+  Divider
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -60,7 +62,33 @@ const Hamburger = () => {
           color={'black'}
           marginTop={'-.4rem'}
         >
-          <TableContainer display='flex' p={5}>
+
+          <Box  display={{base: 'block', lg: 'none'}} p={5}>
+            <Heading>Categories</Heading>
+            <Divider />
+
+            <Button  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={ClothingClick}>
+              Clothing
+            </Button>
+            <br />
+
+            <Button onClick={FootWearClick}  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+              Foot Wear
+            </Button>
+            <br />
+            
+            <Button variant={'ghost'} onClick={HeadWearClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+              Head Wear
+            </Button>
+            <br />
+
+            <Button variant={'ghost'} onClick={AccessoriesClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
+              Accessories
+            </Button>
+          </Box>
+
+
+          <TableContainer display={{base: 'none', lg: 'flex'}} p={5}>
             <Box display={{base: 'none', lg: 'block'}}>
               <Image src= '/beach-hoodie.jpeg' width={450} height={500} alt='can' />
             </Box>
@@ -135,6 +163,8 @@ const Hamburger = () => {
             </Table>
               
           </TableContainer>
+
+
         </MenuList>
       </Menu>
     </Box>
