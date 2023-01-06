@@ -1,5 +1,5 @@
 import { GiShoppingCart } from 'react-icons/gi';
-import { AvatarBadge, Button, Box, Avatar  } from '@chakra-ui/react'
+import { Button, Box  } from '@chakra-ui/react'
 import ItemCount from './ItemCount';
 import { useRouter } from 'next/router';
 
@@ -19,14 +19,12 @@ const CartIcon = () => {
     >
       <GiShoppingCart  fontSize='26pt'/>
       <Box 
-        boxSize='1em' 
-        color={'white'} 
+        boxSize='1em'
         position={'absolute'} 
         top={'0'} 
         right={'2'} 
         border={'none'} 
         fontSize='13pt'
-        _hover={{bgColor:}}
       >
         < ItemCount/>
       </Box>

@@ -7,15 +7,11 @@ import Hamburger from './Hamburger';
 import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 import ItemCount from './ItemCount';
 import CartIcon from './CartIcon';
+import Logo from './Logo';
 
 
 
 const Header = () => {
-
-  const router = useRouter();
-  const handleHomeClick =() =>{
-    router.push('/')
-  }
 
   return ( 
     <Box bgColor= 'black' position={'fixed'} zIndex={'1000'} margin={'auto'} width={'100%'}>
@@ -32,16 +28,7 @@ const Header = () => {
 
       <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '5px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} margin={'auto'}>
 
-        <Box textAlign={'center'} m={'auto'}>
-          <Heading 
-            fontSize={{base: '16pt', md: '30pt'}} 
-            onClick={handleHomeClick} 
-            cursor='pointer' 
-            width={{base: 'fit-content', md: '300px'}} 
-          >
-            Fashion Haven<sup>®</sup>
-          </Heading>
-        </Box>
+        <Logo />
 
         <Box display='flex' flexDirection={'row'} margin={'auto'} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
