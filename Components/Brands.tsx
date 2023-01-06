@@ -10,7 +10,7 @@ import { MdCheckCircle } from 'react-icons/md';
 
 const Brands = () => {
   return ( 
-    <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}}>
+    <Box bgColor={'black'} color={'white'} p={5} m={'auto'} display={{base: 'none', lg: 'block'}} width={'20rem'}>
       <Heading fontSize={'2xl'} p={3}>Top Brands</Heading>
 
       <Divider />

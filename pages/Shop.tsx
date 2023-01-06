@@ -9,9 +9,24 @@ const ShopPage = ({ products }) => {
 
       <Heading>All Results</Heading>
 
-      <Link href='/'><Button bgColor={"black"} color={'white'}>Back to Home</Button></Link>
+      <Link href='/'>
+        <Button  
+          bgColor={"black"} 
+          color={'white'}
+        >
+          Back to Home
+        </Button>
+      </Link>
 
-      <div style={{display: 'grid', flexDirection: 'column', columnCount: '4', width: '95%', gridTemplateColumns: 'auto auto auto auto'}}>
+      <div 
+        style={{
+          display: 'grid', 
+          flexDirection: 'column', 
+          columnCount: '4', 
+          width: '95%', 
+          gridTemplateColumns: 'auto auto auto auto'
+        }}
+      >
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -19,7 +34,6 @@ const ShopPage = ({ products }) => {
     </Box>
   );
 };
-
 export default ShopPage;
 
 export async function getStaticProps() {
