@@ -14,7 +14,7 @@ const TotalPrice = () => {
 
   return ( 
     <>
-      Grand Total: $ {getTotalPrice()}
+      Grand Total: &nbsp; &nbsp; $ {getTotalPrice()}
     </>
    );
 }

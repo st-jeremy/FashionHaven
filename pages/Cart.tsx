@@ -77,7 +77,7 @@ const Cart = ({ item }) => {
               ))}
 
               <Table> 
-                <Tr textAlign={'right'}>
+                <Tr textAlign={'right'} fontWeight={'bold'}>
                   <TotalPrice />
                 </Tr>
               </Table>

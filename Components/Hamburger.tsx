@@ -70,14 +70,30 @@ const Hamburger = () => {
               
               <Thead >
                 <Tr cursor={'pointer'}>
-                  <Th onClick={ClothingClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Clothing</Th>
-                  <Th onClick={FootWearClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Foot Wear</Th>
-                  <Th onClick={HeadWearClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Head Wear</Th>
-                  <Th onClick={AccessoriesClick} fontSize={'13pt'} _hover={{fontSize: '20pt'}}>Accessories</Th>
+                  <Th onClick={ClothingClick}>
+                    <Button variant={'ghost'} border={'1px solid black'}>
+                      Clothing
+                    </Button>
+                  </Th>
+                  <Th onClick={FootWearClick}>
+                    <Button variant={'ghost'} border={'1px solid black'}>
+                      Foot Wear
+                    </Button>
+                  </Th>
+                  <Th onClick={HeadWearClick}>
+                    <Button variant={'ghost'} border={'1px solid black'}>
+                      Head Wear
+                    </Button>
+                  </Th>
+                  <Th onClick={AccessoriesClick}>
+                    <Button variant={'ghost'} border={'1px solid black'}>
+                      Accessories
+                    </Button>
+                  </Th>
                 </Tr>
               </Thead>
 
-              <Tbody>
+              <Tbody fontSize={'10pt'}>
 
                 <Tr>
                   <Td>Bespoke</Td>
@@ -108,9 +124,6 @@ const Hamburger = () => {
                 </Tr>
                 <Tr>
                   <Td>Jackets & Blazers</Td>
-                </Tr>
-                <Tr>
-                  <Td>Swim Wear</Td>
                 </Tr>
                 <Tr>
                   <Td>Lounge Wear</Td>
