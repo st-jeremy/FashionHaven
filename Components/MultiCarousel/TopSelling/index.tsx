@@ -27,16 +27,16 @@ const MultiCarousel = ({ product }) => {
       items: 6
     },
     tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 2
+      breakpoint: { max: 1025, min: 768 },
+      items: 4
     },
     miniTablet:{
-      breakpoint: { max: 768, min: 600 },
-      items: 2
+      breakpoint: { max: 767, min: 465 },
+      items: 4
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 2
     }
   };
 
@@ -66,7 +66,7 @@ const MultiCarousel = ({ product }) => {
 
                 <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
                    <Box maxHeight={200} minHeight={200} >
-                      <Image src={product.image} alt={product.name} width={200} height={250} priority />
+                      <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
                       <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
                   </Box>
 

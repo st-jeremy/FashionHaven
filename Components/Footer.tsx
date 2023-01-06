@@ -13,7 +13,7 @@ const Footer = () => {
     <Box  bgColor={'black'}>
       <Box display={'flex'} flexDirection={{base: 'column', md: 'row'}} p={'3rem 3rem 4rem'} bgColor={'blackAlpha.900'}  color={'white'} maxWidth={'1400px'} margin={'auto'}>
 
-        <Box>
+        <Box mb={10}>
           <Logo />
         </Box>
 

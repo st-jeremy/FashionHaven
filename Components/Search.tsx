@@ -58,6 +58,7 @@ const Search = ({ products }) => {
             onMouseEnter={onOpen}
             color={'black'}
             zIndex={'1000'}
+            marginTop={'-.4rem'}
           >
             <MenuItem fontWeight={'600'} _hover={{bgColor: 'white'}}>Search Products</MenuItem>
             <MenuDivider />

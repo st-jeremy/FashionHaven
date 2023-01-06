@@ -30,15 +30,15 @@ const AllStock = ({product}) => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
-      items: 2
+      items: 4
     },
     miniTablet:{
       breakpoint: { max: 768, min: 600 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 2
     }
   };
 
@@ -73,7 +73,7 @@ const AllStock = ({product}) => {
               <Box key={product.id} borderRadius={'md'} >
                 <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
                   <Box maxHeight={200} minHeight={200} >
-                    <Image src={product.image} alt={product.name} width={200} height={250} priority />
+                    <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
                   </Box>
 
                   <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>

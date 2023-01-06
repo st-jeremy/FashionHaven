@@ -7,9 +7,9 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 const Value = () => {
 
   return ( 
-    <Box display={'flex'} flex={'wrap'} flexDirection={{base: 'column'}} textAlign={'center'} p={5} pt={'6rem'}  pb={'6rem'} maxWidth={'1400px'} margin={'auto'}>
+    <Box display={'flex'} flexDirection={{base: 'column'}} textAlign={'center'} p={{base: '2.5', lg: '5'}} pt={'6rem'} pb={'6rem'} maxWidth={'1400px'} margin={'auto'} >
 
-      <Box display={{base: 'block', md: 'flex'}} margin={'auto'} mb={7}>
+      <Box display={{base: 'block', md: 'flex'}} margin={{base: '0', lg: 'auto'}} mb={7} width={'90vw'}>
         <Box mr={3}>
           <BiDollar style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <br />
@@ -30,8 +30,8 @@ const Value = () => {
         </Box>
       </Box>
 
-      <Box display={{base: 'block', md: 'flex'}} margin={'auto'}>
-        <Box mr={8}>
+      <Box display={{base: 'block', md: 'flex'}} margin={{base: '0', lg: 'auto'}} width={'90vw'}>
+        <Box >
           <AiOutlineSafety style={{position: 'relative', display: 'inline-flex', fontSize: '26pt',}}/>
           <Heading  size='md'>Shop with confidence</Heading>
           <p>Our Buyer Protection policy covers your entire purchase journey.</p>

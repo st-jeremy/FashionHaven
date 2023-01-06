@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
     <Card m={5} width={200} height={325} mb={1} boxShadow={'lg'}>
 
       <Box maxHeight={200} minHeight={200} >
-        <Image src={product.image} alt={product.name} width={200} height={250} priority />
+        <Image src={product.image} alt={product.name} width={200} height={250} />
       </Box>
 
       <Divider />
