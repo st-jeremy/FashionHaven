@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import Hamburger from './Hamburger';
 import { AvatarBadge, Box, Heading, Avatar  } from '@chakra-ui/react'
 import ItemCount from './ItemCount';
+import CartIcon from './CartIcon';
 
 
 
@@ -14,9 +15,6 @@ const Header = () => {
   const router = useRouter();
   const handleHomeClick =() =>{
     router.push('/')
-  }
-  const handleCartClick =() =>{
-    router.push('/Cart')
   }
 
   return ( 
@@ -54,19 +52,7 @@ const Header = () => {
 
           <Account />
     
-          <Avatar 
-            icon={<GiShoppingCart  fontSize='25pt'/>}
-            style={{
-              width: '30px', 
-              height: '50px', 
-              cursor: 'pointer',
-              margin: 'auto'
-            }} 
-            bgColor={'black'}
-            onClick={handleCartClick}
-          >
-            <AvatarBadge boxSize='1em' bgColor={'red'} color={'white'} position={'absolute'} top={'0'} border={'none'} fontSize='12pt'>< ItemCount/></AvatarBadge>
-          </Avatar>
+          <CartIcon />
         </Box>
       </Box>
 
