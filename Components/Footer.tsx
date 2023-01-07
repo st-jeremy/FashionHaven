@@ -37,7 +37,7 @@ const Footer = () => {
             </InputGroup>
           </Box>
 
-          <Box position={{base: 'relative', sm: 'absolute', lg: 'absolute'}} right={{base: 0, sm: '10', lg: '10%' }} bottom={{sm: '25.5rem' }}>
+          <Box position={{base: 'relative', sm: 'absolute', lg: 'absolute'}} right={{base: 0, sm: '12', lg: '10%' }} bottom={{sm: '21rem' }}>
             <Heading size={{base: 'sm', md: 'md'}}>Stay Connected</Heading>
             <br />
             <Box display={'flex'} >

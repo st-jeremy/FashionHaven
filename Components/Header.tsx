@@ -24,7 +24,7 @@ const Header = () => {
         Welcome to Fashion Haven. Shop now!
       </Heading>
 
-      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '2px', md: '1rem 2rem'}} color={'white'} maxWidth={'1400px'}>
+      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '2px', md: '1rem 2rem'}} color={'white'} maxWidth={'1400px'} margin={'auto'}>
 
         <Logo />
 
