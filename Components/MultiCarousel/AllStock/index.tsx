@@ -43,7 +43,7 @@ const AllStock = ({product}) => {
   };
 
   return ( 
-    <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} mt={7} pb={10}>
+    <Box maxWidth={'1400px'} m={'auto'} mt={7} pb={10}>
 
       <Box  bgColor={'black'} display={'flex'} color={'white'} p={2.5}>
         <Heading  fontSize={'24pt'} color={'white'} >All Stock</Heading>
