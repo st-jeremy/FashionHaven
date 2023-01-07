@@ -18,13 +18,23 @@ const Footer = () => {
           <Logo />
         </Box>
 
-        
-
         <Box>
-          <Box display={'flex'} flexDirection={'column'} mb={10} fontSize={{base: 'sm', sm: 'md'}} textDecoration={'underline'}>
-            <Link href='/Help'>Help Center</Link>
-            <Link href='/Help'>Customer Care</Link>
-            <Link href='/Account'>My Account</Link>
+          <Box display={'flex'} flexDirection={'column'} mb={10} fontSize={{base: 'sm', sm: 'md'}}>
+            <Link href='/Help'>
+              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
+                Help Center
+              </Button>
+            </Link>
+            <Link href='/Help'>
+              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
+                Customer Care
+              </Button>
+            </Link>
+            <Link href='/Account'>
+              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
+                My Account
+              </Button>
+            </Link>
           </Box>
 
           <Box position={'relative'} mb={10} mr={10}>
