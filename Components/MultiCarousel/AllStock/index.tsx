@@ -46,9 +46,9 @@ const AllStock = ({product}) => {
     <Box bgColor={'blackAlpha.100'} maxWidth={'1400px'} m={'auto'} mt={7} pb={10}>
 
       <Box  bgColor={'black'} display={'flex'} color={'white'} p={2.5}>
-        <Heading  fontSize={'24pt'} color={'white'}>All Stock</Heading>
+        <Heading  fontSize={'24pt'} color={'white'} >All Stock</Heading>
         <Link href='/Shop'>
-          <Button bgColor={'black'} position={'absolute'} right={'7rem'} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
+          <Button bgColor={'black'} position={{base: 'absolute', lg: 'relative'}} right={{base: '0', lg: '20rem'}} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
         </Link>
       </Box>
 
