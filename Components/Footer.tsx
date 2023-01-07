@@ -18,10 +18,10 @@ const Footer = () => {
           <Logo />
         </Box>
 
-        <Box display={'block'}>
+        <Box display={'flex'} flexDirection={'column'}>
           <Link href='/Help'><Button>Help Center</Button></Link>
-          <Link href='/Help'>Customer Care</Link>
-          <Link href='/Account'>My Account</Link>
+          <Link href='/Help'><Button>Customer Care</Button></Link>
+          <Link href='/Account'><Button>My Account</Button></Link>
         </Box>
 
         <Box>
