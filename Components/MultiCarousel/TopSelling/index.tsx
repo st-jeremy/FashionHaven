@@ -47,7 +47,8 @@ const MultiCarousel = ({ product }) => {
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}>
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
-      <Box width={{base: '95vw'}}>
+
+      <Box width={{base: '100vw'}} mt={5}>
         <Carousel 
           responsive={responsive}
           swipeable={true}
@@ -66,9 +67,9 @@ const MultiCarousel = ({ product }) => {
           {
             ProductList && ProductList.map(product =>{
               return(
-                <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} ml={0} mr={0}>
+                <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} margin={'auto'} mb={10}>
 
-                  <Card m={5} width={200} height={325} boxShadow={'lg'}>
+                  <Card width={200} height={325} boxShadow={'lg'}>
                     <Box maxHeight={200} minHeight={200}>
                       <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
 
