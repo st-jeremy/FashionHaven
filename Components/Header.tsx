@@ -24,11 +24,11 @@ const Header = () => {
         Welcome to Fashion Haven. Shop now!
       </Heading>
 
-      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '2px', md: '1rem 2rem'}} color={'white'}  maxWidth={'1400px'} >
+      <Box display='flex' flexDirection={{base: 'column', md: 'row'}} p={{base: '2px', md: '1rem 2rem'}} color={'white'} maxWidth={'1400px'}>
 
         <Logo />
 
-        <Box display='flex' flexDirection={'row'} margin={'auto'} width={'90%'} p={1} bgColor={'black'}>
+        <Box display={{base: 'inline-flex', md: 'flex'}} flexDirection={'row'}  margin={{base: '0', md: 'auto'}} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
 
           <Search products={undefined} />
