@@ -11,7 +11,7 @@ const Logo = () => {
   return ( 
     <Box textAlign={'center'} m={'auto'}>
       <Heading 
-        fontSize={{base: '16pt', md: '30pt'}} 
+        fontSize={{base: '18pt', md: '30pt'}} 
         onClick={handleHomeClick} 
         cursor='pointer' 
         width={{base: 'fit-content', md: '300px'}} 
