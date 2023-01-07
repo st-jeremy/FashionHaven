@@ -53,21 +53,23 @@ const MultiCarousel = ({ product }) => {
         autoPlaySpeed={10000}
         keyBoardControl={true}
         customTransition="all 4.5"
-        transitionDuration={50000}
+        transitionDuration={500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
+       
       >
         {
           ProductList && ProductList.map(product =>{
             return(
-              <Box key={product.id} borderRadius={'md'} maxWidth={220}>
+              <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} ml={0} mr={0}>
 
                 <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
-                   <Box maxHeight={200} minHeight={200} >
-                      <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
-                      <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
+                  <Box maxHeight={200} minHeight={200}  width={200} >
+                    <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
+
+                    <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
                   </Box>
 
                   <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
