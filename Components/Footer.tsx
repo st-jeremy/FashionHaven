@@ -27,7 +27,7 @@ const Footer = () => {
             <Link href='/Account'>My Account</Link>
           </Box>
 
-          <Box position={{base: 'relative', md: 'relative', lg: 'absolute'}} right={{base:'0', md: '0', lg: '30%'}} mb={10} mr={10}>
+          <Box position={'relative'} mb={10} mr={10}>
             <Heading size={{base: 'sm', md: 'md'}}>Subscribe</Heading>
             <Text fontSize={{base: '12pt', sm: '14pt'}}>Subscribe to our newsletter to get updates on our latest offers!</Text>
             <br />
@@ -37,7 +37,7 @@ const Footer = () => {
             </InputGroup>
           </Box>
 
-          <Box position={{base: 'relative', sm: 'absolute', lg: 'absolute'}} right={{base: 0, sm: '12', lg: '10%' }} bottom={{sm: '21rem' }}>
+          <Box position={{base: 'relative', sm: 'absolute', lg: 'relative'}} right={{base: 0, sm: '12', lg: '-50rem'}} bottom={{sm: '21rem' }}>
             <Heading size={{base: 'sm', md: 'md'}}>Stay Connected</Heading>
             <br />
             <Box display={'flex'} >
