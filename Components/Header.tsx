@@ -28,7 +28,7 @@ const Header = () => {
 
         <Logo />
 
-        <Box display={{base: 'inline-flex', md: 'flex'}} flexDirection={'row'}  margin={{base: '0', md: 'auto'}} width={'90%'} p={1} bgColor={'black'}>
+        <Box display={{base: 'inline-flex', md: 'flex'}} flexDirection={'row'}  margin={ 'auto'} width={'90%'} p={1} bgColor={'black'}>
           <Hamburger />
 
           <Search products={undefined} />

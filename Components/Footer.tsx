@@ -1,4 +1,4 @@
-import { Box, Heading, Input, InputGroup, InputRightAddon} from "@chakra-ui/react";
+import { Box, Heading, Input, InputGroup, InputRightAddon, Text} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
 import Logo from "./Logo";
@@ -18,8 +18,8 @@ const Footer = () => {
         </Box>
 
         <Box position={{base: 'relative', md: 'relative', lg: 'absolute'}} right={{base:'0', md: '0', lg: '30%'}} mb={10} mr={10}>
-          <Heading size={'md'}>Subscribe</Heading>
-          <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+          <Heading size={{base: 'sm', md: 'md'}}>Subscribe</Heading>
+          <Text size={{base: 'sm', md: 'md'}}>Subscribe to our newsletter to get updates on our latest offers!</Text>
           <br />
           <InputGroup>
             <Input type={'email'} placeholder={'Enter your email address'} />
@@ -28,7 +28,7 @@ const Footer = () => {
         </Box>
 
         <Box position={{base: 'relative', md: 'relative', lg: 'absolute'}} right={{base: 0, md: '0', lg: '10%' }}>
-          <Heading size={'md'}>Stay Connected</Heading>
+          <Heading size={{base: 'sm', md: 'md'}}>Stay Connected</Heading>
           <br />
           <Box display={'flex'} >
             <SlSocialInstagram style={{marginRight:'20px'}}/>
