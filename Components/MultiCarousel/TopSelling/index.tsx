@@ -24,7 +24,7 @@ const MultiCarousel = ({ product }) => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1023, min: 768 },
@@ -45,10 +45,10 @@ const MultiCarousel = ({ product }) => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
-      <Box width={{base: '100vw'}} mt={5}>
+      <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
         <Carousel 
           responsive={responsive}
           swipeable={true}
@@ -60,7 +60,7 @@ const MultiCarousel = ({ product }) => {
           customTransition="all 4.5"
           transitionDuration={500}
           containerClass="carousel-container"
-          removeArrowOnDeviceType={["miniTablet", "mobile"]}
+          // removeArrowOnDeviceType={["miniTablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
         >
