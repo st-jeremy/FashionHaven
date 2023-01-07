@@ -11,7 +11,7 @@ const Footer = () => {
 
   return ( 
     <Box  bgColor={'black'}>
-      <Box display={'flex'} flexDirection={{base: 'column', md: 'row'}} p={'3rem 3rem 4rem'} bgColor={'blackAlpha.900'}  color={'white'} maxWidth={'1400px'} margin={'auto'}>
+      <Box display={'flex'} flexDirection={{base: 'column', md: 'row'}} p={{base: '3rem 1.5rem 4rem', md: '3rem 3rem 4rem'}} bgColor={'blackAlpha.900'}  color={'white'} maxWidth={'1400px'} margin={'auto'}>
 
         <Box mb={10}>
           <Logo />
@@ -19,10 +19,10 @@ const Footer = () => {
 
         <Box position={{base: 'relative', md: 'relative', lg: 'absolute'}} right={{base:'0', md: '0', lg: '30%'}} mb={10} mr={10}>
           <Heading size={{base: 'sm', md: 'md'}}>Subscribe</Heading>
-          <Text size={{base: 'sm', md: 'md'}}>Subscribe to our newsletter to get updates on our latest offers!</Text>
+          <Text fontSize={{base: '12pt', md: '14pt'}}>Subscribe to our newsletter to get updates on our latest offers!</Text>
           <br />
           <InputGroup>
-            <Input type={'email'} placeholder={'Enter your email address'} />
+            <Input type={'email'} placeholder={'Enter your email address'} width={{base: '400px', md: 'fit-content'}} />
             <InputRightAddon color={'black'} bgColor={'white'}> &rarr;</InputRightAddon>
           </InputGroup>
         </Box>
@@ -38,7 +38,7 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box bgColor={'black'} color={'white'} textAlign={'center'} p={5} >
+      <Box bgColor={'black'} color={'white'} textAlign={'center'} p={5} fontSize={{base: }}>
         All Rights Reserved. Copyright © {new Date().getFullYear()}
       </Box>
     </Box>
