@@ -35,7 +35,7 @@ const Account = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '20pt', md: '25pt'}}
+          fontSize={{base: '19pt', md: '25pt'}}
           width={'fit-content'}
         >
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
