@@ -39,7 +39,8 @@ const Search = ({ products }) => {
 
   const router = useRouter();
   const handleSubmit =() =>{
-    router.push('/Filter')
+    router.push('/Filter');
+    filteredData;
   }
 
   return ( 
@@ -90,6 +91,7 @@ const Search = ({ products }) => {
                 </Button>
               </form>
             </MenuItem>
+            <MenuItem>{filteredData}</MenuItem>
           </MenuList>
         </Menu>
       </Box>
