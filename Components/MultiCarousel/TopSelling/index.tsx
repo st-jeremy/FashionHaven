@@ -20,7 +20,7 @@ const MultiCarousel = ({ product }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 6
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -46,7 +46,7 @@ const MultiCarousel = ({ product }) => {
 
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
-      
+
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
       <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>

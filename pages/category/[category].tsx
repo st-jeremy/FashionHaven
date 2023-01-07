@@ -16,14 +16,16 @@ const CategoryPage = ({ products }) => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'}>
+      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} width={{base: '100vw'}}>
         <Heading p={5}>Results for {router.query.category}</Heading>
 
-        <div style={{display: 'grid', flexDirection: 'column', columnCount: '5', width: '100%', gridTemplateColumns: 'auto auto auto auto auto', margin: '0'}}>
+        <Box display= 'grid' gridTemplateColumns={{base: 'auto', }}>
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <Box key={product.id} margin={'auto'} p={0}>
+              <ProductCard product={product} />
+            </Box>
           ))}
-        </div>
+        </Box>
       </Box>
     </>
   );
