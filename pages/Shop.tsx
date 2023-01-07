@@ -27,19 +27,15 @@ const ShopPage = ({ products }) => {
           <Button  
             bgColor={"black"} 
             color={'white'}
+            _hover={{bgColor: 'grey', color: 'black', border: '1px solid black'}}
           >
             Back to Home
           </Button>
         </Link>
 
         <Box 
-          style={{
-            display: 'grid', 
-            flexDirection: 'column', 
-            columnCount: '5', 
-            width: '95%', 
-            gridTemplateColumns: 'auto auto auto auto auto'
-          }}
+          display= 'grid' 
+          gridTemplateColumns={{base: 'auto', sm: 'auto auto auto', md: 'auto auto auto auto', lg: 'auto auto auto auto auto' }}
         >
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />

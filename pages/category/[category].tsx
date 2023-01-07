@@ -16,7 +16,7 @@ const CategoryPage = ({ products }) => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} width={{base: '100vw'}}>
+      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} mb={'3rem'}width={{base: '100vw'}}>
         <Heading p={5}>Results for {router.query.category}</Heading>
 
         <Box display= 'grid' gridTemplateColumns={{base: 'auto', sm: 'auto auto auto', md: 'auto auto auto auto', lg: 'auto auto auto auto auto' }}>
