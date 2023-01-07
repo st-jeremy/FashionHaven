@@ -22,7 +22,7 @@ export default function Home() {
 
       <Box >
         <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} padding={5} m={'auto'} maxWidth={'1400px'} mt={'6rem'}>
-          <Box display={'flex'} flexDirection={'row'} >
+          <Box display={'flex'} flexDirection={'row'} width={'fit-content'}>
             <Categories />
 
             <Slideshow />
