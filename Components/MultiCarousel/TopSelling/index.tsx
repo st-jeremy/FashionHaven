@@ -46,6 +46,7 @@ const MultiCarousel = ({ product }) => {
 
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
+      
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
 
       <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
@@ -55,9 +56,9 @@ const MultiCarousel = ({ product }) => {
           draggable={true}
           showDots={true}
           infinite={true}
-          autoPlaySpeed={10000}
+          autoPlaySpeed={1000}
           keyBoardControl={true}
-          customTransition="all 4.5"
+          customTransition="all 1.5"
           transitionDuration={500}
           containerClass="carousel-container"
           // removeArrowOnDeviceType={["miniTablet", "mobile"]}
@@ -73,7 +74,9 @@ const MultiCarousel = ({ product }) => {
                     <Box maxHeight={200} minHeight={200}>
                       <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
 
-                      <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
+                      <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>
+                        50% Off
+                      </Text>
                     </Box>
 
                     <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>

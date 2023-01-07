@@ -22,74 +22,81 @@ const AllStock = ({product}) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 6
+      items: 5
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 6
     },
     tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 4
-    },
-    miniTablet:{
-      breakpoint: { max: 768, min: 600 },
+      breakpoint: { max: 1023, min: 768 },
       items: 3
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
+    miniTablet:{
+      breakpoint: { max: 767, min: 465 },
       items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 425 },
+      items: 2
+    },
+    miniMobile: {
+      breakpoint: { max: 424, min: 0 },
+      items: 1
     }
   };
 
   return ( 
-    <Box maxWidth={'1400px'} m={'auto'} mt={7} pb={10}>
+    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
 
       <Box  bgColor={'black'} display={'flex'} color={'white'} p={2.5}>
         <Heading  fontSize={'24pt'} color={'white'} >All Stock</Heading>
         <Link href='/Shop'>
-          <Button bgColor={'black'} position={{base: 'absolute', lg: 'relative'}} right={{base: '0', lg: '-55rem'}} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
+          <Button bgColor={'black'} position={{base: 'absolute', lg: 'relative'}} right={{base: '1', lg: '-55rem'}} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
         </Link>
       </Box>
 
-      <Carousel 
-        responsive={responsive}
-        swipeable={true}
-        draggable={true}
-        showDots={true}
-        infinite={true}
-        autoPlaySpeed={1000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {
-          ProductList && ProductList.map(product =>{
-            return(
-              <Box key={product.id} borderRadius={'md'} >
-                <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
-                  <Box maxHeight={200} minHeight={200} >
-                    <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
-                  </Box>
+      <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
+        <Carousel 
+          responsive={responsive}
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          infinite={true}
+          autoPlaySpeed={1000}
+          keyBoardControl={true}
+          customTransition="all 1.5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          // removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {
+            ProductList && ProductList.map(product =>{
+              return(
+                <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} margin={'auto'} mb={10}>
 
-                  <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
-                    <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
+                  <Card width={200} height={325} boxShadow={'lg'}>
+                    <Box maxHeight={200} minHeight={200} >
+                      <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
+                    </Box>
 
-                    <Text fontWeight={'bold'}textAlign={'center'}>${product.price}</Text>
-                    
-                    <AddtoCartButton product={product} />
-                  </Box>
-                </Card>
+                    <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>
+                      <Text bgColor={'white'} textAlign={'center'} pt={1}>{product.name}</Text>
 
-              </Box>
-            )
-          })
-        } 
-      </Carousel>
+                      <Text fontWeight={'bold'}textAlign={'center'}>${product.price}</Text>
+                      
+                      <AddtoCartButton product={product} />
+                    </Box>
+                  </Card>
+
+                </Box>
+              )
+            })
+          } 
+        </Carousel>
+      </Box>
     </Box>
    );
 }
