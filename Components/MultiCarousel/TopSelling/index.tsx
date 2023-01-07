@@ -32,18 +32,19 @@ const MultiCarousel = ({ product }) => {
     },
     miniTablet:{
       breakpoint: { max: 767, min: 465 },
-      items: 4
+      items: 2
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2
     }
+    miniMobile:
   };
 
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}>
       <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
-
+      <Box width={{base: '95vw'}}>
       <Carousel 
         responsive={responsive}
         swipeable={true}
@@ -55,7 +56,7 @@ const MultiCarousel = ({ product }) => {
         customTransition="all 4.5"
         transitionDuration={500}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={["miniTablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
        
@@ -66,7 +67,7 @@ const MultiCarousel = ({ product }) => {
               <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} ml={0} mr={0}>
 
                 <Card m={5} width={200} height={325} mb={10} boxShadow={'lg'}>
-                  <Box maxHeight={200} minHeight={200}  width={200} >
+                  <Box maxHeight={200} minHeight={200}>
                     <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
 
                     <Text borderRadius={'none'} fontSize='10pt' position={'absolute'} top={'0'} right={'0'} bgColor={'yellow'} color={'black'} width={'fit-content'} p={1}>50% Off</Text>
@@ -88,6 +89,7 @@ const MultiCarousel = ({ product }) => {
           })
         }
       </Carousel>
+      </Box>
     </Box>
    );
 }
