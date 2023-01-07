@@ -19,7 +19,7 @@ const CategoryPage = ({ products }) => {
       <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} width={{base: '100vw'}}>
         <Heading p={5}>Results for {router.query.category}</Heading>
 
-        <Box display= 'grid' gridTemplateColumns={{base: 'auto', }}>
+        <Box display= 'grid' gridTemplateColumns={{base: 'auto', sm: 'auto auto auto', md: 'auto auto auto auto', lg: 'auto auto auto auto auto' }}>
           {products.map((product) => (
             <Box key={product.id} margin={'auto'} p={0}>
               <ProductCard product={product} />
