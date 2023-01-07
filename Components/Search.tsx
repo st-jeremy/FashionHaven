@@ -13,6 +13,7 @@ import {
 import { SearchIcon, ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { Key, useState } from 'react';
 import ProductCard from '../Components/ProductCard';
+import { useRouter } from 'next/router';
 
 const Search = ({ products }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,12 +30,17 @@ const Search = ({ products }) => {
   
   const filteredData = allProducts?.filter((filtered) => {
     if (inputText === '') {
-        return filtered;
+      return filtered;
     }
     else {
-        return filtered.text.toLowerCase().includes(setInputText)
+      return filtered.text.toLowerCase().includes(setInputText)
     }
   });
+
+  const router = useRouter();
+  const handleSubmit =() =>{
+    router.push('/Filter')
+  }
 
   return ( 
     <Box margin= 'auto'>
@@ -44,11 +50,11 @@ const Search = ({ products }) => {
             as={Button}
             leftIcon={<SearchIcon />}
             bgColor={'black'}
-            _expanded={{fontSize: '18pt', bgColor: 'white', color: 'black' }}
+            _expanded={{ bgColor: 'white', color: 'black' }}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
-            fontSize={{base: '16pt', md: '25pt'}}
+            fontSize={{base: '16pt', md: '20pt'}}
             padding={{base: '1', md: 'auto'}}
           >
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
@@ -65,22 +71,23 @@ const Search = ({ products }) => {
             <MenuDivider />
 
             <MenuItem width={{ base: '250px', lg: 'fit-content' }} _hover={{bgColor: 'white'}} display={'flex'} id='search'>
-              <form action="" method="get">
-              <Input
-                type="text"
-                name="Search"
-                id="search_field"
-                placeholder="Search products"
-                width={{ base: '250px', lg: '450' }}
-                height={{ base: '8', lg: 'auto' }}
-                marginBottom={'2'} 
-                value= {inputText}
-                onChange={inputHandler}
-              /> 
-              <Button bgColor={'black'} color={'white'}  _hover={{bgColor: 'white', border: '1px solid black', color: 'black'}} type='submit' >
-                Search &nbsp;
-                <SearchIcon />
-              </Button>
+              <form action="" method="get" onSubmit={handleSubmit}>
+                <Input
+                  type="text"
+                  name="Search"
+                  id="search_field"
+                  placeholder="Search products"
+                  width={{ base: '250px', lg: '450' }}
+                  height={{ base: '8', lg: 'auto' }}
+                  marginBottom={'2'} 
+                  value= {inputText}
+                  // onClick={setInputText}
+                  onChange={inputHandler}
+                /> 
+                <Button bgColor={'black'} color={'white'}  _hover={{bgColor: 'white', border: '1px solid black', color: 'black'}} type='submit' >
+                  Search &nbsp;
+                  <SearchIcon />
+                </Button>
               </form>
             </MenuItem>
           </MenuList>
@@ -88,16 +95,20 @@ const Search = ({ products }) => {
       </Box>
 
       <FormControl width={{ base: '250px', lg: 'fit-content' }} display={{ base: 'none', lg: 'flex' }}>
-        <Input
-          type="text"
-          name="Search"
-          id="search_field"
-          placeholder="Search products"
-          width={ '450px' }
-          height={ '2.4rem' }
-          marginTop={'0'} 
-        />
-        <SearchIcon style={{ position: 'absolute', top: '15', right: '15' }} />
+        <form action="" onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            name="Search"
+            id="search_field"
+            placeholder="Search products"
+            width={ '450px' }
+            height={ '2.4rem' }
+            marginTop={'0'} 
+            value= {inputText}
+            onChange={inputHandler}
+          />
+          <SearchIcon style={{ position: 'absolute', top: '15', right: '15', color: 'red' }} type='submit' />
+        </form>
       </FormControl>
     </Box>
 
@@ -105,3 +116,5 @@ const Search = ({ products }) => {
 }
  
 export default Search;
+
+// /Shop?Search=nike
