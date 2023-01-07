@@ -7,7 +7,7 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 const Value = () => {
 
   return ( 
-    <Box display={'flex'} flexDirection={{base: 'column'}} textAlign={'center'} p={{base: '2.5', lg: '5'}} pt={'6rem'} pb={'6rem'} maxWidth={'1400px'} margin={'auto'} >
+    <Box display={'flex'} flexDirection={{base: 'column'}} textAlign={'center'} p={{base: '2.5', lg: '5'}} pt={'6rem'} pb={'6rem'} width={'fit-content'}  maxWidth={'1400px'} margin={'auto'} >
 
       <Box display={{base: 'block', md: 'flex'}} margin={{base: '0', lg: 'auto'}} mb={7} width={'90vw'}>
         <Box mr={3}>
