@@ -29,7 +29,8 @@ const HelpCenter = () => {
           onMouseLeave={onClose}
           fontSize={{base: '20pt', md: '25pt'}}
           paddingTop={0}
-          width={'100px'}
+          // width={'100px'}
+          padding={{base: '1', md: 'auto'}}
         >
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>

@@ -51,6 +51,7 @@ const Hamburger = () => {
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
           fontSize={{base: '25pt', md: '30pt'}}
+          padding={{base: '1', md: 'auto'}}
         >
           {isOpen ? <ImMenu4 /> : <ImMenu3 />}
         </MenuButton>

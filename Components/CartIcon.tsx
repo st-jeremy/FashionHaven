@@ -16,6 +16,7 @@ const CartIcon = () => {
       color={'white'}
       _hover={{bgColor: 'white', color: 'black'}} 
       onClick={handleCartClick}
+      minWidth={'70px'}
     >
       <GiShoppingCart  fontSize='24pt'/>
       <Box 

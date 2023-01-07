@@ -49,6 +49,7 @@ const Search = ({ products }) => {
             onMouseLeave={onClose}
             width={'fit-content'}
             fontSize={{base: '16pt', md: '25pt'}}
+            padding={{base: '1', md: 'auto'}}
           >
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>

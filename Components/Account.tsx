@@ -37,6 +37,7 @@ const Account = () => {
           onMouseLeave={onClose}
           fontSize={{base: '19pt', md: '25pt'}}
           width={'fit-content'}
+          padding={{base: '1', md: 'auto'}}
         >
           {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
         </MenuButton>
