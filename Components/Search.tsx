@@ -109,7 +109,7 @@ const Search = ({ products }) => {
             value= {inputText}
             onChange={inputHandler}
           />
-          <SearchIcon style={{ position: 'absolute', top: '15', right: '15', color: 'red' }} type='submit' />
+          <SearchIcon style={{ position: 'absolute', top: '15', right: '15', color: 'white' }} type='submit' />
         </form>
       </FormControl>
     </Box>

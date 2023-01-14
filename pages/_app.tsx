@@ -16,7 +16,7 @@ export default function App({
     <SessionProvider session={session} >
       <Provider store={store}>
         <ChakraProvider>
-          <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'100vh'} >
+          <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'140vh'} >
             <Header />
               <Component {...pageProps} />
             <Footer />
