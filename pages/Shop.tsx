@@ -47,6 +47,7 @@ const ShopPage = ({ products }) => {
 };
 export default ShopPage;
 
+// Here, static generation where page content depends on the data, therefore getStaticProps() was used instead of getStaticPaths() because it was not a dynamic one. 
 export async function getStaticProps() {
   const products = await getProducts();
   return { props: { products } };
