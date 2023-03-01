@@ -33,8 +33,11 @@ const CategoryPage = ({ products }) => {
 
 export default CategoryPage;
 
+
+// Here, Server-side Rendering: The HTML is generated on each request; is used, not static generation.
 export async function getServerSideProps(ctx) {
   const category = ctx.query.category;
   const products = await getProductsByCategory(category);
+
   return { props: { products } };
 }

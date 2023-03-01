@@ -52,9 +52,8 @@ export async function getStaticProps() {
 
   // This, const res = await fetch('https://.../posts') was not used as we're not fetching from an external API.
   const products = await getProducts();
-  
-  return { 
-    // Here, ShopPage receives products as prop as build time, used for pre-rendering.
-    props: { products } 
-  };
+
+
+// Here, ShopPage receives products as prop as build time, used for pre-rendering.
+  return { props: { products } };
 }
