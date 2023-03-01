@@ -49,6 +49,12 @@ export default ShopPage;
 
 // Here, static generation where page content depends on the data, therefore getStaticProps() was used instead of getStaticPaths() because it was not a dynamic one. 
 export async function getStaticProps() {
+
+  // This, const res = await fetch('https://.../posts') was not used as we're not fetching from an external API.
   const products = await getProducts();
-  return { props: { products } };
+  
+  return { 
+    // Here, ShopPage receives products as prop as build time, used for pre-rendering.
+    props: { products } 
+  };
 }
