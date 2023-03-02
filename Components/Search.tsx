@@ -45,7 +45,9 @@ const Search = ({ products }) => {
 
   return ( 
     <Box margin= 'auto'>
+
       <Box display={{ base: 'flex', lg: 'none' }}>
+        
         <Menu isOpen={isOpen}>
           <MenuButton
             as={Button}
@@ -58,7 +60,12 @@ const Search = ({ products }) => {
             fontSize={{base: '16pt', md: '20pt'}}
             padding={{base: '1', md: 'auto'}}
           >
-            {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
+            {
+              isOpen ? 
+                <ChevronUpIcon style={{display: 'inline-grid'}}/> 
+                : 
+                <ChevronDownIcon  style={{display: 'inline-grid'}}/>
+            }
           </MenuButton>
 
           <MenuList 
