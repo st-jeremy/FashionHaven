@@ -47,7 +47,7 @@ const Search = ({ products }) => {
     <Box margin= 'auto'>
 
       <Box display={{ base: 'flex', lg: 'none' }}>
-        
+
         <Menu isOpen={isOpen}>
           <MenuButton
             as={Button}
@@ -75,29 +75,43 @@ const Search = ({ products }) => {
             zIndex={'1000'}
             marginTop={'-.4rem'}
           >
-            <MenuItem fontWeight={'600'} _hover={{bgColor: 'white'}}>Search Products</MenuItem>
+            <MenuItem fontWeight={'600'} _hover={{bgColor: 'white'}}>
+              Search Products
+            </MenuItem>
             <MenuDivider />
 
-            <MenuItem width={{ base: '250px', lg: 'fit-content' }} _hover={{bgColor: 'white'}} display={'flex'} id='search'>
+            <MenuItem 
+              width={{ base: '250px', lg: 'fit-content' }} 
+              _hover={{bgColor: 'white'}} 
+              display={'flex'} 
+              id='search'
+            >
               <form action="" method="get" onSubmit={handleSubmit}>
                 <Input
                   type="text"
-                  name="Search"
+                  name="search"
                   id="search_field"
                   placeholder="Search products"
                   width={{ base: '250px', lg: '450' }}
                   height={{ base: '8', lg: 'auto' }}
                   marginBottom={'2'} 
-                  value= {inputText}
+                  // value= {inputText}
                   // onClick={setInputText}
-                  onChange={inputHandler}
+                  // onChange={inputHandler}
                 /> 
-                <Button bgColor={'black'} color={'white'}  _hover={{bgColor: 'white', border: '1px solid black', color: 'black'}} type='submit' >
+                <Button 
+                  bgColor={'black'} 
+                  color={'white'}  
+                  _hover={{bgColor: 'white', border: '1px solid black', color: 'black'}} 
+                  type='submit'
+                >
                   Search &nbsp;
                   <SearchIcon />
                 </Button>
               </form>
+
             </MenuItem>
+
             <MenuItem>{filteredData}</MenuItem>
           </MenuList>
         </Menu>
