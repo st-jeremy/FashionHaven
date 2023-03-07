@@ -1,11 +1,12 @@
 import data from './data.json';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export function getProductsByCategory(category) {
   const products = data.filter((product) => product.category === category);
   return products;
 }
 
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
