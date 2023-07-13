@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import Brands from "./Brands";
 import Categories from "./Categories";
 import Slideshow from "./Slideshow";
+import Welcome from "./Welcome";
 
 const Hero = () => {
   return ( 
@@ -9,6 +10,7 @@ const Hero = () => {
       <Categories />
       <Slideshow />
       <Brands />
+      <Welcome />
     </Box>
    );
 }

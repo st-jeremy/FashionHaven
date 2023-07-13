@@ -64,7 +64,7 @@ const Account = () => {
                 My Account
               </Link>
             </MenuItem>
-}
+          }
         </MenuList>
       </Menu>
     </Box>

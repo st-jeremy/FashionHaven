@@ -12,10 +12,10 @@ const Categories = () => {
       <Heading fontSize={'2xl'} m={5}>Categories</Heading>
       <Divider />
       <br />
-      <CategoryCard name="Clothing" link={undefined} />
-      <CategoryCard name="HeadWear" link={undefined} />
-      <CategoryCard name="FootWear" link={undefined} /> 
-      <CategoryCard name="Accessories" link={undefined} />
+      <CategoryCard name="Clothing" link={"Clothing"} />
+      <CategoryCard name="Head Wear" link={"HeadWear"} />
+      <CategoryCard name="Foot Wear" link={"FootWear"} /> 
+      <CategoryCard name="Accessories" link={"Accessories"} />
     </Box>
   );
 }
