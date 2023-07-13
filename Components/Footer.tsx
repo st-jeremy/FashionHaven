@@ -1,62 +1,58 @@
-import { Box, Heading, Input, InputGroup, InputRightAddon, Text, Button} from "@chakra-ui/react";
-import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl'
+import { 
+  Box, 
+  Heading, 
+  Input, 
+  InputGroup, 
+  InputRightAddon, 
+  Text, 
+  Button, 
+  VStack, 
+  HStack,
+  Stack
+} from "@chakra-ui/react";
+import { SlSocialFacebook, SlSocialLinkedin, SlSocialInstagram } from 'react-icons/sl';
+import { FaTwitter, FaTiktok, FaTwitch, FaWhatsapp } from 'react-icons/fa';
 import Logo from "./Logo";
 import Link from "next/link";
 
 const Footer = () => {
-
   return ( 
-    <Box  bgColor={'black'}>
-      <Box display={'flex'} flexDirection={{base: 'column',}} p={{base: '3rem 1.5rem 4rem', sm: '3rem 3rem 1rem'}} bgColor={'blackAlpha.900'}  color={'white'} maxWidth={'1400px'} margin={'auto'}>
+    <Box bgColor={'black'} color={'white'} p={10}>
+      <Box maxWidth={'1400px'} margin={'auto'} >
+        <Logo />
+        <Stack direction={{base:'column', md: 'row'}} spacing={10} justifyContent={'space-between'}>
+          <Stack direction={{base:'row', md: 'column'}} fontSize={{base: 'sm', sm: 'md'}} mt={10}>
+            <Link href='/'>Help Center</Link>
+            <Link href='/'>Customer Care</Link>
+            <Link href='/my-account'>My Account</Link>
+          </Stack>
 
-        <Box mb={10}>
-          <Logo />
-        </Box>
-
-        <Box>
-          <Box display={'flex'} flexDirection={'column'} mb={10} fontSize={{base: 'sm', sm: 'md'}}>
-            <Link href='/Help'>
-              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
-                Help Center
-              </Button>
-            </Link>
-            <Link href='/Help'>
-              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
-                Customer Care
-              </Button>
-            </Link>
-            <Link href='/Account'>
-              <Button _hover={{textDecoration: 'underline'}} variant={'ghost'}>
-                My Account
-              </Button>
-            </Link>
-          </Box>
-
-          <Box position={'relative'} mb={10} mr={10}>
-            <Heading size={{base: 'sm', md: 'md'}}>Subscribe</Heading>
-            <Text fontSize={{base: '12pt', sm: '14pt'}}>Subscribe to our newsletter to get updates on our latest offers!</Text>
-            <br />  
+          <VStack my={5} justifyContent={'center'} m={'auto'} maxW={270}>
+            <Text fontSize={{base: '10pt', md: '14pt'}} textAlign={'center'}>Subscribe to our newsletter to get updates on our latest offers!</Text>
             <InputGroup>
-              <Input type={'email'} placeholder={'Enter your email address'} width={{base: '400px', md: 'fit-content'}} />
-              <InputRightAddon color={'black'} bgColor={'white'}> &rarr;</InputRightAddon>
+              <Input type={'email'} placeholder={'Enter your email address'} width={215} />
+              <InputRightAddon as={Button} color={'black'} bgColor={'white'}> &rarr;</InputRightAddon>
             </InputGroup>
-          </Box>
+          </VStack>
 
-          <Box position={{base: 'relative', sm: 'absolute', lg: 'relative'}} right={{base: 0, sm: '12', lg: '-50rem'}} bottom={{sm: '21rem' }}>
+          <VStack my={5} justifyContent={'center'}>
             <Heading size={{base: 'sm', md: 'md'}}>Stay Connected</Heading>
-            <br />
-            <Box display={'flex'} >
-              <SlSocialInstagram style={{marginRight:'20px'}}/>
-              <SlSocialLinkedin  style={{marginRight:'20px'}}/>
+            <HStack spacing={5}>
+              <SlSocialInstagram/>
+              <SlSocialLinkedin />
               <SlSocialFacebook />
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+              <FaTiktok />
+              <FaTwitter />
+              <FaTwitch />
+              <FaWhatsapp />
+            </HStack>
+          </VStack>
+        </Stack>
 
-      <Box bgColor={'black'} color={'white'} textAlign={'center'} p={5} fontSize={{base: '12pt', md: '14pt'}}>
-        All Rights Reserved. Copyright © {new Date().getFullYear()}
-      </Box>
+        <Box bgColor={'black'} color={'white'} textAlign={'center'} p={5} fontSize={{base: '12pt', md: '14pt'}}>
+          All Rights Reserved. Copyright © {new Date().getFullYear()}
+        </Box>
+      </Box>  
     </Box>
    );
 }
