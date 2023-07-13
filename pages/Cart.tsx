@@ -85,7 +85,7 @@ const Cart = ({ item }) => {
             </Box>
         )}
         <Box mt={15} textAlign={'center'}>
-          <Link href='/Shop'><Button bgColor={"black"} color={'white'} border={'1px solid black'} _hover={{color: 'black', bgColor: 'white'}}>Continue Shopping</Button></Link>
+          <Link href='/shop'><Button bgColor={"black"} color={'white'} border={'1px solid black'} _hover={{color: 'black', bgColor: 'white'}}>Continue Shopping</Button></Link>
         </Box>
       </Box>
     </>
