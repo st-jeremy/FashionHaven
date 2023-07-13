@@ -13,8 +13,8 @@ const CategoryPage = ({ products }) => {
         <title>{router.query.category} | Fashion Haven</title>
       </Head>
 
-      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} mb={'3rem'}width={{base: '100vw'}}>
-        <Heading p={5}>Results for {router.query.category}</Heading>
+      <Box p={5} maxWidth={'1440px'} margin={'auto'} mt={'5rem'} mb={'3rem'} width={{base: '100vw'}}>
+        <Heading textAlign={'center'} p={5}>Results for {router.query.category}</Heading>
 
         <Box display= 'grid' gridTemplateColumns={{base: 'auto', sm: 'auto auto auto', md: 'auto auto auto auto', lg: 'auto auto auto auto auto' }}>
           {products.map((product) => (

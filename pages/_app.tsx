@@ -6,6 +6,7 @@ import Header from '../Components/Header'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import Footer from '../Components/Footer'
 import { SessionProvider } from 'next-auth/react'
+import Head from 'next/head';
 
 export default function App({ 
   Component, 
@@ -17,6 +18,13 @@ export default function App({
       <Provider store={store}>
         <ChakraProvider>
           <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'100vh'} >
+            <Head>
+              <title>Fashion Haven</title>
+              <meta name="description" content="eCommerce Fashion Website" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <link rel="icon" href="/logo.png" />
+            </Head>
+
             <Header />
               <Component {...pageProps} />
             <Footer />
