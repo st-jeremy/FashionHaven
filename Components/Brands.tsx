@@ -9,7 +9,7 @@ import Point from './Point';
 
 const Brands = () => {
   return ( 
-    <VStack p={5} display={{base: 'none', lg: 'block'}} bgGradient='linear(to-r, white, grey)' width={'fit-content'} ml={6}>
+    <VStack p={5} display={{base: 'none', lg: 'flex'}} bgGradient='linear(to-r, white, grey)' width={'fit-content'}>
       <Heading fontSize={'2xl'} p={3}>Top Brands</Heading>
       <Divider />
 

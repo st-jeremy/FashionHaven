@@ -22,7 +22,7 @@ const zoomOutProperties = {
 
 const Slideshow = () => {
   return (
-    <Box width={{base: '85vw', sm: '92vw', md: '65%', lg:'70%'}} maxW={490} mt={10}>
+    <Box width={{base: '85vw', sm: '92vw', md: '65%', lg:'70%'}} maxW={490} mt={10} m={"auto"}>
       <Zoom {...zoomOutProperties}>
         {images.map((each, index) => (
           <Box key={index} m={'auto'}>
