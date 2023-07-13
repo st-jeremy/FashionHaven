@@ -27,10 +27,7 @@ const MyAccount = () => {
   return ( 
     <>
       <Head>
-        <title>Fashion Haven</title>
-        <meta name="description" content="eCommerce Fashion Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.png" />
+        <title>Account | Fashion Haven</title>
       </Head>
 
       <Box p={5} maxWidth={'1400px'} margin={'auto'} pt={'5rem'}>
