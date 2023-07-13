@@ -20,15 +20,8 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { ImMenu3, ImMenu4 } from 'react-icons/im';
+import CategoryCard from './CategoryCard';
 
-const CatBtn = ({name, onClick}: { name:string, onClick:any }) => {
-  return ( 
-    <Button width={'10rem'} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={onClick}>
-      {name}
-    </Button> 
-  );
-};
- 
 const Hamburger = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -80,10 +73,10 @@ const Hamburger = () => {
             <Heading fontSize={{base:'16pt', lg:'unset'}}>Categories</Heading>
             <Divider />
 
-            <CatBtn name='Clothing' onClick={ClothingClick} />
-            <CatBtn name='Foot Wear' onClick={FootWearClick} />
-            <CatBtn name='Head Wear' onClick={HeadWearClick} />
-            <CatBtn name='Accessories' onClick={AccessoriesClick} />
+            <CategoryCard name='Clothing' link={ClothingClick} />
+            <CategoryCard name='Foot Wear' link={FootWearClick} />
+            <CategoryCard name='Head Wear' link={HeadWearClick} />
+            <CategoryCard name='Accessories' link={AccessoriesClick} />
           </VStack>
 
 

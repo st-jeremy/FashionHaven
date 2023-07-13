@@ -1,23 +1,18 @@
-import { 
-  Box,
-  Button,
-} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import Link from 'next/link';
 
-const CategoryCard = ({ name }) => {
+const CategoryCard = ({ name, link }: { name: string, link:any }) => {
   return ( 
-    <Box>
-      <Button
-        size='md'
-        height='48px'
-        width='200px'
-        border='2px'
-        variant='solid'
-        mb={4}
-      >
-        <Link href={`/category/${name}`}>{name}</Link>
-      </Button>
-    </Box>
+    <Button
+      size='md'
+      height='48px'
+      width='200px'
+      border='2px'
+      variant='solid'
+      mb={[2, 4]}
+    >
+      <Link href={`/category/${link}`}>{name}</Link>
+    </Button>
    );
 }
 
