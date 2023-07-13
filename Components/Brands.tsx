@@ -4,58 +4,37 @@ import {
   List,
   ListItem,
   ListIcon,
-  Divider, 
+  Divider,
+  VStack, 
 } from '@chakra-ui/react';
 import { MdCheckCircle } from 'react-icons/md';
 
+const Brand = ({name}: {name:string}) => {
+  return ( 
+    <ListItem>
+      <ListIcon as={MdCheckCircle} color='white.500' />
+      {name}
+    </ListItem> 
+  );
+};
 const Brands = () => {
   return ( 
-    <Box bgColor={'black'} color={'white'} p={5} display={{base: 'none', lg: 'block'}} width={'10rem'} mt={5} ml={6}>
+    <VStack p={5} display={{base: 'none', lg: 'block'}} bgGradient='linear(to-r, white, grey)' width={'fit-content'} ml={6}>
       <Heading fontSize={'2xl'} p={3}>Top Brands</Heading>
-
       <Divider />
-      <br />
 
-      <List spacing={3} >
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Nike
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Louis Vuitton 
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Hermes
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Gucci
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Adidas
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Zara
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Cartier
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Moncler
-        </ListItem>
-        <ListItem>
-          <ListIcon as={MdCheckCircle} color='white.500' />
-          Chanel
-        </ListItem>
-        
+      <List spacing={3}>
+        <Brand name={'Nike'} />
+        <Brand name={'Louis Vuitton '} />
+        <Brand name={'Hermes'} />
+        <Brand name={'Gucci'} />
+        <Brand name={'Adidas'} />
+        <Brand name={'Zara'} />
+        <Brand name={'Cartier'} />
+        <Brand name={'Moncler'} />
+        {/* <Brand name={'Chanel'} /> */}
       </List> 
-    </Box>
+    </VStack>
    );
 }
  

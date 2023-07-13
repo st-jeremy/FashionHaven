@@ -35,7 +35,7 @@ export default function Component() {
         _hover={{ color: 'black', bgColor:'white', border: '1px solid black'}}
         mt={2}
       >
-        Sign in
+        Sign in or Register
       </Button>
     </>
   )

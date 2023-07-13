@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <Box >
+      <Box m={'auto'}>
         <Hero />
 
         <TopSelling product={undefined} />

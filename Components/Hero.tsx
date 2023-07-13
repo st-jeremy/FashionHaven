@@ -5,13 +5,9 @@ import Slideshow from "./Slideshow";
 
 const Hero = () => {
   return ( 
-    <Box display={'flex'} flexDirection={{base: 'column', lg: 'row'}} padding={5} m={'auto'} maxWidth={'1400px'} mt={'6rem'}>
-      <Box display={'flex'} flexDirection={'row'} width={'100vw'} >
-        <Categories />
-        <Slideshow />
-      </Box>
-      
-
+    <Box display={'flex'} flexDirection={'row'} padding={5} m={'auto'} justifyContent={'center'} alignItems={'center'} maxWidth={'1400px'} mt={'6rem'}>
+      <Categories />
+      <Slideshow />
       <Brands />
     </Box>
    );
