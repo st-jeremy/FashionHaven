@@ -22,9 +22,9 @@ export default function Home() {
       <Box m={'auto'}>
         <Hero />
 
-        <TopSelling product={undefined} />
+        <TopSelling />
 
-        <AllStock product={ProductList} />
+        <AllStock />
 
         <Value />
       </Box>

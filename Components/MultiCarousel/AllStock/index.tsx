@@ -1,14 +1,9 @@
 import { 
   Box, 
-  CardBody, 
-  CardFooter, 
   Card, 
-  Stack, 
-  Divider, 
   Heading, 
   Text, 
   Button,
-  useToast
 } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -17,7 +12,7 @@ import Link from 'next/link';
 import { ProductList } from './ProductList';
 import AddtoCartButton from '../../AddToCartButton';
 
-const AllStock = ({product}) => {
+const AllStock = () => {
   const responsive = {
     largeDesktop: {
       breakpoint: { max: 1536, min: 1440 },
