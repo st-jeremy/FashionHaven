@@ -16,7 +16,6 @@ import AddtoCartButton from '../../AddToCartButton';
 
 
 const MultiCarousel = ({ product }) => {
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -45,10 +44,8 @@ const MultiCarousel = ({ product }) => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
-
-      <Heading  fontSize={'24pt'} bg={'black'} color={'white'} p={2.5}>Top Selling</Heading>
-
+    <Box m={'auto'} maxWidth={'1400px'} bgColor={'black.200'}  p={0}>
+      <Heading  fontSize={'24pt'} bg={'black'} color={'white'} py={2.5} px={10}>Top Selling</Heading>
       <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
         <Carousel 
           responsive={responsive}
@@ -56,7 +53,7 @@ const MultiCarousel = ({ product }) => {
           draggable={true}
           showDots={true}
           infinite={true}
-          autoPlaySpeed={1000}
+          autoPlaySpeed={500}
           keyBoardControl={true}
           customTransition="all 1.5"
           transitionDuration={500}

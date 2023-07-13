@@ -48,11 +48,10 @@ const AllStock = ({product}) => {
 
   return ( 
     <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
-
-      <Box  bgColor={'black'} display={'flex'} color={'white'} p={2}>
+      <Box bgColor={'black'} display={'flex'} color={'white'} p={2} position={'relative'}>
         <Heading  fontSize={'24pt'} color={'white'} >All Stock</Heading>
-        <Link href='/Shop'>
-          <Button bgColor={'black'} position={{base: 'absolute', lg: 'relative'}} right={{base: '1', lg: '-55rem'}} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
+        <Link href='/shop'>
+          <Button bgColor={'black'} position={'absolute'} right={5} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
         </Link>
       </Box>
 
