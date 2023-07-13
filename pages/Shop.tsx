@@ -1,5 +1,5 @@
 import ProductCard from '../Components/ProductCard';
-import { getProducts } from './api/Products/index';
+import { getProducts } from './api/products/index';
 import Link from 'next/link';
 import Head from 'next/head';
 import { Box, Heading, Button } from '@chakra-ui/react';

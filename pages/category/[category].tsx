@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import ProductCard from '../../Components/ProductCard';
-import { getProductsByCategory } from '../api/Products/[category]';
+import { getProductsByCategory } from '../api/products/[category]';
 import { Heading, Box } from '@chakra-ui/react';
 import Head from 'next/head';
 
