@@ -6,10 +6,11 @@ import {
   Button,
   Box,
   useDisclosure,
-  MenuDivider
-} from '@chakra-ui/react'
-import { BiHelpCircle } from 'react-icons/bi'
-import { ChevronUpIcon, ChevronDownIcon } from '@chakra-ui/icons'
+  MenuDivider,
+  Icon
+} from '@chakra-ui/react';
+import { ChevronUpIcon, ChevronDownIcon, QuestionOutlineIcon } from '@chakra-ui/icons';
+import { BiHelpCircle } from 'react-icons/bi';
 
 const HelpCenter = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,20 +20,16 @@ const HelpCenter = () => {
       <Menu isOpen={isOpen}>
         <MenuButton
           as={Button}
-          leftIcon={<BiHelpCircle />}
           bgColor={'black'}
-          border= 'none'
-          _hover={{ color: 'white'}}
           _expanded={{bgColor: 'white', color: 'black'}}
-          _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '20pt', md: '25pt'}}
-          paddingTop={0}
-          // width={'100px'}
-          padding={{base: '1', md: 'auto'}}
+          width={'fit-content'}
+          fontSize={{base: '12pt', md: '18pt'}}
+          px={{base: '1', md: 'auto'}}
         >
-          {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
+          <Icon as={BiHelpCircle} mb={'-7px'} fontSize={{base: '16pt', md: '22pt'}} />
+          {isOpen ? <ChevronUpIcon/> : <ChevronDownIcon/>}
         </MenuButton>
         
         <MenuList 

@@ -8,7 +8,8 @@ import {
   MenuDivider,
   Box,
   Divider,
-  Avatar
+  Avatar,
+  Icon
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
@@ -28,18 +29,18 @@ const Account = () => {
       <Menu  isOpen={isOpen}>
         <MenuButton 
           as={Button}
-          leftIcon={<BiUser />}
           bgColor={'black'}
           _hover={{ color: 'white'}}
           _expanded={{bgColor: 'white', color: 'black'}}
           _focus={{ boxShadow: 'none' }}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          fontSize={{base: '19pt', md: '25pt'}}
+          fontSize={{base: '12pt', md: '18pt'}}
           width={'fit-content'}
-          padding={{base: '1', md: 'auto'}}
+          px={{base: '1', md: 'auto'}}
         >
-          {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
+          <Icon as={BiUser} mb={'-7px'} fontSize={{base: '16pt', md: '22pt'}} />
+          {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </MenuButton>
 
         <MenuList 
@@ -53,13 +54,15 @@ const Account = () => {
           <MenuDivider/>
 
           <MenuItem display={'block'}><LoginBtn /></MenuItem>
-          <Divider />
-          <MenuItem>
-            <Link href='/MyAccount'>
-              <Avatar name={userName} src={userImage} /> &nbsp; &nbsp;
-              My Account
-            </Link>
-          </MenuItem>
+
+          { session && 
+            <MenuItem>
+              <Link href='/MyAccount'>
+                <Avatar name={userName} src={userImage} /> &nbsp; &nbsp;
+                My Account
+              </Link>
+            </MenuItem>
+}
         </MenuList>
       </Menu>
     </Box>

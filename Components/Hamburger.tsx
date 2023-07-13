@@ -50,8 +50,8 @@ const Hamburger = () => {
           _focus={{ boxShadow: 'none' }}
           onMouseLeave={onClose}
           onMouseEnter={onOpen}
-          fontSize={{base: '25pt', md: '30pt'}}
-          padding={{base: '1', md: 'auto'}}
+          fontSize={{base: '18pt', md:'22pt', lg: '30pt'}}
+          padding={{base: '2', md: 'auto'}}
         >
           {isOpen ? <ImMenu4 /> : <ImMenu3 />}
         </MenuButton>

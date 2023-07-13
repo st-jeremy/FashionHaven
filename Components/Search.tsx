@@ -49,7 +49,6 @@ const Search = ({ products }) => {
         <Menu isOpen={isOpen}>
           <MenuButton
             as={Button}
-            leftIcon={<SearchIcon />}
             bgColor={'black'}
             _expanded={{ bgColor: 'white', color: 'black' }}
             onMouseEnter={onOpen}
@@ -58,6 +57,7 @@ const Search = ({ products }) => {
             fontSize={{base: '12pt', md: '18pt'}}
             padding={{base: '1', md: 'auto'}}
           >
+            <SearchIcon />
             {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>
 
