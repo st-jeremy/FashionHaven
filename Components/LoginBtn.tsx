@@ -33,6 +33,7 @@ export default function Component() {
         color={'white'} 
         onClick={() => signIn('', {callbackUrl:'/'})} 
         _hover={{ color: 'black', bgColor:'white', border: '1px solid black'}}
+        mt={2}
       >
         Sign in
       </Button>

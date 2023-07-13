@@ -9,7 +9,8 @@ import {
   Box,
   Divider,
   Avatar,
-  Icon
+  Icon, 
+  Text
 } from '@chakra-ui/react'
 import { BiUser } from 'react-icons/bi'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
@@ -38,6 +39,7 @@ const Account = () => {
           fontSize={{base: '12pt', md: '18pt'}}
           width={'fit-content'}
           px={{base: '1', md: 'auto'}}
+          display={'flex'}
         >
           <Icon as={BiUser} mb={'-7px'} fontSize={{base: '16pt', md: '22pt'}} />
           {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
