@@ -45,9 +45,7 @@ const Search = ({ products }) => {
 
   return ( 
     <Box margin= 'auto'>
-
-      <Box display={{ base: 'flex', lg: 'none' }}>
-
+      <Box display={{ base: 'flex', lg: 'none' }} >
         <Menu isOpen={isOpen}>
           <MenuButton
             as={Button}
@@ -57,15 +55,10 @@ const Search = ({ products }) => {
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             width={'fit-content'}
-            fontSize={{base: '16pt', md: '20pt'}}
+            fontSize={{base: '12pt', md: '18pt'}}
             padding={{base: '1', md: 'auto'}}
           >
-            {
-              isOpen ? 
-                <ChevronUpIcon style={{display: 'inline-grid'}}/> 
-                : 
-                <ChevronDownIcon  style={{display: 'inline-grid'}}/>
-            }
+            {isOpen ? <ChevronUpIcon style={{display: 'inline-grid'}}/> : <ChevronDownIcon  style={{display: 'inline-grid'}}/>}
           </MenuButton>
 
           <MenuList 
@@ -75,15 +68,10 @@ const Search = ({ products }) => {
             zIndex={'1000'}
             marginTop={'-.4rem'}
           >
-            <MenuItem fontWeight={'600'} _hover={{bgColor: 'white'}}>
-              Search Products
-            </MenuItem>
-            <MenuDivider />
-
             <MenuItem 
-              width={{ base: '250px', lg: 'fit-content' }} 
+              width={{ base: '250px', md: 'fit-content' }} 
               _hover={{bgColor: 'white'}} 
-              display={'flex'} 
+              display={{base:'flex', lg:'none'}} 
               id='search'
             >
               <form action="" method="get" onSubmit={handleSubmit}>
@@ -92,7 +80,7 @@ const Search = ({ products }) => {
                   name="search"
                   id="search_field"
                   placeholder="Search products"
-                  width={{ base: '250px', lg: '450' }}
+                  w={'100%'}
                   height={{ base: '8', lg: 'auto' }}
                   marginBottom={'2'} 
                   // value= {inputText}
@@ -111,26 +99,26 @@ const Search = ({ products }) => {
               </form>
 
             </MenuItem>
-
+            {/* use map function here */}
             <MenuItem>{filteredData}</MenuItem>
           </MenuList>
         </Menu>
       </Box>
 
-      <FormControl width={{ base: '250px', lg: 'fit-content' }} display={{ base: 'none', lg: 'flex' }}>
+      <FormControl display={{ base: 'none', lg: 'flex' }}>
         <form action="" onSubmit={handleSubmit}>
           <Input
             type="text"
             name="Search"
             id="search_field"
             placeholder="Search products"
-            width={ '450px' }
+            width={{lg: '300px', xl:'450px' }}
             height={ '2.4rem' }
             marginTop={'0'} 
             value= {inputText}
             onChange={inputHandler}
           />
-          <SearchIcon style={{ position: 'absolute', top: '15', right: '15', color: 'white' }} type='submit' />
+          <SearchIcon style={{ position: 'absolute', top: '12', right: '15', color: 'white' }} type='submit' />
         </form>
       </FormControl>
     </Box>
