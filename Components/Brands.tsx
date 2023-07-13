@@ -1,22 +1,12 @@
 import { 
-  Box, 
   Heading,
   List,
-  ListItem,
-  ListIcon,
   Divider,
   VStack, 
 } from '@chakra-ui/react';
-import { MdCheckCircle } from 'react-icons/md';
+import Point from './Point';
 
-const Brand = ({name}: {name:string}) => {
-  return ( 
-    <ListItem>
-      <ListIcon as={MdCheckCircle} color='white.500' />
-      {name}
-    </ListItem> 
-  );
-};
+
 const Brands = () => {
   return ( 
     <VStack p={5} display={{base: 'none', lg: 'block'}} bgGradient='linear(to-r, white, grey)' width={'fit-content'} ml={6}>
@@ -24,15 +14,14 @@ const Brands = () => {
       <Divider />
 
       <List spacing={3}>
-        <Brand name={'Nike'} />
-        <Brand name={'Louis Vuitton '} />
-        <Brand name={'Hermes'} />
-        <Brand name={'Gucci'} />
-        <Brand name={'Adidas'} />
-        <Brand name={'Zara'} />
-        <Brand name={'Cartier'} />
-        <Brand name={'Moncler'} />
-        {/* <Brand name={'Chanel'} /> */}
+        <Point name={'Nike'} />
+        <Point name={'Louis Vuitton '} />
+        <Point name={'Hermes'} />
+        <Point name={'Gucci'} />
+        <Point name={'Adidas'} />
+        <Point name={'Zara'} />
+        <Point name={'Cartier'} />
+        <Point name={'Moncler'} />
       </List> 
     </VStack>
    );
