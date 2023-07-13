@@ -14,24 +14,37 @@ import {
   TableCaption,
   TableContainer,
   useDisclosure,
-  Divider
+  Divider,
+  VStack
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { ImMenu3, ImMenu4 } from 'react-icons/im';
 
+const CatBtn = ({name, onClick}: { name:string, onClick:any }) => {
+  return ( 
+    <Button width={'10rem'} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={onClick}>
+      {name}
+    </Button> 
+  );
+};
+ 
 const Hamburger = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+
   const ClothingClick =() =>{
     router.push('/category/Clothing')
   };
+
   const AccessoriesClick =() =>{
     router.push('/category/Accessories')
   };
+
   const FootWearClick =() =>{
     router.push('/category/FootWear')
   };
+
   const HeadWearClick =() =>{
     router.push('/category/HeadWear')
   }
@@ -63,35 +76,20 @@ const Hamburger = () => {
           color={'black'}
           marginTop={'-.4rem'}
         >
-
-          <Box  display={{base: 'block', lg: 'none'}} p={5}>
-            <Heading>Categories</Heading>
+          <VStack display={{base: 'flex', lg: 'none'}} p={5}>
+            <Heading fontSize={{base:'16pt', lg:'unset'}}>Categories</Heading>
             <Divider />
 
-            <Button width={'10rem'} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}}  onClick={ClothingClick}>
-              Clothing
-            </Button>
-            <br />
-
-            <Button width={'10rem'} onClick={FootWearClick}  mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
-              Foot Wear
-            </Button>
-            <br />
-            
-            <Button width={'10rem'}  onClick={HeadWearClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
-              Head Wear
-            </Button>
-            <br />
-
-            <Button width={'10rem'} onClick={AccessoriesClick} mb={3} bgColor={'black'} color={'white'} _hover={{ border: '1px solid black', bgColor: 'white', color: 'black'}} >
-              Accessories
-            </Button>
-          </Box>
+            <CatBtn name='Clothing' onClick={ClothingClick} />
+            <CatBtn name='Foot Wear' onClick={FootWearClick} />
+            <CatBtn name='Head Wear' onClick={HeadWearClick} />
+            <CatBtn name='Accessories' onClick={AccessoriesClick} />
+          </VStack>
 
 
-          <TableContainer display={{base: 'none', lg: 'flex'}} p={5}>
-            <Box display={{base: 'none', lg: 'block'}}>
-              <Image src= '/beach-hoodie.jpeg' width={450} height={500} alt='can' />
+          <TableContainer display={{base: 'none', lg: 'flex'}} p={5} maxW={{lg:'87%', xl:'unset'}}>
+            <Box display={{base: 'none', lg: 'flex'}}>
+              <Image src= '/beach-hoodie.jpeg' width={450} height={500} alt='Category image' />
             </Box>
 
             <Table variant='unstyled' size='sm' ml={3} width={'90%'}>
