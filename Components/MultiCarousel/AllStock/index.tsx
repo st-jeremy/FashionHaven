@@ -45,7 +45,7 @@ const AllStock = () => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} bgColor={'black.200'} maxW={1400} p={0}>
+    <Box m={'auto'} my={5} bgColor={'black.200'} maxW={1400} p={0}>
       <Box bgColor={'black'} display={'flex'} color={'white'}  width={'100vw'} maxW={1440} p={0} py={2.5} position={'relative'}>
         <Heading fontSize={'24pt'} color={'white'} px={10}>All Stock</Heading>
         <Link href='/shop'>

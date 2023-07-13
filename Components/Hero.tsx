@@ -6,7 +6,7 @@ import Welcome from "./Welcome";
 
 const Hero = () => {
   return ( 
-    <HStack py={5} px={6} spacing={4} justifyContent={{base:'unset', xl:'center'}} maxWidth={'1400px'} mt={'6rem'}>
+    <HStack py={5} px={6} spacing={4} justifyContent={{base:'unset', xl:'center'}} maxWidth={'1400px'}>
       <Categories />
       <Slideshow />
       <Brands />
