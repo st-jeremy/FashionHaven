@@ -18,18 +18,21 @@ import { ProductList } from './ProductList';
 import AddtoCartButton from '../../AddToCartButton';
 
 const AllStock = ({product}) => {
-
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
+    largeDesktop: {
+      breakpoint: { max: 1536, min: 1440 },
       items: 6
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 6
+      breakpoint: { max: 1439, min: 1280 },
+      items: 5
+    },
+    miniDesktop: {
+      breakpoint: { max: 1279, min: 992 },
+      items: 4
     },
     tablet: {
-      breakpoint: { max: 1023, min: 768 },
+      breakpoint: { max: 991, min: 768 },
       items: 3
     },
     miniTablet:{
@@ -47,15 +50,17 @@ const AllStock = ({product}) => {
   };
 
   return ( 
-    <Box m={'auto'} mt={5} maxWidth={'1400px'} bgColor={'black.200'}  p={{md: '5', lg: '0'}}>
-      <Box bgColor={'black'} display={'flex'} color={'white'} p={2} position={'relative'}>
-        <Heading  fontSize={'24pt'} color={'white'} >All Stock</Heading>
+    <Box m={'auto'} mt={5} bgColor={'black.200'} maxW={1400} p={0}>
+      <Box bgColor={'black'} display={'flex'} color={'white'}  width={'100vw'} maxW={1440} p={0} py={2.5} position={'relative'}>
+        <Heading fontSize={'24pt'} color={'white'} px={10}>All Stock</Heading>
         <Link href='/shop'>
-          <Button bgColor={'black'} position={'absolute'} right={5} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>View All</Button>
+          <Button bgColor={'black'} position={'absolute'} right={5} _hover={{textDecoration:'underline', bgColor: 'white', color: 'black'}}>
+            View All
+          </Button>
         </Link>
       </Box>
 
-      <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
+      <Box width={'100vw'} maxW={1440} mt={5}>
         <Carousel 
           responsive={responsive}
           swipeable={true}
@@ -77,8 +82,15 @@ const AllStock = ({product}) => {
                 <Box key={product.id} borderRadius={'md'} width={200} maxWidth={220} margin={'auto'} mb={10}>
 
                   <Card width={200} height={325} boxShadow={'lg'}>
-                    <Box maxHeight={200} minHeight={200} >
-                      <Image src={product.image} alt={product.name} width={200} height={250} loading={'lazy'} />
+                    <Box maxHeight={200} minHeight={200} width={"200"} height={"auto"}>
+                      <Image 
+                        src={product.image} 
+                        alt={product.name} 
+                        width={200} 
+                        height={250}
+                        loading={'lazy'}
+                        style={{ objectFit: 'cover', width:"auto", height: "auto" }}
+                      />
                     </Box>
 
                     <Box bgColor={'white'} borderRadius={'0  0 13px 13px'} height={125}>

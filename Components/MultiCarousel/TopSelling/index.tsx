@@ -14,19 +14,22 @@ import Image from 'next/image';
 import { ProductList } from '../TopSelling/ProductList'
 import AddtoCartButton from '../../AddToCartButton';
 
-
 const MultiCarousel = ({ product }) => {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
+    largeDesktop: {
+      breakpoint: { max: 1536, min: 1440 },
       items: 6
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 6
+      breakpoint: { max: 1439, min: 1280 },
+      items: 5
+    },
+    miniDesktop: {
+      breakpoint: { max: 1279, min: 992 },
+      items: 4
     },
     tablet: {
-      breakpoint: { max: 1023, min: 768 },
+      breakpoint: { max: 991, min: 768 },
       items: 3
     },
     miniTablet:{
@@ -44,9 +47,9 @@ const MultiCarousel = ({ product }) => {
   };
 
   return ( 
-    <Box m={'auto'} maxWidth={'1400px'} bgColor={'black.200'}  p={0}>
-      <Heading  fontSize={'24pt'} bg={'black'} color={'white'} py={2.5} px={10}>Top Selling</Heading>
-      <Box width={{base: '100vw', md: '95vw', lg: '1400px'}} mt={5}>
+    <Box m={'auto'} maxWidth={1440} bgColor={'black.200'} p={0}>
+      <Heading fontSize={'24pt'} bg={'black'} color={'white'} py={2.5} px={10}>Top Selling</Heading>
+      <Box width={'100vw'} maxWidth={1440} mt={5}>
         <Carousel 
           responsive={responsive}
           swipeable={true}

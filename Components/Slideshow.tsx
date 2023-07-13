@@ -26,7 +26,7 @@ const Slideshow = () => {
       <Zoom {...zoomOutProperties}>
         {images.map((each, index) => (
           <Box key={index} m={'auto'}>
-            <Image height={700} src={each} alt='slide show' style={{borderRadius:"30px 0 30px 0"}}/>
+            <Image height={700} src={each} alt='slide show' style={{borderRadius:"30px 0 30px 0"}} priority />
           </Box>
         ))}
       </Zoom>
