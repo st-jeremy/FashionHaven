@@ -99,8 +99,11 @@ const Search = ({ products }) => {
               </form>
 
             </MenuItem>
-            {/* use map function here */}
+            {/* use map function here */} 
             <MenuItem>{filteredData}</MenuItem>
+            {/* {filteredData.map(filter=> {
+              <MenuItem>{filter}</MenuItem>
+            })} */}
           </MenuList>
         </Menu>
       </Box>

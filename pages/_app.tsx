@@ -7,6 +7,8 @@ import { Box, ChakraProvider } from '@chakra-ui/react'
 import Footer from '../Components/Footer'
 import { SessionProvider } from 'next-auth/react'
 import Head from 'next/head';
+import { persistor } from '../redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 export default function App({ 
   Component, 
@@ -16,6 +18,7 @@ export default function App({
   return (
     <SessionProvider session={session} >
       <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
         <ChakraProvider>
           <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'100vh'} >
             <Head>
@@ -30,6 +33,7 @@ export default function App({
             <Footer />
           </Box>
         </ChakraProvider>
+        </PersistGate>
       </Provider>
     </SessionProvider>
   )

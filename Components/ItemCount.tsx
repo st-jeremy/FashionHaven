@@ -2,14 +2,18 @@ import { useSelector } from 'react-redux';
 import { State } from './Types';
 
 const ItemCount = () => {
-  
   const cart = useSelector((state: State) => state.cart);
 
+  // const getItemsCount = () => {
+  //   return (
+  //     cart.reduce((accumulator, item) => accumulator + item.quantity, 0)
+  //   )
+  // };
   const getItemsCount = () => {
-
-    return (
-      cart.reduce((accumulator, item) => accumulator + item.quantity, 0)
-    )
+    if (cart) {
+      return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
+    }
+    return 0;
   };
 
   return ( 
