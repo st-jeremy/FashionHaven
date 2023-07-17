@@ -1,5 +1,5 @@
 import { SEARCH_QUERY } from "../actions/types";
-import { SearchQueryAction } from '../actions/index';
+import { SearchQueryAction } from '../actions/searchActions';
 
 interface SearchState {
   query: string;
